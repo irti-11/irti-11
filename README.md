@@ -39,7 +39,7 @@ Currently building expertise in HTML, CSS, and JavaScript, while exploring DevOp
 <a href="#" ><img align="center" src="https://user-images.githubusercontent.com/74038190/226127923-0e8b7792-7b3c-462b-951b-63c96ba1a5af.gif" height="45" width="35" /></a>
 </h3>
 <p align="left">
-<a href="https://linkedin.com/in/irtiza ali" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="irtiza ali" height="30" width="40" /></a>
+<a href="https://linkedin.com/in/irtiza-ali-7a4880351" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="irtiza ali" height="30" width="40" /></a>
 <a href="https://instagram.com/sdrtza_ali" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="sdrtza_ali" height="30" width="40" /></a>
 <a href="https://dribbble.com/syed irtiza ali" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/dribbble.svg" alt="syed irtiza ali" height="30" width="40" /></a>
 
