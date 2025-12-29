@@ -9,7 +9,11 @@
 
 
 
-<h3 align="center">Hello! I’m Irtiza Ali ✨ A tech enthusiast and aspiring digital wizard, turning ideas into practical solutions. "Small code, mighty effects." Currently building expertise in HTML, CSS, and JavaScript, while exploring DevOps and AI to broaden my technical skill set and deliver impactful projects.</h3>
+<h3  style="line-height: 25px;">Hello! I’m Irtiza Ali ✨ A tech enthusiast and aspiring digital wizard, turning ideas into practical solutions. 
+<br>
+"Small code, mighty effects." 
+<br>
+Currently building expertise in HTML, CSS, and JavaScript, while exploring DevOps and AI to broaden my technical skill set and deliver impactful projects.</h3>
 
 <div align="center" width="100%">
         <img src="https://user-images.githubusercontent.com/74038190/212284158-e840e285-664b-44d7-b79b-e264b5e54825.gif" height="40" alt="cplusplus logo"/>
