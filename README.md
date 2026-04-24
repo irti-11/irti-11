@@ -1,54 +1,92 @@
-[![MasterHead](https://user-images.githubusercontent.com/74038190/213910845-af37a709-8995-40d6-be59-724526e3c3d7.gif)](https://rishavchanda.io)
-<h1 align="center">Hi <a href="#" ><img align="center" src="https://user-images.githubusercontent.com/74038190/214644152-52f47eb3-5e31-4f47-8758-05c9468d5596.gif" height="45" width="50" /></a>, I'm Syed Irtiza Ali <a href="#" ><img align="center" src="https://user-images.githubusercontent.com/74038190/219923809-b86dc415-a0c2-4a38-bc88-ad6cf06395a8.gif" height="77" width="88" /></a></h1>
+<div align="center">
+  <img height="100%"  src="https://i.pinimg.com/originals/ca/26/2e/ca262e0354eea311c41134c3e4bc3bc2.gif"  />
+</div>
 
-<p align="center">
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Sekuya&size=18&duration=3000&pause=1000&color=36A2F7&center=true&random=true&width=590&lines=I+am+;Progressive+Web_dev;Passionate+Learner%2C+Curious+Mind;DevOps+Enthusiast+%7C+Automation+Advocate;AI+Explorer" alt="Typing SVG">
+###
+
+<h1 align="left">Salutations, I'm Syed Irtiza Ali</h1>
+
+###
+
+<p align="left">I sit at the edge of design and code<br>not fully one, not fully the other.<br>That in-between is where I do my best work.<br><br>I care about how things look, how they feel,<br>and whether they were worth building at all.</p>
+
+###
+
+<img align="right" height="104" src="https://i.pinimg.com/originals/a2/2f/94/a22f94de8558e615eae70781f82fa5ec.gif"  />
+
+###
+
+<img align="right" height="87" src="https://i.pinimg.com/originals/4a/12/b8/4a12b8b3f8d1af1e3d06a338d2d5e2fe.gif"  />
+
+###
+
+<div align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="40" alt="html5 logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="40" alt="css logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" height="40" alt="bootstrap logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" height="40" alt="mysql logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" height="40" alt="figma logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" height="40" alt="vscode logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" height="40" alt="canva logo"  />
+</div>
+
+###
+
+<div align="left">
+  <a href="irtiza001690@gmail.com" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=Gmail&logo=gmail&label=&color=D14836&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="gmail logo"  />
   </a>
-</p>
+  <a href="www.linkedin.com/in/sdirtiza-ali" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="linkedin logo"  />
+  </a>
+</div>
 
+###
 
+<h1 align="left">🔧 What I'm Working On</h1>
 
-<h3  style="line-height: 25px;">Hello! I’m Irtiza Ali ✨ A tech enthusiast and aspiring digital wizard, turning ideas into practical solutions. 
-<br>
-"Small code, mighty effects." 
-<br>
-Currently building expertise in HTML, CSS, and JavaScript, while exploring DevOps and AI to broaden my technical skill set and deliver impactful projects.</h3>
+###
 
-<div align="center" width="100%">
-        <img src="https://user-images.githubusercontent.com/74038190/212284158-e840e285-664b-44d7-b79b-e264b5e54825.gif" height="40" alt="cplusplus logo"/>
-    </div>
+<img align="right" height="135" src="https://user-images.githubusercontent.com/74038190/212744275-c56a72c2-50b1-45e2-a693-d19d40357766.gif"  />
 
+###
 
-  
+<p align="left">Something is in progress.<br>It's not ready, so it doesn't have a name yet.<br><br>Good things take time to say out loud.</p>
 
-- I contributed to [32Smiles](https://irti-11.github.io/ee_project/) <a href="#" ><img align="center" src="https://media0.giphy.com/media/v1.Y2lkPTZjMDliOTUydXZpNHhyaXk4d3phYW4yeWttMmVsbGVzczQ0a2w2cThpOHNrMmQxdiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/bGgsc5mWoryfgKBx1u/200w.gif" height="45" width="50" /></a>
+###
 
-- 🌱I am enhancing my skills in… **JavaScript, Java, Git, GitHub**<a href="#" ><img align="center" src="https://i.pinimg.com/originals/48/3a/ff/483aff1b06c5e2013510e66ee77184b6.gif" height="30" width="50" /></a>
+<h1 align="left">Fun Fact</h1>
 
-- 💬 Ask me about **HTML, CSS, and web magic.**
+###
 
-- 📫 How to reach me **irtiza001690@gaiml.com ^_^**
+<img align="right" height="141" src="https://user-images.githubusercontent.com/74038190/216655848-cf4d7bed-52aa-4740-8c67-1832472051ec.gif"  />
 
-- ⚡ Fun fact **Most of my ideas come after midnight coding sessions😉.**
+###
 
+<p align="left">I have a cat. she has witnessed every deadline.<br>desktop customized. always. it's the first thing.<br>I run @pxlsect.xyz — design, type, setups, digital life<br> once rebuilt a whole layout because one font felt wrong<br>silence + screen + late hour = best work condition</p>
 
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" alt="">
+###
 
-<h3 align="left">Connect with me:
-<a href="#" ><img align="center" src="https://user-images.githubusercontent.com/74038190/226127923-0e8b7792-7b3c-462b-951b-63c96ba1a5af.gif" height="45" width="35" /></a>
-</h3>
-<p align="left">
-<a href="https://linkedin.com/in/irtiza-ali-7a4880351" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="irtiza ali" height="30" width="40" /></a>
-<a href="https://instagram.com/sdrtza_ali" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="sdrtza_ali" height="30" width="40" /></a>
-<a href="https://dribbble.com/syed irtiza ali" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/dribbble.svg" alt="syed irtiza ali" height="30" width="40" /></a>
+<h1 align="left">📡 Goals / What I'm Learning</h1>
 
-</p>
+###
 
-<h3 align="left">Languages and Tools:
- <a href="#" ><img align="center" src="https://i.pinimg.com/originals/30/79/27/3079277290da72f1c36fad89957c8a9d.gif" height="50" width="88" /></a>
-</h3>
-<p align="left"> <a href="https://www.arduino.cc/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg" alt="arduino" width="40" height="40"/> </a> <a href="https://getbootstrap.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"/> </a> <a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/> </a> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://www.figma.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://www.linux.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> </a> <a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> </p>
+<p align="left">There's a direction. A real one.<br><br>I don't talk about what I'm learning<br>until I actually know it.<br>Until then heads down, moving forward.<br><br>The work will introduce itself.</p>
 
-<img align="center" src="https://user-images.githubusercontent.com/74038190/225813708-98b745f2-7d22-48cf-9150-083f1b00d6c9.gif" alt="" width="100%">
-     
+###
+
+<br clear="both">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/irti-11/irti-11/output/pacman-contribution-graph-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/irti-11/irti-11/output/pacman-contribution-graph.svg">
+  <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/irti-11/irti-11/output/pacman-contribution-graph.svg">
+</picture>
+
+###
