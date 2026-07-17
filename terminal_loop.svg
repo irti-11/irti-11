@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 90" width="300" height="90">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 90" width="100%" height="90" preserveAspectRatio="xMinYMin meet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&amp;display=swap');
         @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
@@ -7,39 +7,118 @@
     <circle cx="16" cy="14" r="4" fill="#ff5f56" />
     <circle cx="30" cy="14" r="4" fill="#ffbd2e" />
     <circle cx="44" cy="14" r="4" fill="#27c93f" />
-    <g clip-path="url(#tline0)">
+    <g clip-path="url(#s0l0)">
         <text x="20" y="34" style="font-family:'Fira Code',monospace; font-size:12px; fill:#e2e8f0;">$ npm run dev</text>
     </g>
-    <clipPath id="tline0">
+    <clipPath id="s0l0">
         <rect x="20" y="22" width="0" height="20">
-            <animate attributeName="width" keyTimes="0.0;0.1852;0.9444;1.0"
-                     values="0.0;93.6;93.6;0.0"
-                     dur="5.4s" repeatCount="indefinite" calcMode="linear" />
+            <animate attributeName="width" keyTimes="0;0.0;0.04032;0.21774;0.23387;1" values="0.0;0.0;93.6;93.6;0.0;0.0"
+                     dur="18.6s" repeatCount="indefinite" calcMode="linear" />
         </rect>
     </clipPath>
-    <g clip-path="url(#tline1)">
+    <g clip-path="url(#s0l1)">
         <text x="20" y="54" style="font-family:'Fira Code',monospace; font-size:12px; fill:#aef3a4;">✓ compiled successfully</text>
     </g>
-    <clipPath id="tline1">
+    <clipPath id="s0l1">
         <rect x="20" y="42" width="0" height="20">
-            <animate attributeName="width" keyTimes="0.0;0.2222;0.3889;0.9444;1.0"
-                     values="0.0;0.0;165.6;165.6;0.0"
-                     dur="5.4s" repeatCount="indefinite" calcMode="linear" />
+            <animate attributeName="width" keyTimes="0;0.04839;0.08871;0.21774;0.23387;1" values="0.0;0.0;165.6;165.6;0.0;0.0"
+                     dur="18.6s" repeatCount="indefinite" calcMode="linear" />
         </rect>
     </clipPath>
-    <g clip-path="url(#tline2)">
+    <g clip-path="url(#s0l2)">
         <text x="20" y="74" style="font-family:'Fira Code',monospace; font-size:12px; fill:#6272a4;">&gt; watching for changes...</text>
     </g>
-    <clipPath id="tline2">
+    <clipPath id="s0l2">
         <rect x="20" y="62" width="0" height="20">
-            <animate attributeName="width" keyTimes="0.0;0.4259;0.6111;0.9444;1.0"
-                     values="0.0;0.0;179.99999999999997;179.99999999999997;0.0"
-                     dur="5.4s" repeatCount="indefinite" calcMode="linear" />
+            <animate attributeName="width" keyTimes="0;0.09677;0.1371;0.21774;0.23387;1" values="0.0;0.0;180.0;180.0;0.0;0.0"
+                     dur="18.6s" repeatCount="indefinite" calcMode="linear" />
         </rect>
     </clipPath>
-    <text x="204.0" y="74" class="blink" style="font-family:'Fira Code',monospace; font-size:12px; fill:#78dec7;">
-        <animate attributeName="opacity" keyTimes="0;0.6111;0.6111;0.9444;0.9444;1"
-                 values="0;0;1;1;0;0" dur="5.4s" repeatCount="indefinite" calcMode="discrete" />
+    <g clip-path="url(#s1l0)">
+        <text x="20" y="34" style="font-family:'Fira Code',monospace; font-size:12px; fill:#e2e8f0;">$ git status</text>
+    </g>
+    <clipPath id="s1l0">
+        <rect x="20" y="22" width="0" height="20">
+            <animate attributeName="width" keyTimes="0;0.25;0.29032;0.46774;0.48387;1" values="0.0;0.0;86.4;86.4;0.0;0.0"
+                     dur="18.6s" repeatCount="indefinite" calcMode="linear" />
+        </rect>
+    </clipPath>
+    <g clip-path="url(#s1l1)">
+        <text x="20" y="54" style="font-family:'Fira Code',monospace; font-size:12px; fill:#aef3a4;">✓ working tree clean</text>
+    </g>
+    <clipPath id="s1l1">
+        <rect x="20" y="42" width="0" height="20">
+            <animate attributeName="width" keyTimes="0;0.29839;0.33871;0.46774;0.48387;1" values="0.0;0.0;144.0;144.0;0.0;0.0"
+                     dur="18.6s" repeatCount="indefinite" calcMode="linear" />
+        </rect>
+    </clipPath>
+    <g clip-path="url(#s1l2)">
+        <text x="20" y="74" style="font-family:'Fira Code',monospace; font-size:12px; fill:#6272a4;">&gt; branch up to date</text>
+    </g>
+    <clipPath id="s1l2">
+        <rect x="20" y="62" width="0" height="20">
+            <animate attributeName="width" keyTimes="0;0.34677;0.3871;0.46774;0.48387;1" values="0.0;0.0;136.8;136.8;0.0;0.0"
+                     dur="18.6s" repeatCount="indefinite" calcMode="linear" />
+        </rect>
+    </clipPath>
+    <g clip-path="url(#s2l0)">
+        <text x="20" y="34" style="font-family:'Fira Code',monospace; font-size:12px; fill:#e2e8f0;">$ pytest</text>
+    </g>
+    <clipPath id="s2l0">
+        <rect x="20" y="22" width="0" height="20">
+            <animate attributeName="width" keyTimes="0;0.5;0.54032;0.71774;0.73387;1" values="0.0;0.0;57.6;57.6;0.0;0.0"
+                     dur="18.6s" repeatCount="indefinite" calcMode="linear" />
+        </rect>
+    </clipPath>
+    <g clip-path="url(#s2l1)">
+        <text x="20" y="54" style="font-family:'Fira Code',monospace; font-size:12px; fill:#aef3a4;">✓ 12 passed in 0.8s</text>
+    </g>
+    <clipPath id="s2l1">
+        <rect x="20" y="42" width="0" height="20">
+            <animate attributeName="width" keyTimes="0;0.54839;0.58871;0.71774;0.73387;1" values="0.0;0.0;136.8;136.8;0.0;0.0"
+                     dur="18.6s" repeatCount="indefinite" calcMode="linear" />
+        </rect>
+    </clipPath>
+    <g clip-path="url(#s2l2)">
+        <text x="20" y="74" style="font-family:'Fira Code',monospace; font-size:12px; fill:#6272a4;">&gt; no warnings found</text>
+    </g>
+    <clipPath id="s2l2">
+        <rect x="20" y="62" width="0" height="20">
+            <animate attributeName="width" keyTimes="0;0.59677;0.6371;0.71774;0.73387;1" values="0.0;0.0;136.8;136.8;0.0;0.0"
+                     dur="18.6s" repeatCount="indefinite" calcMode="linear" />
+        </rect>
+    </clipPath>
+    <g clip-path="url(#s3l0)">
+        <text x="20" y="34" style="font-family:'Fira Code',monospace; font-size:12px; fill:#e2e8f0;">$ php artisan serve</text>
+    </g>
+    <clipPath id="s3l0">
+        <rect x="20" y="22" width="0" height="20">
+            <animate attributeName="width" keyTimes="0;0.75;0.79032;0.96774;0.98387;1" values="0.0;0.0;136.8;136.8;0.0;0.0"
+                     dur="18.6s" repeatCount="indefinite" calcMode="linear" />
+        </rect>
+    </clipPath>
+    <g clip-path="url(#s3l1)">
+        <text x="20" y="54" style="font-family:'Fira Code',monospace; font-size:12px; fill:#aef3a4;">✓ server started :8000</text>
+    </g>
+    <clipPath id="s3l1">
+        <rect x="20" y="42" width="0" height="20">
+            <animate attributeName="width" keyTimes="0;0.79839;0.83871;0.96774;0.98387;1" values="0.0;0.0;158.4;158.4;0.0;0.0"
+                     dur="18.6s" repeatCount="indefinite" calcMode="linear" />
+        </rect>
+    </clipPath>
+    <g clip-path="url(#s3l2)">
+        <text x="20" y="74" style="font-family:'Fira Code',monospace; font-size:12px; fill:#6272a4;">&gt; ctrl+c to stop</text>
+    </g>
+    <clipPath id="s3l2">
+        <rect x="20" y="62" width="0" height="20">
+            <animate attributeName="width" keyTimes="0;0.84677;0.8871;0.96774;0.98387;1" values="0.0;0.0;115.2;115.2;0.0;0.0"
+                     dur="18.6s" repeatCount="indefinite" calcMode="linear" />
+        </rect>
+    </clipPath>
+    <text x="204.0" y="74" class="blink" style="font-family:'Fira Code',monospace; font-size:12px; fill:#78dec7; visibility:hidden;">
+        <animate attributeName="visibility" keyTimes="0.1371;0.21774;0.3871;0.46774;0.6371;0.71774;0.8871;0.96774" values="visible;hidden;visible;hidden;visible;hidden;visible;hidden" dur="18.6s" repeatCount="indefinite" calcMode="discrete" />
+        <animate attributeName="x" keyTimes="0.1371;0.3871;0.6371;0.8871" values="204.0;160.8;160.8;139.2" dur="18.6s" repeatCount="indefinite" calcMode="discrete" />
+        <animate attributeName="y" keyTimes="0.1371;0.3871;0.6371;0.8871" values="74;74;74;74" dur="18.6s" repeatCount="indefinite" calcMode="discrete" />
         |
     </text>
 </svg>
