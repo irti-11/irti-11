@@ -43,8 +43,13 @@ def generate_svg():
 
     svg_width, svg_height = 850, 340
 
-    # Typing speed constant
+    # Typing speed constant for bio lines
     type_duration = 0.8
+
+    # --- Printer-style ascii reveal timing ---
+    print_total = 1.2                              # total time to "print" the whole ascii block
+    stagger = print_total / num_lines               # gap between each line starting to print
+    line_dur = stagger * 0.8                        # quick left-to-right sweep per line
 
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 {svg_width} {svg_height}" width="{svg_width}" height="{svg_height}">
     <style>
@@ -64,27 +69,34 @@ def generate_svg():
     <line x1="420" y1="38" x2="420" y2="{svg_height}" style="stroke:#1e222a; stroke-width:1;" />
 
     <svg x="{padding}" y="{38 + padding}" width="{available_w}" height="{available_h}">
-        <g style="font-size: {ascii_font_size:.2f}px; fill: {COLOR_CYAN};">
 '''
     y_offset = ascii_font_size
-    for line in chosen_art:
-        svg += f'            <text x="0" y="{y_offset:.2f}" style="white-space: pre;">{html.escape(line)}</text>\n'
+    for idx, line in enumerate(chosen_art):
+        begin = idx * stagger
+        clip_y = y_offset - ascii_font_size
+        svg += f'''        <g clip-path="url(#ascii_line_{idx})" style="font-size: {ascii_font_size:.2f}px; fill: {COLOR_CYAN};">
+            <text x="0" y="{y_offset:.2f}" style="white-space: pre;">{html.escape(line)}</text>
+        </g>
+        <clipPath id="ascii_line_{idx}">
+            <rect x="0" y="{clip_y:.2f}" width="0" height="{line_height:.2f}">
+                <animate attributeName="width" from="0" to="{available_w}" begin="{begin:.3f}s" dur="{line_dur:.3f}s" fill="freeze" />
+            </rect>
+        </clipPath>
+'''
         y_offset += line_height
 
-    svg += f'''        </g>
-        <rect x="0" y="0" width="{available_w}" height="{available_h}" fill="{BG_COLOR}">
-            <animate attributeName="height" from="{available_h}" to="0" dur="1.5s" fill="freeze" />
-        </rect>
-    </svg>
-'''
+    svg += '    </svg>\n'
+
+    # Bio panel starts typing right after the ascii finishes "printing"
+    bio_start_delay = print_total
 
     bio_y = 100
     first_y = bio_y
-    x_animations = ""   # collects the per-line x/y moves for the single cursor
-    last_delay_end = 1.5
+    x_animations = ""
+    last_delay_end = bio_start_delay
 
     for idx, item in enumerate(bio_lines):
-        delay = 1.5 + (idx * 0.8)
+        delay = bio_start_delay + (idx * type_duration)
         text_width = len(item["val"]) * 9
 
         svg += f'''        <g>
@@ -101,16 +113,15 @@ def generate_svg():
             </rect>
         </clipPath>
 '''
-        # One cursor, reused: jump to this line's y, then type across it
         x_animations += f'''            <animate attributeName="y" to="{bio_y}" begin="{delay}s" dur="0.01s" fill="freeze" />
             <animate attributeName="x" from="560" to="{560 + text_width}" begin="{delay}s" dur="{type_duration}s" fill="freeze" />
 '''
         last_delay_end = delay + type_duration
         bio_y += 45
 
-    # Single persistent cursor, moved/typed across every line above
+    # Single persistent cursor, moved/typed across every bio line
     svg += f'''        <text x="560" y="{first_y}" class="cursor blink">
-{x_animations}            <animate attributeName="visibility" from="visible" to="hidden" begin="{last_delay_end}s" dur="0.1s" fill="freeze" />
+{x_animations}            <set attributeName="visibility" to="hidden" begin="{last_delay_end}s" fill="freeze" />
             |
         </text>
 '''
@@ -119,7 +130,7 @@ def generate_svg():
 
     with open("terminal_banner.svg", "w", encoding="utf-8") as f:
         f.write(svg)
-    print("✨ Generated: single cursor gliding through all lines.")
+    print("✨ Generated: printer-style ascii reveal + single gliding cursor.")
 
 if __name__ == "__main__":
     generate_svg()
