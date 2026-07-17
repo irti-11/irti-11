@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 90" width="300" height="90">
+    <rect width="100%" height="100%" fill="transparent" />
+    <rect x="0.0" y="66.0" width="12.9" height="24.0" rx="2" fill="#78dec7">
+        <animate attributeName="height" values="24.0;42.7;24.8;26.3;24.0" keyTimes="0.0;0.25;0.5;0.75;1.0"
+                 dur="0.96s" begin="0.4s" repeatCount="indefinite" calcMode="spline"
+                 keySplines="0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1" />
+        <animate attributeName="y" values="66.0;47.3;65.2;63.7;66.0" keyTimes="0.0;0.25;0.5;0.75;1.0"
+                 dur="0.96s" begin="0.4s" repeatCount="indefinite" calcMode="spline"
+                 keySplines="0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1" />
+    </rect>
+    <rect x="16.9" y="4.9" width="12.9" height="85.1" rx="2" fill="#f2a6c3">
+        <animate attributeName="height" values="85.1;67.1;57.4;45.5;85.1" keyTimes="0.0;0.25;0.5;0.75;1.0"
+                 dur="0.7s" begin="0.01s" repeatCount="indefinite" calcMode="spline"
+                 keySplines="0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1" />
+        <animate attributeName="y" values="4.9;22.9;32.6;44.5;4.9" keyTimes="0.0;0.25;0.5;0.75;1.0"
+                 dur="0.7s" begin="0.01s" repeatCount="indefinite" calcMode="spline"
+                 keySplines="0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1" />
+    </rect>
+    <rect x="33.8" y="32.8" width="12.9" height="57.2" rx="2" fill="#aef3a4">
+        <animate attributeName="height" values="57.2;27.9;70.2;43.3;40.3;49.8;57.2" keyTimes="0.0;0.167;0.333;0.5;0.667;0.833;1.0"
+                 dur="0.97s" begin="0.0s" repeatCount="indefinite" calcMode="spline"
+                 keySplines="0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1" />
+        <animate attributeName="y" values="32.8;62.1;19.8;46.7;49.7;40.2;32.8" keyTimes="0.0;0.167;0.333;0.5;0.667;0.833;1.0"
+                 dur="0.97s" begin="0.0s" repeatCount="indefinite" calcMode="spline"
+                 keySplines="0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1" />
+    </rect>
+    <rect x="50.7" y="44.0" width="12.9" height="46.0" rx="2" fill="#e2e8f0">
+        <animate attributeName="height" values="46.0;62.9;79.2;46.5;46.0" keyTimes="0.0;0.25;0.5;0.75;1.0"
+                 dur="0.8s" begin="0.06s" repeatCount="indefinite" calcMode="spline"
+                 keySplines="0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1" />
+        <animate attributeName="y" values="44.0;27.1;10.8;43.5;44.0" keyTimes="0.0;0.25;0.5;0.75;1.0"
+                 dur="0.8s" begin="0.06s" repeatCount="indefinite" calcMode="spline"
+                 keySplines="0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1" />
+    </rect>
+    <rect x="67.6" y="52.4" width="12.9" height="37.6" rx="2" fill="#78dec7">
+        <animate attributeName="height" values="37.6;55.7;75.6;68.1;53.1;37.6" keyTimes="0.0;0.2;0.4;0.6;0.8;1.0"
+                 dur="0.84s" begin="0.45s" repeatCount="indefinite" calcMode="spline"
+                 keySplines="0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1" />
+        <animate attributeName="y" values="52.4;34.3;14.4;21.9;36.9;52.4" keyTimes="0.0;0.2;0.4;0.6;0.8;1.0"
+                 dur="0.84s" begin="0.45s" repeatCount="indefinite" calcMode="spline"
+                 keySplines="0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1" />
+    </rect>
+    <rect x="84.4" y="19.0" width="12.9" height="71.0" rx="2" fill="#f2a6c3">
+        <animate attributeName="height" values="71.0;76.8;25.6;29.1;38.7;83.5;71.0" keyTimes="0.0;0.167;0.333;0.5;0.667;0.833;1.0"
+                 dur="0.67s" begin="0.03s" repeatCount="indefinite" calcMode="spline"
+                 keySplines="0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1" />
+        <animate attributeName="y" values="19.0;13.2;64.4;60.9;51.3;6.5;19.0" keyTimes="0.0;0.167;0.333;0.5;0.667;0.833;1.0"
+                 dur="0.67s" begin="0.03s" repeatCount="indefinite" calcMode="spline"
+                 keySplines="0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1" />
+    </rect>
+    <rect x="101.3" y="30.6" width="12.9" height="59.4" rx="2" fill="#aef3a4">
+        <animate attributeName="height" values="59.4;25.8;66.9;17.0;81.9;59.4" keyTimes="0.0;0.2;0.4;0.6;0.8;1.0"
+                 dur="0.98s" begin="0.05s" repeatCount="indefinite" calcMode="spline"
+                 keySplines="0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1" />
+        <animate attributeName="y" values="30.6;64.2;23.1;73.0;8.1;30.6" keyTimes="0.0;0.2;0.4;0.6;0.8;1.0"
+                 dur="0.98s" begin="0.05s" repeatCount="indefinite" calcMode="spline"
+                 keySplines="0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1" />
+    </rect>
+    <rect x="118.2" y="30.9" width="12.9" height="59.1" rx="2" fill="#e2e8f0">
+        <animate attributeName="height" values="59.1;53.0;72.0;16.6;36.3;70.1;59.1" keyTimes="0.0;0.167;0.333;0.5;0.667;0.833;1.0"
+                 dur="1.07s" begin="0.01s" repeatCount="indefinite" calcMode="spline"
+                 keySplines="0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1" />
+        <animate attributeName="y" values="30.9;37.0;18.0;73.4;53.7;19.9;30.9" keyTimes="0.0;0.167;0.333;0.5;0.667;0.833;1.0"
+                 dur="1.07s" begin="0.01s" repeatCount="indefinite" calcMode="spline"
+                 keySplines="0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1" />
+    </rect>
+    <rect x="135.1" y="52.1" width="12.9" height="37.9" rx="2" fill="#78dec7">
+        <animate attributeName="height" values="37.9;15.9;81.5;35.5;37.9" keyTimes="0.0;0.25;0.5;0.75;1.0"
+                 dur="1.26s" begin="0.33s" repeatCount="indefinite" calcMode="spline"
+                 keySplines="0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1" />
+        <animate attributeName="y" values="52.1;74.1;8.5;54.5;52.1" keyTimes="0.0;0.25;0.5;0.75;1.0"
+                 dur="1.26s" begin="0.33s" repeatCount="indefinite" calcMode="spline"
+                 keySplines="0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1" />
+    </rect>
+    <rect x="152.0" y="58.0" width="12.9" height="32.0" rx="2" fill="#f2a6c3">
+        <animate attributeName="height" values="32.0;43.5;57.4;74.9;32.0" keyTimes="0.0;0.25;0.5;0.75;1.0"
+                 dur="1.17s" begin="0.2s" repeatCount="indefinite" calcMode="spline"
+                 keySplines="0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1" />
+        <animate attributeName="y" values="58.0;46.5;32.6;15.1;58.0" keyTimes="0.0;0.25;0.5;0.75;1.0"
+                 dur="1.17s" begin="0.2s" repeatCount="indefinite" calcMode="spline"
+                 keySplines="0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1" />
+    </rect>
+    <rect x="168.9" y="50.2" width="12.9" height="39.8" rx="2" fill="#aef3a4">
+        <animate attributeName="height" values="39.8;39.9;28.2;16.3;79.1;39.8" keyTimes="0.0;0.2;0.4;0.6;0.8;1.0"
+                 dur="0.68s" begin="0.45s" repeatCount="indefinite" calcMode="spline"
+                 keySplines="0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1" />
+        <animate attributeName="y" values="50.2;50.1;61.8;73.7;10.9;50.2" keyTimes="0.0;0.2;0.4;0.6;0.8;1.0"
+                 dur="0.68s" begin="0.45s" repeatCount="indefinite" calcMode="spline"
+                 keySplines="0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1" />
+    </rect>
+    <rect x="185.8" y="57.2" width="12.9" height="32.8" rx="2" fill="#e2e8f0">
+        <animate attributeName="height" values="32.8;44.4;26.3;52.5;51.7;45.7;32.8" keyTimes="0.0;0.167;0.333;0.5;0.667;0.833;1.0"
+                 dur="0.93s" begin="0.04s" repeatCount="indefinite" calcMode="spline"
+                 keySplines="0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1" />
+        <animate attributeName="y" values="57.2;45.6;63.7;37.5;38.3;44.3;57.2" keyTimes="0.0;0.167;0.333;0.5;0.667;0.833;1.0"
+                 dur="0.93s" begin="0.04s" repeatCount="indefinite" calcMode="spline"
+                 keySplines="0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1" />
+    </rect>
+    <rect x="202.7" y="31.6" width="12.9" height="58.4" rx="2" fill="#78dec7">
+        <animate attributeName="height" values="58.4;61.4;40.5;18.3;16.1;58.4" keyTimes="0.0;0.2;0.4;0.6;0.8;1.0"
+                 dur="0.85s" begin="0.41s" repeatCount="indefinite" calcMode="spline"
+                 keySplines="0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1" />
+        <animate attributeName="y" values="31.6;28.6;49.5;71.7;73.9;31.6" keyTimes="0.0;0.2;0.4;0.6;0.8;1.0"
+                 dur="0.85s" begin="0.41s" repeatCount="indefinite" calcMode="spline"
+                 keySplines="0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1" />
+    </rect>
+    <rect x="219.6" y="72.8" width="12.9" height="17.2" rx="2" fill="#f2a6c3">
+        <animate attributeName="height" values="17.2;27.4;39.5;55.6;17.2" keyTimes="0.0;0.25;0.5;0.75;1.0"
+                 dur="1.14s" begin="0.13s" repeatCount="indefinite" calcMode="spline"
+                 keySplines="0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1" />
+        <animate attributeName="y" values="72.8;62.6;50.5;34.4;72.8" keyTimes="0.0;0.25;0.5;0.75;1.0"
+                 dur="1.14s" begin="0.13s" repeatCount="indefinite" calcMode="spline"
+                 keySplines="0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1" />
+    </rect>
+    <rect x="236.4" y="19.8" width="12.9" height="70.2" rx="2" fill="#aef3a4">
+        <animate attributeName="height" values="70.2;39.1;84.7;23.2;70.2" keyTimes="0.0;0.25;0.5;0.75;1.0"
+                 dur="0.93s" begin="0.45s" repeatCount="indefinite" calcMode="spline"
+                 keySplines="0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1" />
+        <animate attributeName="y" values="19.8;50.9;5.3;66.8;19.8" keyTimes="0.0;0.25;0.5;0.75;1.0"
+                 dur="0.93s" begin="0.45s" repeatCount="indefinite" calcMode="spline"
+                 keySplines="0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1" />
+    </rect>
+    <rect x="253.3" y="38.8" width="12.9" height="51.2" rx="2" fill="#e2e8f0">
+        <animate attributeName="height" values="51.2;45.3;65.2;22.2;15.8;51.2" keyTimes="0.0;0.2;0.4;0.6;0.8;1.0"
+                 dur="0.71s" begin="0.48s" repeatCount="indefinite" calcMode="spline"
+                 keySplines="0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1" />
+        <animate attributeName="y" values="38.8;44.7;24.8;67.8;74.2;38.8" keyTimes="0.0;0.2;0.4;0.6;0.8;1.0"
+                 dur="0.71s" begin="0.48s" repeatCount="indefinite" calcMode="spline"
+                 keySplines="0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1" />
+    </rect>
+    <rect x="270.2" y="35.0" width="12.9" height="55.0" rx="2" fill="#78dec7">
+        <animate attributeName="height" values="55.0;52.9;51.0;23.5;14.6;55.0" keyTimes="0.0;0.2;0.4;0.6;0.8;1.0"
+                 dur="0.81s" begin="0.29s" repeatCount="indefinite" calcMode="spline"
+                 keySplines="0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1" />
+        <animate attributeName="y" values="35.0;37.1;39.0;66.5;75.4;35.0" keyTimes="0.0;0.2;0.4;0.6;0.8;1.0"
+                 dur="0.81s" begin="0.29s" repeatCount="indefinite" calcMode="spline"
+                 keySplines="0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1" />
+    </rect>
+    <rect x="287.1" y="40.5" width="12.9" height="49.5" rx="2" fill="#f2a6c3">
+        <animate attributeName="height" values="49.5;78.8;14.9;29.7;49.5" keyTimes="0.0;0.25;0.5;0.75;1.0"
+                 dur="0.7s" begin="0.4s" repeatCount="indefinite" calcMode="spline"
+                 keySplines="0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1" />
+        <animate attributeName="y" values="40.5;11.2;75.1;60.3;40.5" keyTimes="0.0;0.25;0.5;0.75;1.0"
+                 dur="0.7s" begin="0.4s" repeatCount="indefinite" calcMode="spline"
+                 keySplines="0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1 0.4 0 0.6 1" />
+    </rect>
+</svg>
