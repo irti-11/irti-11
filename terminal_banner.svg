@@ -1,120 +1,132 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 340" width="850" height="340">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 850 340" width="850" height="340">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&amp;display=swap');
-        
-        .bg { fill: #0c0f12; }
+        .bg { fill: #000000; }
         text { font-family: 'Fira Code', monospace; fill: #e2e8f0; }
-        
-        /* Terminal UI Styles */
-        .dot { rx: 5; ry: 5; }
-        .dot-red { fill: #ff5f56; }
-        .dot-yellow { fill: #ffbd2e; }
-        .dot-green { fill: #27c93f; }
-        .window-title { fill: #6272a4; font-size: 12px; }
-        .divider { stroke: #1e222a; stroke-width: 1; }
-
         .label { font-weight: 600; fill: #f2a6c3; font-size: 14px; }
-        .arrow { fill: #78dec7; font-size: 14px; }
         .val { fill: #e2e8f0; font-size: 14px; }
         .stack-val { fill: #aef3a4; font-weight: 600; font-size: 14px; }
+        .cursor { fill: #78dec7; font-weight: bold; font-size: 16px; }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+        .blink { animation: blink 1s step-end infinite; }
     </style>
-
-    <!-- Background Frame -->
     <rect width="100%" height="100%" class="bg" rx="8"/>
+    <text x="25" y="24" style="fill:#6272a4; font-size:12px;">session: sys_fetch@irti-11</text>
+    <line x1="0" y1="38" x2="850" y2="38" style="stroke:#1e222a; stroke-width:1;" />
+    <line x1="420" y1="38" x2="420" y2="340" style="stroke:#1e222a; stroke-width:1;" />
 
-    <!-- Terminal Window Bar -->
-    <circle cx="25" cy="20" r="6" class="dot dot-red"/>
-    <circle cx="45" cy="20" r="6" class="dot dot-yellow"/>
-    <circle cx="65" cy="20" r="6" class="dot dot-green"/>
-    <text x="90" y="24" class="window-title">session: sys_fetch@irti-11</text>
-    <line x1="0" y1="38" x2="850" y2="38" class="divider" />
-    <line x1="420" y1="38" x2="420" y2="340" class="divider" />
-
-    <!-- LEFT PANE: Nested SVG acts as an unbreakable wall so art NEVER bleeds right -->
-    <svg x="0" y="38" width="420" height="302">
-        <g style="font-size: 7.66px; fill: #78dec7;">
-            <text x="15" y="22.66" style="white-space: pre;">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡯⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢘⣿⣿⣿⣿⣿⣿⣿⣿</text>
-            <text x="15" y="31.86" style="white-space: pre;">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢱⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢨⣿⣿⣿⣿⣿⣿⣿⣿</text>
-            <text x="15" y="41.05" style="white-space: pre;">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡀⠀⠀⠀⠀⠀⢠⣟⠀⠀⠀⠀⠀⠀⢠⠀⢰⠀⠀⠀⠀⠀⠀⠀⡏⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣏⣻⣿⣿⣿⣿⣿⣿</text>
-            <text x="15" y="50.25" style="white-space: pre;">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠙⠀⠀⠀⠀⠀⠈⣿⡀⠀⠀⠀⠀⠀⢸⠀⠀⡇⠀⠀⠀⠀⠀⠀⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣼⣿⣿⣿⣿⣿⣿</text>
-            <text x="15" y="59.44" style="white-space: pre;">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⣄⠆⠀⠀⠀⠐⣿⣷⡀⠀⠀⠀⠀⠸⡀⠀⢷⠀⠀⠀⠀⠀⠀⢹⢈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⢰⢸⣿⣿⣿⣿⣿⣿</text>
-            <text x="15" y="68.64" style="white-space: pre;">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣞⣆⠀⠀⠀⠀⠈⠛⠳⠄⠰⡀⠀⠀⠀⡀⠀⣠⡀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⠀⠈⣏⣿⣿⣿⣿⣿⣿</text>
-            <text x="15" y="77.84" style="white-space: pre;">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢉⡆⠀⠀⠀⠀⢰⣇⠀⡄⠘⣦⡀⠀⣻⣄⠹⢿⢯⡀⠀⠍⣿⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⠀⠀⢻⢻⣿⣿⣿⣿⣿</text>
-            <text x="15" y="87.03" style="white-space: pre;">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢟⠎⠨⠀⠀⠀⠀⢀⠈⠳⢀⣿⣧⡀⢻⣷⣮⡛⠛⠉⠀⠉⠛⠏⠝⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⠀⢺⢸⣿⣿⣿⣿⣿</text>
-            <text x="15" y="96.23" style="white-space: pre;">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣵⠏⠀⠠⠀⡄⠀⠀⢸⠳⢆⣾⢿⣿⣿⣿⣿⣿⣥⡤⠾⣿⣿⠁⡂⢷⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡄⣾⢸⣿⣿⣿⣿⣿</text>
-            <text x="15" y="105.42" style="white-space: pre;">⣿⣿⣿⣿⣿⣿⣿⣿⡿⣫⣾⠃⠀⢀⠂⠀⠀⠀⠀⢟⣵⣿⣷⣔⢌⠿⣿⣿⣿⣯⣦⣀⠛⠻⢬⣉⣤⠀⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠆⢼⡀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⣷⣿⣿⣿⣿⣿⣿</text>
-            <text x="15" y="114.62" style="white-space: pre;">⣿⣿⣿⣿⣿⣿⣿⢏⣼⡿⠃⢀⠨⠀⠀⠀⠀⢠⣾⣿⣿⣿⣿⣿⣷⣕⡌⢛⢿⣿⣿⣿⣿⢧⣤⡶⠄⠠⢀⣀⣤⣴⡷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⢸⡃⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿</text>
-            <text x="15" y="123.81" style="white-space: pre;">⣿⣿⣿⣿⣿⣿⢇⣾⡿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠻⣿⣿⣿⣿⣿⣿⣿⣿⣦⡿⣎⡟⣿⢱⣸⣿⣷⣾⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡼⢧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢇⡸⣿⣿⣿⣿⣿⣿</text>
-            <text x="15" y="133.01" style="white-space: pre;">⣿⣿⣿⣿⣿⡏⣼⡿⡵⠁⢀⡔⠠⢂⠄⠀⠀⠀⠐⡼⣦⣽⣿⣿⣿⣿⣿⣿⣿⣶⣯⠓⢩⣙⢻⢿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠥⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⡝⣿⣿⣿⣿⣿</text>
-            <text x="15" y="142.20" style="white-space: pre;">⣿⣿⣿⣿⡿⣭⣫⠞⡑⠠⣾⠃⠀⠠⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⠿⠿⠿⠿⠇⢌⣿⣶⣤⣈⠺⣟⢿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⡎⢿⣿⣿⣿</text>
-            <text x="15" y="151.40" style="white-space: pre;">⣿⣿⣿⣿⢟⣽⡓⠀⡠⢰⠋⠀⣰⠀⠀⠀⠀⠀⠀⠹⠻⣿⣿⣿⣿⣿⣿⣿⣿⣽⠠⣰⣶⣶⣶⣤⣄⣂⣙⠪⣽⣻⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⢠⠹⣿⡀⣻⣿⣿</text>
-            <text x="15" y="160.59" style="white-space: pre;">⣿⣿⣿⣯⣟⡽⠁⣰⡕⢰⠂⡰⠃⠀⠀⠀⠀⠀⠀⠀⢸⣦⣭⣻⠿⣿⣿⣿⣿⠃⣰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠀⠀⠹⡆⢹⣯⠱⣻⣿</text>
-            <text x="15" y="169.79" style="white-space: pre;">⣿⣿⣳⣟⡾⠁⣸⢙⣼⠈⠈⠁⠀⠀⠀⠀⠀⠀⠀⠀⠈⣛⢿⣿⣷⣿⣿⣿⡟⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⡐⣤⣿⡇⣇⣿</text>
-            <text x="15" y="178.98" style="white-space: pre;">⣿⣿⣿⣿⠣⢰⢏⡾⢁⡼⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⠃⣾⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠋⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣇⡘⣿⡇⢻⣾</text>
-            <text x="15" y="188.18" style="white-space: pre;">⣿⣿⣿⡏⢆⢊⠞⣴⢿⠀⠀⠀⠀⠀⠀⣠⠃⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠛⠋⠉⠀⢀⣮⢯⣾⠐⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⢸⢱⠸⡏⣰⣿</text>
-            <text x="15" y="197.38" style="white-space: pre;">⣿⣿⣿⠃⠎⣠⣾⣿⠇⠀⠀⠀⠀⠀⣸⢧⠀⠀⠀⠀⠀⠀⠙⠛⠻⠿⠛⠛⠛⠋⠉⠁⠐⠈⠀⠀⠀⢀⣴⡟⣷⣿⠇⠂⠀⠀⠀⠀⠀⠀⠀⠀⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠄⠀⠀⠘⡄⢰⡇⢰⣿⣿</text>
-            <text x="15" y="206.57" style="white-space: pre;">⣿⢿⠟⠠⣸⣿⣿⠏⠀⠀⡀⡆⠀⠀⣿⡄⡀⢠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠢⠀⠀⠀⠀⠀⠀⢀⡴⣫⣯⣾⣿⡿⠄⠀⠀⠀⠀⠀⠀⠀⠀⣠⡿⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣷⢸⣾⡘⣿⣿</text>
-            <text x="15" y="215.77" style="white-space: pre;">⡿⣣⣾⢀⣿⣿⡟⠀⡄⢰⡇⡇⠀⠀⣼⣧⡇⢠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣿⣿⣿⡿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣧⠀⠀⠀⠀⠀⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠈⣿⡇⣿⣿</text>
-            <text x="15" y="224.96" style="white-space: pre;">⣾⣿⡿⡈⢿⡿⠁⢰⠁⢸⡇⣇⠀⠆⡏⣿⣿⡌⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⠀⠀⠀⠀⠀⠀⢻⣿⡿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠘⢿⠀⠀⠀⢀⣤⣶⣾⣿⣿⣷⣶⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠂⢹⡷⢸⣿</text>
+    <svg x="10" y="48" width="400" height="282">
+        <g style="font-size: 14.55px; fill: #78dec7;">
+            <text x="0" y="14.55" style="white-space: pre;">⠤⣤⣤⣤⣄⣀⣀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣠⣤⠤⠤⠴⠶⠶⠶⠶</text>
+            <text x="0" y="30.55" style="white-space: pre;">⢠⣤⣤⡄⣤⣤⣤⠄⣀⠉⣉⣙⠒⠤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠴⠘⣉⢡⣤⡤⠐⣶⡆⢶⠀⣶⣶⡦</text>
+            <text x="0" y="46.55" style="white-space: pre;">⣄⢻⣿⣧⠻⠇⠋⠀⠋⠀⢘⣿⢳⣦⣌⠳⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠞⣡⣴⣧⠻⣄⢸⣿⣿⡟⢁⡻⣸⣿⡿⠁</text>
+            <text x="0" y="62.55" style="white-space: pre;">⠈⠃⠙⢿⣧⣙⠶⣿⣿⡷⢘⣡⣿⣿⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣾⣿⣿⣿⣷⣝⡳⠶⠶⠾⣛⣵⡿⠋⠀⠀</text>
+            <text x="0" y="78.55" style="white-space: pre;">⠀⠀⠀⠀⠉⠻⣿⣶⠂⠘⠛⠛⠛⢛⡛⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠛⠀⠉⠒⠛⠀⠀⠀⠀⠀</text>
+            <text x="0" y="94.55" style="white-space: pre;">⠀⠀⠀⠀⠀⠀⣿⡇⠀⠀⠀⠀⠀⢸⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+            <text x="0" y="110.55" style="white-space: pre;">⠀⠀⠀⠀⠀⠀⣿⡇⠀⠀⠀⠀⠀⣾⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+            <text x="0" y="126.55" style="white-space: pre;">⠀⠀⠀⠀⠀⠀⣿⡇⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+            <text x="0" y="142.55" style="white-space: pre;">⠀⠀⠀⠀⠀⠀⢻⡁⠀⠀⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+            <text x="0" y="158.55" style="white-space: pre;">⠀⠀⠀⠀⠀⠀⠘⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+            <text x="0" y="174.55" style="white-space: pre;">⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+            <text x="0" y="190.55" style="white-space: pre;">⠀⠀⠀⠀⠀⠀⠀⠿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
         </g>
-        <!-- PRINTER ANIMATION: A solid block sliding downwards to reveal the text -->
-        <rect x="0" y="0" width="420" height="302" fill="#0c0f12">
-            <animate attributeName="y" from="0" to="302" dur="2s" fill="freeze" />
-            <animate attributeName="height" from="302" to="0" dur="2s" fill="freeze" />
+        <rect x="0" y="0" width="400" height="282" fill="#000000">
+            <animate attributeName="height" from="282" to="0" dur="1.5s" fill="freeze" />
         </rect>
     </svg>
-
-    <!-- RIGHT PANE: System Information Output -->
-    <g id="bio-group">
         <g>
-            <text x="450" y="95" class="label">👤 USER</text>
-            <text x="530" y="95" class="arrow">➔</text>
-            <text x="555" y="95" class="val">irti-11 (Syed Irtiza Ali)</text>
+            <text x="450" y="100" class="label">👤 USER</text>
+            
+            <g clip-path="url(#mask0)">
+                <text x="560" y="100" class="val">irti-11 (Syed Irtiza Ali)</text>
+            </g>
+            
+            <!-- Persistent Cursor that glides -->
+            <text x="560" y="100" class="cursor blink">
+                <animate attributeName="x" from="560" to="785" begin="1.5s" dur="0.8s" fill="freeze" />
+                |
+            </text>
         </g>
-        <!-- TYPEWRITER ANIMATION: Blocks sliding to the right to reveal text stroke-by-stroke -->
-        <rect x="440" y="80" width="400" height="25" fill="#0c0f12">
-            <animate attributeName="x" from="440" to="850" begin="2.0s" dur="0.6s" fill="freeze" />
-            <animate attributeName="width" from="400" to="0" begin="2.0s" dur="0.6s" fill="freeze" />
-        </rect>
+        
+        <clipPath id="mask0">
+            <rect x="560" y="80" width="0" height="30">
+                <animate attributeName="width" from="0" to="235" begin="1.5s" dur="0.8s" fill="freeze" />
+            </rect>
+        </clipPath>
         <g>
-            <text x="450" y="140" class="label">🎓 DEPT</text>
-            <text x="530" y="140" class="arrow">➔</text>
-            <text x="555" y="140" class="val">Computer Systems Engineering</text>
+            <text x="450" y="145" class="label">🎓 DEPT</text>
+            
+            <g clip-path="url(#mask1)">
+                <text x="560" y="145" class="val">Computer Systems Engineering</text>
+            </g>
+            
+            <!-- Persistent Cursor that glides -->
+            <text x="560" y="145" class="cursor blink">
+                <animate attributeName="x" from="560" to="812" begin="2.3s" dur="0.8s" fill="freeze" />
+                |
+            </text>
         </g>
-        <!-- TYPEWRITER ANIMATION: Blocks sliding to the right to reveal text stroke-by-stroke -->
-        <rect x="440" y="125" width="400" height="25" fill="#0c0f12">
-            <animate attributeName="x" from="440" to="850" begin="2.7s" dur="0.6s" fill="freeze" />
-            <animate attributeName="width" from="400" to="0" begin="2.7s" dur="0.6s" fill="freeze" />
-        </rect>
+        
+        <clipPath id="mask1">
+            <rect x="560" y="125" width="0" height="30">
+                <animate attributeName="width" from="0" to="262" begin="2.3s" dur="0.8s" fill="freeze" />
+            </rect>
+        </clipPath>
         <g>
-            <text x="450" y="185" class="label">🏫 CAMPUS</text>
-            <text x="530" y="185" class="arrow">➔</text>
-            <text x="555" y="185" class="val">Dawood UET</text>
+            <text x="450" y="190" class="label">🏫 CAMPUS</text>
+            
+            <g clip-path="url(#mask2)">
+                <text x="560" y="190" class="val">Dawood UET</text>
+            </g>
+            
+            <!-- Persistent Cursor that glides -->
+            <text x="560" y="190" class="cursor blink">
+                <animate attributeName="x" from="560" to="650" begin="3.1s" dur="0.8s" fill="freeze" />
+                |
+            </text>
         </g>
-        <!-- TYPEWRITER ANIMATION: Blocks sliding to the right to reveal text stroke-by-stroke -->
-        <rect x="440" y="170" width="400" height="25" fill="#0c0f12">
-            <animate attributeName="x" from="440" to="850" begin="3.4s" dur="0.6s" fill="freeze" />
-            <animate attributeName="width" from="400" to="0" begin="3.4s" dur="0.6s" fill="freeze" />
-        </rect>
+        
+        <clipPath id="mask2">
+            <rect x="560" y="170" width="0" height="30">
+                <animate attributeName="width" from="0" to="100" begin="3.1s" dur="0.8s" fill="freeze" />
+            </rect>
+        </clipPath>
         <g>
-            <text x="450" y="230" class="label">📍 LOCATION</text>
-            <text x="530" y="230" class="arrow">➔</text>
-            <text x="555" y="230" class="val">Karachi, Pakistan</text>
+            <text x="450" y="235" class="label">📍 LOCATION</text>
+            
+            <g clip-path="url(#mask3)">
+                <text x="560" y="235" class="val">Karachi, Pakistan</text>
+            </g>
+            
+            <!-- Persistent Cursor that glides -->
+            <text x="560" y="235" class="cursor blink">
+                <animate attributeName="x" from="560" to="713" begin="3.9000000000000004s" dur="0.8s" fill="freeze" />
+                |
+            </text>
         </g>
-        <!-- TYPEWRITER ANIMATION: Blocks sliding to the right to reveal text stroke-by-stroke -->
-        <rect x="440" y="215" width="400" height="25" fill="#0c0f12">
-            <animate attributeName="x" from="440" to="850" begin="4.1s" dur="0.6s" fill="freeze" />
-            <animate attributeName="width" from="400" to="0" begin="4.1s" dur="0.6s" fill="freeze" />
-        </rect>
+        
+        <clipPath id="mask3">
+            <rect x="560" y="215" width="0" height="30">
+                <animate attributeName="width" from="0" to="163" begin="3.9000000000000004s" dur="0.8s" fill="freeze" />
+            </rect>
+        </clipPath>
         <g>
-            <text x="450" y="275" class="label">🛠️ STACK</text>
-            <text x="530" y="275" class="arrow">➔</text>
-            <text x="555" y="275" class="stack-val">[ C++ | Python | PHP | MySQL ]</text>
+            <text x="450" y="280" class="label">🛠️ STACK</text>
+            
+            <g clip-path="url(#mask4)">
+                <text x="560" y="280" class="stack-val">[ C++ | Python | PHP | MySQL ]</text>
+            </g>
+            
+            <!-- Persistent Cursor that glides -->
+            <text x="560" y="280" class="cursor blink">
+                <animate attributeName="x" from="560" to="830" begin="4.7s" dur="0.8s" fill="freeze" />
+                |
+            </text>
         </g>
-        <!-- TYPEWRITER ANIMATION: Blocks sliding to the right to reveal text stroke-by-stroke -->
-        <rect x="440" y="260" width="400" height="25" fill="#0c0f12">
-            <animate attributeName="x" from="440" to="850" begin="4.8s" dur="0.6s" fill="freeze" />
-            <animate attributeName="width" from="400" to="0" begin="4.8s" dur="0.6s" fill="freeze" />
-        </rect>
-    </g>
+        
+        <clipPath id="mask4">
+            <rect x="560" y="260" width="0" height="30">
+                <animate attributeName="width" from="0" to="280" begin="4.7s" dur="0.8s" fill="freeze" />
+            </rect>
+        </clipPath>
 </svg>
