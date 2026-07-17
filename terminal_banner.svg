@@ -1,0 +1,339 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 850 340" width="850" height="340">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&amp;display=swap');
+        .bg { fill: #000000; }
+        text { font-family: 'Fira Code', monospace; fill: #e2e8f0; }
+        .label { font-weight: 600; fill: #f2a6c3; font-size: 14px; }
+        .val { fill: #e2e8f0; font-size: 14px; }
+        .stack-val { fill: #aef3a4; font-weight: 600; font-size: 14px; }
+        .cursor { fill: #78dec7; font-weight: bold; font-size: 16px; }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+        .blink { animation: blink 1s step-end infinite; }
+    </style>
+    <rect width="100%" height="100%" class="bg" rx="8"/>
+    <text x="25" y="24" style="fill:#6272a4; font-size:12px;">session: sys_fetch@irti-11</text>
+    <line x1="0" y1="38" x2="850" y2="38" style="stroke:#1e222a; stroke-width:1;" />
+    <line x1="420" y1="38" x2="420" y2="340" style="stroke:#1e222a; stroke-width:1;" />
+
+    <svg x="10" y="48" width="400" height="282">
+        <g clip-path="url(#ascii_line_0)" style="font-size: 8.55px; fill: #78dec7;">
+            <text x="0" y="8.55" style="white-space: pre;">⢀⣴⣶⠛⠋⠉⠉⠉⠉⠉⠙⠛⠒⠒⠒⠒⠒⠒⠒⠀⠠⠤⠤⠤⠤⠤⠤⠤⠤⠤⢤⣤⣄⣀⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+        </g>
+        <clipPath id="ascii_line_0">
+            <rect x="0" y="0.00" width="0" height="9.40">
+                <animate attributeName="width" from="0" to="400" begin="0.000s" dur="0.032s" fill="freeze" />
+            </rect>
+        </clipPath>
+        <g clip-path="url(#ascii_line_1)" style="font-size: 8.55px; fill: #78dec7;">
+            <text x="0" y="17.95" style="white-space: pre;">⣼⢻⡇⠀⠀⢀⣠⡤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⣄⣀⣀⣀⣀⣀⣀⣀⣀⣈⠉⠉⠳⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+        </g>
+        <clipPath id="ascii_line_1">
+            <rect x="0" y="9.40" width="0" height="9.40">
+                <animate attributeName="width" from="0" to="400" begin="0.040s" dur="0.032s" fill="freeze" />
+            </rect>
+        </clipPath>
+        <g clip-path="url(#ascii_line_2)" style="font-size: 8.55px; fill: #78dec7;">
+            <text x="0" y="27.35" style="white-space: pre;">⣇⢸⡇⠀⠀⣾⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠻⣆⠀⢸⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+        </g>
+        <clipPath id="ascii_line_2">
+            <rect x="0" y="18.80" width="0" height="9.40">
+                <animate attributeName="width" from="0" to="400" begin="0.080s" dur="0.032s" fill="freeze" />
+            </rect>
+        </clipPath>
+        <g clip-path="url(#ascii_line_3)" style="font-size: 8.55px; fill: #78dec7;">
+            <text x="0" y="36.75" style="white-space: pre;">⣿⠸⣧⠀⠀⢹⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠐⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+        </g>
+        <clipPath id="ascii_line_3">
+            <rect x="0" y="28.20" width="0" height="9.40">
+                <animate attributeName="width" from="0" to="400" begin="0.120s" dur="0.032s" fill="freeze" />
+            </rect>
+        </clipPath>
+        <g clip-path="url(#ascii_line_4)" style="font-size: 8.55px; fill: #78dec7;">
+            <text x="0" y="46.15" style="white-space: pre;">⢸⠀⣿⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⡇⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+        </g>
+        <clipPath id="ascii_line_4">
+            <rect x="0" y="37.60" width="0" height="9.40">
+                <animate attributeName="width" from="0" to="400" begin="0.160s" dur="0.032s" fill="freeze" />
+            </rect>
+        </clipPath>
+        <g clip-path="url(#ascii_line_5)" style="font-size: 8.55px; fill: #78dec7;">
+            <text x="0" y="55.55" style="white-space: pre;">⠸⡄⢸⡄⠀⠀⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣷⠀⢻⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+        </g>
+        <clipPath id="ascii_line_5">
+            <rect x="0" y="47.00" width="0" height="9.40">
+                <animate attributeName="width" from="0" to="400" begin="0.200s" dur="0.032s" fill="freeze" />
+            </rect>
+        </clipPath>
+        <g clip-path="url(#ascii_line_6)" style="font-size: 8.55px; fill: #78dec7;">
+            <text x="0" y="64.95" style="white-space: pre;">⠀⡇⠀⡇⠀⠀⢿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+        </g>
+        <clipPath id="ascii_line_6">
+            <rect x="0" y="56.40" width="0" height="9.40">
+                <animate attributeName="width" from="0" to="400" begin="0.240s" dur="0.032s" fill="freeze" />
+            </rect>
+        </clipPath>
+        <g clip-path="url(#ascii_line_7)" style="font-size: 8.55px; fill: #78dec7;">
+            <text x="0" y="74.35" style="white-space: pre;">⠀⣷⠀⢷⠀⠀⠸⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡄⠘⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+        </g>
+        <clipPath id="ascii_line_7">
+            <rect x="0" y="65.80" width="0" height="9.40">
+                <animate attributeName="width" from="0" to="400" begin="0.280s" dur="0.032s" fill="freeze" />
+            </rect>
+        </clipPath>
+        <g clip-path="url(#ascii_line_8)" style="font-size: 8.55px; fill: #78dec7;">
+            <text x="0" y="83.75" style="white-space: pre;">⠀⢻⠀⢸⠀⠀⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⡇⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+        </g>
+        <clipPath id="ascii_line_8">
+            <rect x="0" y="75.20" width="0" height="9.40">
+                <animate attributeName="width" from="0" to="400" begin="0.320s" dur="0.032s" fill="freeze" />
+            </rect>
+        </clipPath>
+        <g clip-path="url(#ascii_line_9)" style="font-size: 8.55px; fill: #78dec7;">
+            <text x="0" y="93.15" style="white-space: pre;">⠀⢸⡇⠸⡄⠀⠀⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠰⡇⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+        </g>
+        <clipPath id="ascii_line_9">
+            <rect x="0" y="84.60" width="0" height="9.40">
+                <animate attributeName="width" from="0" to="400" begin="0.360s" dur="0.032s" fill="freeze" />
+            </rect>
+        </clipPath>
+        <g clip-path="url(#ascii_line_10)" style="font-size: 8.55px; fill: #78dec7;">
+            <text x="0" y="102.55" style="white-space: pre;">⠀⠈⣿⠀⣇⠀⠀⢹⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⢧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+        </g>
+        <clipPath id="ascii_line_10">
+            <rect x="0" y="94.00" width="0" height="9.40">
+                <animate attributeName="width" from="0" to="400" begin="0.400s" dur="0.032s" fill="freeze" />
+            </rect>
+        </clipPath>
+        <g clip-path="url(#ascii_line_11)" style="font-size: 8.55px; fill: #78dec7;">
+            <text x="0" y="111.95" style="white-space: pre;">⠀⠀⣿⡀⢹⠀⠀⠘⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢷⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+        </g>
+        <clipPath id="ascii_line_11">
+            <rect x="0" y="103.40" width="0" height="9.40">
+                <animate attributeName="width" from="0" to="400" begin="0.440s" dur="0.032s" fill="freeze" />
+            </rect>
+        </clipPath>
+        <g clip-path="url(#ascii_line_12)" style="font-size: 8.55px; fill: #78dec7;">
+            <text x="0" y="121.35" style="white-space: pre;">⠀⠀⠉⡇⠸⡄⠀⠀⢹⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⠆⢸⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+        </g>
+        <clipPath id="ascii_line_12">
+            <rect x="0" y="112.80" width="0" height="9.40">
+                <animate attributeName="width" from="0" to="400" begin="0.480s" dur="0.032s" fill="freeze" />
+            </rect>
+        </clipPath>
+        <g clip-path="url(#ascii_line_13)" style="font-size: 8.55px; fill: #78dec7;">
+            <text x="0" y="130.75" style="white-space: pre;">⠀⠀⠀⢧⠀⣷⠀⠀⢸⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⡤⠴⠞⠋⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+        </g>
+        <clipPath id="ascii_line_13">
+            <rect x="0" y="122.20" width="0" height="9.40">
+                <animate attributeName="width" from="0" to="400" begin="0.520s" dur="0.032s" fill="freeze" />
+            </rect>
+        </clipPath>
+        <g clip-path="url(#ascii_line_14)" style="font-size: 8.55px; fill: #78dec7;">
+            <text x="0" y="140.15" style="white-space: pre;">⠀⠀⠀⢸⠀⢹⡀⠀⠈⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣠⠤⠴⠒⠛⠉⠁⢀⣀⣠⣤⣶⣾⣿⣶⠶⠤⣤⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+        </g>
+        <clipPath id="ascii_line_14">
+            <rect x="0" y="131.60" width="0" height="9.40">
+                <animate attributeName="width" from="0" to="400" begin="0.560s" dur="0.032s" fill="freeze" />
+            </rect>
+        </clipPath>
+        <g clip-path="url(#ascii_line_15)" style="font-size: 8.55px; fill: #78dec7;">
+            <text x="0" y="149.55" style="white-space: pre;">⠀⠀⠀⠘⡆⠈⣇⠀⠀⢧⡀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣤⠤⠴⠒⠚⠋⠉⠉⢀⣀⣠⣤⣴⣺⣿⣿⣿⣿⣿⣿⣟⣿⣽⢷⡲⢦⣬⣉⡙⠒⠶⠦⣤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+        </g>
+        <clipPath id="ascii_line_15">
+            <rect x="0" y="141.00" width="0" height="9.40">
+                <animate attributeName="width" from="0" to="400" begin="0.600s" dur="0.032s" fill="freeze" />
+            </rect>
+        </clipPath>
+        <g clip-path="url(#ascii_line_16)" style="font-size: 8.55px; fill: #78dec7;">
+            <text x="0" y="158.95" style="white-space: pre;">⠀⠀⠀⠀⢧⠀⢹⡀⠀⠘⢷⣤⠤⠤⠤⠖⠒⠚⠋⠉⠁⠀⠀⣀⣀⡤⠴⠖⢚⣯⡫⠼⣿⣿⣽⢿⣿⣿⣭⠼⣿⡛⢛⣦⣬⣟⠛⣿⣭⡽⠓⣶⣤⡀⠈⠉⠓⠲⠤⣤⣀⡀⠀⠀⠀</text>
+        </g>
+        <clipPath id="ascii_line_16">
+            <rect x="0" y="150.40" width="0" height="9.40">
+                <animate attributeName="width" from="0" to="400" begin="0.640s" dur="0.032s" fill="freeze" />
+            </rect>
+        </clipPath>
+        <g clip-path="url(#ascii_line_17)" style="font-size: 8.55px; fill: #78dec7;">
+            <text x="0" y="168.35" style="white-space: pre;">⠀⠀⠀⠀⢸⡀⠈⣇⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⡤⠤⠖⠻⢋⣁⣈⣤⣶⣾⣯⡿⠟⢿⣉⣠⣿⠛⠋⠹⣧⡠⣾⣿⣻⣷⠴⠟⢿⣅⣠⣿⣾⡿⠟⠁⠀⠀⠀⠀⠀⠀⠈⠉⠓⠲⣤</text>
+        </g>
+        <clipPath id="ascii_line_17">
+            <rect x="0" y="159.80" width="0" height="9.40">
+                <animate attributeName="width" from="0" to="400" begin="0.680s" dur="0.032s" fill="freeze" />
+            </rect>
+        </clipPath>
+        <g clip-path="url(#ascii_line_18)" style="font-size: 8.55px; fill: #78dec7;">
+            <text x="0" y="177.75" style="white-space: pre;">⠀⠀⠀⠀⠈⣧⠀⢹⡆⣀⣀⡤⠤⠖⠛⠋⠁⠁⣀⣠⣤⢖⢻⣿⣥⣴⡛⢉⣹⡷⠶⠿⣍⣀⣨⠷⠞⢻⣅⡠⠼⠟⠉⣹⣦⣴⣿⡿⠟⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡴⠚</text>
+        </g>
+        <clipPath id="ascii_line_18">
+            <rect x="0" y="169.20" width="0" height="9.40">
+                <animate attributeName="width" from="0" to="400" begin="0.720s" dur="0.032s" fill="freeze" />
+            </rect>
+        </clipPath>
+        <g clip-path="url(#ascii_line_19)" style="font-size: 8.55px; fill: #78dec7;">
+            <text x="0" y="187.15" style="white-space: pre;">⠀⠀⠀⠀⠀⠸⠷⢾⢿⡍⠀⠀⠀⣀⡤⠴⢾⣏⣁⣤⢿⠛⣿⣥⠤⢾⡛⠉⣙⣦⠤⢶⣏⢉⣨⡷⠖⠛⢁⣠⡤⢾⣿⣿⣿⣿⡿⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡴⠟⠁⠀⣠</text>
+        </g>
+        <clipPath id="ascii_line_19">
+            <rect x="0" y="178.60" width="0" height="9.40">
+                <animate attributeName="width" from="0" to="400" begin="0.760s" dur="0.032s" fill="freeze" />
+            </rect>
+        </clipPath>
+        <g clip-path="url(#ascii_line_20)" style="font-size: 8.55px; fill: #78dec7;">
+            <text x="0" y="196.55" style="white-space: pre;">⠀⠀⠀⠀⠀⠀⢠⣟⡀⠙⢦⡀⠀⠙⢶⡞⢻⣍⣠⡽⠟⠛⠛⢦⣄⣤⠟⠛⠻⣄⣠⠴⠛⠉⢀⣀⣤⣞⣏⡥⣞⣻⡿⠛⠋⠀⠀⠀⠙⠦⡄⠀⠀⠀⠀⢀⣠⠴⠛⠁⠀⣀⡴⠚⠁</text>
+        </g>
+        <clipPath id="ascii_line_20">
+            <rect x="0" y="188.00" width="0" height="9.40">
+                <animate attributeName="width" from="0" to="400" begin="0.800s" dur="0.032s" fill="freeze" />
+            </rect>
+        </clipPath>
+        <g clip-path="url(#ascii_line_21)" style="font-size: 8.55px; fill: #78dec7;">
+            <text x="0" y="205.95" style="white-space: pre;">⠀⠀⠀⠀⠀⠀⠀⠻⣧⡀⠀⠙⢦⡀⠈⠙⢿⡇⠈⣳⣦⠴⠾⣝⢁⣨⠷⠖⠋⢧⣀⣠⠴⢺⣭⡼⠟⣫⡥⠞⠋⠁⠀⠀⠀⠀⠀⠀⢀⡴⠇⠀⢀⡠⠖⠉⠀⠀⣠⠴⠚⠁⠀⠀⠀</text>
+        </g>
+        <clipPath id="ascii_line_21">
+            <rect x="0" y="197.40" width="0" height="9.40">
+                <animate attributeName="width" from="0" to="400" begin="0.840s" dur="0.032s" fill="freeze" />
+            </rect>
+        </clipPath>
+        <g clip-path="url(#ascii_line_22)" style="font-size: 8.55px; fill: #78dec7;">
+            <text x="0" y="215.35" style="white-space: pre;">⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⣄⠀⠀⠙⢦⡀⠀⠙⢯⡁⣀⡠⣶⠋⠉⠈⣳⡤⣶⣫⣭⡴⠖⠉⢱⡶⠊⠉⠀⠀⠀⠀⠀⠀⠀⢀⡤⠞⠋⣀⡤⠞⠉⠀⢀⣠⠶⠋⠁⠀⠀⠀⠀⠀⠀</text>
+        </g>
+        <clipPath id="ascii_line_22">
+            <rect x="0" y="206.80" width="0" height="9.40">
+                <animate attributeName="width" from="0" to="400" begin="0.880s" dur="0.032s" fill="freeze" />
+            </rect>
+        </clipPath>
+        <g clip-path="url(#ascii_line_23)" style="font-size: 8.55px; fill: #78dec7;">
+            <text x="0" y="224.75" style="white-space: pre;">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⣄⠀⠀⠙⢦⡀⠀⠙⢧⣀⣹⣷⣶⣿⡿⠿⠟⠉⠁⠀⠀⠀⠈⠻⣄⠀⠀⠀⠀⠀⣀⡴⠚⠁⣠⠴⠛⠁⠀⣀⡴⠞⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+        </g>
+        <clipPath id="ascii_line_23">
+            <rect x="0" y="216.20" width="0" height="9.40">
+                <animate attributeName="width" from="0" to="400" begin="0.920s" dur="0.032s" fill="freeze" />
+            </rect>
+        </clipPath>
+        <g clip-path="url(#ascii_line_24)" style="font-size: 8.55px; fill: #78dec7;">
+            <text x="0" y="234.15" style="white-space: pre;">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⣄⠀⠀⠙⠦⣀⠀⠉⠙⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⢤⣤⠖⠋⢁⡤⠞⠋⠁⢀⣠⠴⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+        </g>
+        <clipPath id="ascii_line_24">
+            <rect x="0" y="225.60" width="0" height="9.40">
+                <animate attributeName="width" from="0" to="400" begin="0.960s" dur="0.032s" fill="freeze" />
+            </rect>
+        </clipPath>
+        <g clip-path="url(#ascii_line_25)" style="font-size: 8.55px; fill: #78dec7;">
+            <text x="0" y="243.55" style="white-space: pre;">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⢦⡀⠀⠈⠲⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⠴⠚⠉⠀⢀⣤⠖⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+        </g>
+        <clipPath id="ascii_line_25">
+            <rect x="0" y="235.00" width="0" height="9.40">
+                <animate attributeName="width" from="0" to="400" begin="1.000s" dur="0.032s" fill="freeze" />
+            </rect>
+        </clipPath>
+        <g clip-path="url(#ascii_line_26)" style="font-size: 8.55px; fill: #78dec7;">
+            <text x="0" y="252.95" style="white-space: pre;">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢦⣀⠀⠈⠳⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡴⠚⠋⠀⢀⣠⡴⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+        </g>
+        <clipPath id="ascii_line_26">
+            <rect x="0" y="244.40" width="0" height="9.40">
+                <animate attributeName="width" from="0" to="400" begin="1.040s" dur="0.032s" fill="freeze" />
+            </rect>
+        </clipPath>
+        <g clip-path="url(#ascii_line_27)" style="font-size: 8.55px; fill: #78dec7;">
+            <text x="0" y="262.35" style="white-space: pre;">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⣄⡀⠈⠛⢦⡀⠀⠀⠀⢀⣠⠴⠚⠉⠁⠀⣠⡤⠖⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+        </g>
+        <clipPath id="ascii_line_27">
+            <rect x="0" y="253.80" width="0" height="9.40">
+                <animate attributeName="width" from="0" to="400" begin="1.080s" dur="0.032s" fill="freeze" />
+            </rect>
+        </clipPath>
+        <g clip-path="url(#ascii_line_28)" style="font-size: 8.55px; fill: #78dec7;">
+            <text x="0" y="271.75" style="white-space: pre;">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠦⣀⠀⠙⠓⠒⠛⠉⠀⠀⣀⡤⠖⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+        </g>
+        <clipPath id="ascii_line_28">
+            <rect x="0" y="263.20" width="0" height="9.40">
+                <animate attributeName="width" from="0" to="400" begin="1.120s" dur="0.032s" fill="freeze" />
+            </rect>
+        </clipPath>
+        <g clip-path="url(#ascii_line_29)" style="font-size: 8.55px; fill: #78dec7;">
+            <text x="0" y="281.15" style="white-space: pre;">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⢤⣄⣀⣤⠤⠖⠚⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+        </g>
+        <clipPath id="ascii_line_29">
+            <rect x="0" y="272.60" width="0" height="9.40">
+                <animate attributeName="width" from="0" to="400" begin="1.160s" dur="0.032s" fill="freeze" />
+            </rect>
+        </clipPath>
+    </svg>
+        <g>
+            <text x="450" y="100" class="label">👤 USER</text>
+
+            <g clip-path="url(#mask0)">
+                <text x="560" y="100" class="val">irti-11 (Syed Irtiza Ali)</text>
+            </g>
+        </g>
+
+        <clipPath id="mask0">
+            <rect x="560" y="80" width="0" height="30">
+                <animate attributeName="width" from="0" to="235" begin="1.2s" dur="0.8s" fill="freeze" />
+            </rect>
+        </clipPath>
+        <g>
+            <text x="450" y="145" class="label">🎓 DEPT</text>
+
+            <g clip-path="url(#mask1)">
+                <text x="560" y="145" class="val">Computer Systems Engineering</text>
+            </g>
+        </g>
+
+        <clipPath id="mask1">
+            <rect x="560" y="125" width="0" height="30">
+                <animate attributeName="width" from="0" to="262" begin="2.0s" dur="0.8s" fill="freeze" />
+            </rect>
+        </clipPath>
+        <g>
+            <text x="450" y="190" class="label">🏫 CAMPUS</text>
+
+            <g clip-path="url(#mask2)">
+                <text x="560" y="190" class="val">Dawood UET</text>
+            </g>
+        </g>
+
+        <clipPath id="mask2">
+            <rect x="560" y="170" width="0" height="30">
+                <animate attributeName="width" from="0" to="100" begin="2.8s" dur="0.8s" fill="freeze" />
+            </rect>
+        </clipPath>
+        <g>
+            <text x="450" y="235" class="label">📍 LOCATION</text>
+
+            <g clip-path="url(#mask3)">
+                <text x="560" y="235" class="val">Karachi, Pakistan</text>
+            </g>
+        </g>
+
+        <clipPath id="mask3">
+            <rect x="560" y="215" width="0" height="30">
+                <animate attributeName="width" from="0" to="163" begin="3.6000000000000005s" dur="0.8s" fill="freeze" />
+            </rect>
+        </clipPath>
+        <g>
+            <text x="450" y="280" class="label">🛠️ STACK</text>
+
+            <g clip-path="url(#mask4)">
+                <text x="560" y="280" class="stack-val">[ C++ | Python | PHP | MySQL ]</text>
+            </g>
+        </g>
+
+        <clipPath id="mask4">
+            <rect x="560" y="260" width="0" height="30">
+                <animate attributeName="width" from="0" to="280" begin="4.4s" dur="0.8s" fill="freeze" />
+            </rect>
+        </clipPath>
+        <text x="560" y="100" class="cursor blink">
+            <animate attributeName="y" to="100" begin="1.2s" dur="0.01s" fill="freeze" />
+            <animate attributeName="x" from="560" to="785" begin="1.2s" dur="0.8s" fill="freeze" />
+            <animate attributeName="y" to="145" begin="2.0s" dur="0.01s" fill="freeze" />
+            <animate attributeName="x" from="560" to="812" begin="2.0s" dur="0.8s" fill="freeze" />
+            <animate attributeName="y" to="190" begin="2.8s" dur="0.01s" fill="freeze" />
+            <animate attributeName="x" from="560" to="650" begin="2.8s" dur="0.8s" fill="freeze" />
+            <animate attributeName="y" to="235" begin="3.6000000000000005s" dur="0.01s" fill="freeze" />
+            <animate attributeName="x" from="560" to="713" begin="3.6000000000000005s" dur="0.8s" fill="freeze" />
+            <animate attributeName="y" to="280" begin="4.4s" dur="0.01s" fill="freeze" />
+            <animate attributeName="x" from="560" to="830" begin="4.4s" dur="0.8s" fill="freeze" />
+            <set attributeName="visibility" to="hidden" begin="5.2s" fill="freeze" />
+            |
+        </text>
+</svg>
