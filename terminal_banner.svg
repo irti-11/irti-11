@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 340" width="850" height="340">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&amp;display=swap');
+        
+        .bg { fill: #0c0f12; }
+        text {
+            font-family: 'Fira Code', monospace;
+            font-size: 13px; 
+            fill: #e2e8f0;
+        }
+        
+        /* Terminal UI Styles */
+        .dot { rx: 5; ry: 5; }
+        .dot-red { fill: #ff5f56; }
+        .dot-yellow { fill: #ffbd2e; }
+        .dot-green { fill: #27c93f; }
+        .window-title { fill: #6272a4; font-size: 12px; }
+        .divider { stroke: #1e222a; stroke-width: 1; }
+
+        /* Cascading Animation Rules */
+        .ascii-line {
+            opacity: 0;
+            animation: fadeInLine 0.3s ease-out forwards;
+        }
+        
+        .label { font-weight: 600; fill: #f2a6c3; }
+        .arrow { fill: #78dec7; }
+        .val { fill: #e2e8f0; }
+        .stack-val { fill: #aef3a4; font-weight: 600; }
+
+        @keyframes fadeInLine {
+            to { opacity: 1; }
+        }
+    </style>
+
+    <!-- Background Frame -->
+    <rect width="100%" height="100%" class="bg" rx="8"/>
+
+    <!-- Terminal Window Bar -->
+    <circle cx="25" cy="20" r="6" class="dot dot-red"/>
+    <circle cx="45" cy="20" r="6" class="dot dot-yellow"/>
+    <circle cx="65" cy="20" r="6" class="dot dot-green"/>
+    <text x="90" y="24" class="window-title">session: sys_fetch@irti-11</text>
+    <line x1="0" y1="38" x2="850" y2="38" class="divider" />
+    <line x1="420" y1="38" x2="420" y2="340" class="divider" />
+
+    <!-- LEFT PANE: Dynamic Text Art Rendering -->
+    <g id="ascii-group">
+        <text x="25" y="75" class="ascii-line" style="animation-delay: 0.00s; fill: #78dec7; white-space: pre;">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡯⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢘⣿⣿⣿⣿⣿⣿⣿⣿</text>
+    <text x="25" y="93" class="ascii-line" style="animation-delay: 0.08s; fill: #78dec7; white-space: pre;">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢱⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢨⣿⣿⣿⣿⣿⣿⣿⣿</text>
+    <text x="25" y="111" class="ascii-line" style="animation-delay: 0.16s; fill: #78dec7; white-space: pre;">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡀⠀⠀⠀⠀⠀⢠⣟⠀⠀⠀⠀⠀⠀⢠⠀⢰⠀⠀⠀⠀⠀⠀⠀⡏⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣏⣻⣿⣿⣿⣿⣿⣿</text>
+    <text x="25" y="129" class="ascii-line" style="animation-delay: 0.24s; fill: #78dec7; white-space: pre;">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠙⠀⠀⠀⠀⠀⠈⣿⡀⠀⠀⠀⠀⠀⢸⠀⠀⡇⠀⠀⠀⠀⠀⠀⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣼⣿⣿⣿⣿⣿⣿</text>
+    <text x="25" y="147" class="ascii-line" style="animation-delay: 0.32s; fill: #78dec7; white-space: pre;">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⣄⠆⠀⠀⠀⠐⣿⣷⡀⠀⠀⠀⠀⠸⡀⠀⢷⠀⠀⠀⠀⠀⠀⢹⢈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⢰⢸⣿⣿⣿⣿⣿⣿</text>
+    <text x="25" y="165" class="ascii-line" style="animation-delay: 0.40s; fill: #78dec7; white-space: pre;">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣞⣆⠀⠀⠀⠀⠈⠛⠳⠄⠰⡀⠀⠀⠀⡀⠀⣠⡀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⠀⠈⣏⣿⣿⣿⣿⣿⣿</text>
+    <text x="25" y="183" class="ascii-line" style="animation-delay: 0.48s; fill: #78dec7; white-space: pre;">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢉⡆⠀⠀⠀⠀⢰⣇⠀⡄⠘⣦⡀⠀⣻⣄⠹⢿⢯⡀⠀⠍⣿⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⠀⠀⢻⢻⣿⣿⣿⣿⣿</text>
+    <text x="25" y="201" class="ascii-line" style="animation-delay: 0.56s; fill: #78dec7; white-space: pre;">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢟⠎⠨⠀⠀⠀⠀⢀⠈⠳⢀⣿⣧⡀⢻⣷⣮⡛⠛⠉⠀⠉⠛⠏⠝⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⠀⢺⢸⣿⣿⣿⣿⣿</text>
+    <text x="25" y="219" class="ascii-line" style="animation-delay: 0.64s; fill: #78dec7; white-space: pre;">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣵⠏⠀⠠⠀⡄⠀⠀⢸⠳⢆⣾⢿⣿⣿⣿⣿⣿⣥⡤⠾⣿⣿⠁⡂⢷⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡄⣾⢸⣿⣿⣿⣿⣿</text>
+    <text x="25" y="237" class="ascii-line" style="animation-delay: 0.72s; fill: #78dec7; white-space: pre;">⣿⣿⣿⣿⣿⣿⣿⣿⡿⣫⣾⠃⠀⢀⠂⠀⠀⠀⠀⢟⣵⣿⣷⣔⢌⠿⣿⣿⣿⣯⣦⣀⠛⠻⢬⣉⣤⠀⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠆⢼⡀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⣷⣿⣿⣿⣿⣿⣿</text>
+    <text x="25" y="255" class="ascii-line" style="animation-delay: 0.80s; fill: #78dec7; white-space: pre;">⣿⣿⣿⣿⣿⣿⣿⢏⣼⡿⠃⢀⠨⠀⠀⠀⠀⢠⣾⣿⣿⣿⣿⣿⣷⣕⡌⢛⢿⣿⣿⣿⣿⢧⣤⡶⠄⠠⢀⣀⣤⣴⡷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⢸⡃⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿</text>
+    <text x="25" y="273" class="ascii-line" style="animation-delay: 0.88s; fill: #78dec7; white-space: pre;">⣿⣿⣿⣿⣿⣿⢇⣾⡿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠻⣿⣿⣿⣿⣿⣿⣿⣿⣦⡿⣎⡟⣿⢱⣸⣿⣷⣾⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡼⢧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢇⡸⣿⣿⣿⣿⣿⣿</text>
+    <text x="25" y="291" class="ascii-line" style="animation-delay: 0.96s; fill: #78dec7; white-space: pre;">⣿⣿⣿⣿⣿⡏⣼⡿⡵⠁⢀⡔⠠⢂⠄⠀⠀⠀⠐⡼⣦⣽⣿⣿⣿⣿⣿⣿⣿⣶⣯⠓⢩⣙⢻⢿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠥⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⡝⣿⣿⣿⣿⣿</text>
+    <text x="25" y="309" class="ascii-line" style="animation-delay: 1.04s; fill: #78dec7; white-space: pre;">⣿⣿⣿⣿⡿⣭⣫⠞⡑⠠⣾⠃⠀⠠⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⠿⠿⠿⠿⠇⢌⣿⣶⣤⣈⠺⣟⢿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⡎⢿⣿⣿⣿</text>
+    </g>
+
+    <!-- RIGHT PANE: System Information Output -->
+    <g id="bio-group">
+        <g class="ascii-line" style="animation-delay: 1.20s;">
+            <text x="450" y="95" class="label">👤 USER</text>
+            <text x="530" y="95" class="arrow">➔</text>
+            <text x="555" y="95" class="val">irti-11 (Syed Irtiza Ali)</text>
+        </g>
+        <g class="ascii-line" style="animation-delay: 1.40s;">
+            <text x="450" y="133" class="label">🎓 DEPT</text>
+            <text x="530" y="133" class="arrow">➔</text>
+            <text x="555" y="133" class="val">Computer Systems Engineering</text>
+        </g>
+        <g class="ascii-line" style="animation-delay: 1.60s;">
+            <text x="450" y="171" class="label">🏫 CAMPUS</text>
+            <text x="530" y="171" class="arrow">➔</text>
+            <text x="555" y="171" class="val">Dawood UET</text>
+        </g>
+        <g class="ascii-line" style="animation-delay: 1.80s;">
+            <text x="450" y="209" class="label">📍 LOCATION</text>
+            <text x="530" y="209" class="arrow">➔</text>
+            <text x="555" y="209" class="val">Karachi, Pakistan</text>
+        </g>
+        <g class="ascii-line" style="animation-delay: 2.00s;">
+            <text x="450" y="247" class="label">🛠️ STACK</text>
+            <text x="530" y="247" class="arrow">➔</text>
+            <text x="555" y="247" class="stack-val">[ C++ | Python | PHP | MySQL ]</text>
+        </g>
+    </g>
+</svg>
