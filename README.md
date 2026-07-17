@@ -21,20 +21,18 @@ I'm continuously improving my backend development skills by building practical p
 ![Skills Map](./skills_map.svg)
 
 ###
-
-<div align="left">
+<p align="left">
 
 [![Gmail](https://img.shields.io/badge/Gmail-DB4437?style=for-the-badge&logo=gmail&logoColor=white)](mailto:irtiza001690@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sdirtiza-ali)
 [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/pxlsect.xyz)
 
-</div>
+</p>
 
-<div style="display:flex; flex-wrap:wrap; gap:16px; align-items:flex-start; margin-top:12px;">
-  <img src="https://raw.githubusercontent.com/irti-11/irti-11/main/equalizer.svg" alt="equalizer" style="flex:1 1 280px; max-width:100%; height:auto;" />
-  <img src="https://raw.githubusercontent.com/irti-11/irti-11/main/terminal_loop.svg" alt="terminal" style="flex:1 1 280px; max-width:100%; height:auto;" />
-</div>
-
+<p align="left">
+  <img src="https://raw.githubusercontent.com/irti-11/irti-11/main/equalizer.svg" alt="equalizer" width="380" />
+  <img src="https://raw.githubusercontent.com/irti-11/irti-11/main/terminal_loop.svg" alt="terminal" width="380" />
+</p>
 ###
 
 <h1 align="left">🔧 What I'm Working On</h1>
