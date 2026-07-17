@@ -71,6 +71,10 @@ def generate_svg():
     <svg x="{padding}" y="{38 + padding}" width="{available_w}" height="{available_h}">
 '''
     y_offset = ascii_font_size
+    content_height = num_lines * line_height
+    vertical_offset = max(0, (available_h - content_height) / 2)
+    y_offset += vertical_offset
+
     for idx, line in enumerate(chosen_art):
         begin = idx * stagger
         clip_y = y_offset - ascii_font_size
