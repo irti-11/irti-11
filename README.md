@@ -6,11 +6,14 @@
 
 ###
 
-<h1 align="left">Salutations, I'm Syed Irtiza Ali</h1>
+<h1 align="left">Salutations, I'm Syed Irtiza Al</h1>
 
 ###
 
-<p align="left">I sit at the edge of design and code<br>not fully one, not fully the other.<br>That in-between is where I do my best work.<br><br>I care about how things look, how they feel,<br>and whether they were worth building at all.</p>
+<p align="left">I'm a Computer System Engineering student focused on full-stack web development and software engineering. I build responsive, database-driven web applications using HTML, CSS, JavaScript, PHP, and MySQL, with an emphasis on clean code, user-friendly interfaces, and efficient database design.
+
+I'm continuously improving my backend development skills by building practical projects, exploring modern web development practices, and strengthening my understanding of software development through hands-on experience.
+</p>
 
 ###
 
