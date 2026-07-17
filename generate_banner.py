@@ -93,6 +93,8 @@ def generate_svg():
             <!-- Persistent Cursor that glides -->
             <text x="560" y="{bio_y}" class="cursor blink">
                 <animate attributeName="x" from="560" to="{560 + text_width}" begin="{delay}s" dur="{type_duration}s" fill="freeze" />
+                <!-- This forces the cursor to be hidden after the animation ends -->
+                <animate attributeName="visibility" from="visible" to="hidden" begin="{delay + type_duration}s" dur="0.1s" fill="freeze" />
                 |
             </text>
         </g>

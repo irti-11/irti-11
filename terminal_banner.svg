@@ -55,6 +55,8 @@
             <!-- Persistent Cursor that glides -->
             <text x="560" y="100" class="cursor blink">
                 <animate attributeName="x" from="560" to="785" begin="1.5s" dur="0.8s" fill="freeze" />
+                <!-- This forces the cursor to be hidden after the animation ends -->
+                <animate attributeName="visibility" from="visible" to="hidden" begin="2.3s" dur="0.1s" fill="freeze" />
                 |
             </text>
         </g>
@@ -74,6 +76,8 @@
             <!-- Persistent Cursor that glides -->
             <text x="560" y="145" class="cursor blink">
                 <animate attributeName="x" from="560" to="812" begin="2.3s" dur="0.8s" fill="freeze" />
+                <!-- This forces the cursor to be hidden after the animation ends -->
+                <animate attributeName="visibility" from="visible" to="hidden" begin="3.0999999999999996s" dur="0.1s" fill="freeze" />
                 |
             </text>
         </g>
@@ -93,6 +97,8 @@
             <!-- Persistent Cursor that glides -->
             <text x="560" y="190" class="cursor blink">
                 <animate attributeName="x" from="560" to="650" begin="3.1s" dur="0.8s" fill="freeze" />
+                <!-- This forces the cursor to be hidden after the animation ends -->
+                <animate attributeName="visibility" from="visible" to="hidden" begin="3.9000000000000004s" dur="0.1s" fill="freeze" />
                 |
             </text>
         </g>
@@ -112,6 +118,8 @@
             <!-- Persistent Cursor that glides -->
             <text x="560" y="235" class="cursor blink">
                 <animate attributeName="x" from="560" to="713" begin="3.9000000000000004s" dur="0.8s" fill="freeze" />
+                <!-- This forces the cursor to be hidden after the animation ends -->
+                <animate attributeName="visibility" from="visible" to="hidden" begin="4.7s" dur="0.1s" fill="freeze" />
                 |
             </text>
         </g>
@@ -131,6 +139,8 @@
             <!-- Persistent Cursor that glides -->
             <text x="560" y="280" class="cursor blink">
                 <animate attributeName="x" from="560" to="830" begin="4.7s" dur="0.8s" fill="freeze" />
+                <!-- This forces the cursor to be hidden after the animation ends -->
+                <animate attributeName="visibility" from="visible" to="hidden" begin="5.5s" dur="0.1s" fill="freeze" />
                 |
             </text>
         </g>
