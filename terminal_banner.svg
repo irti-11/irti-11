@@ -16,21 +16,37 @@
     <line x1="420" y1="38" x2="420" y2="340" style="stroke:#1e222a; stroke-width:1;" />
 
     <svg x="10" y="48" width="400" height="282">
-        <g style="font-size: 16.00px; fill: #78dec7;">
-            <text x="0" y="16.00" style="white-space: pre;">⣇⣿⠘⣿⣿⣿⡿⡿⣟⣟⢟⢟⢝⠵⡝⣿⡿⢂⣼⣿⣷⣌⠩⡫⡻⣝⠹⢿⣿⣷</text>
-            <text x="0" y="33.60" style="white-space: pre;">⡆⣿⣆⠱⣝⡵⣝⢅⠙⣿⢕⢕⢕⢕⢝⣥⢒⠅⣿⣿⣿⡿⣳⣌⠪⡪⣡⢑⢝⣇</text>
-            <text x="0" y="51.20" style="white-space: pre;">⡆⣿⣿⣦⠹⣳⣳⣕⢅⠈⢗⢕⢕⢕⢕⢕⢈⢆⠟⠋⠉⠁⠉⠉⠁⠈⠼⢐⢕⢽</text>
-            <text x="0" y="68.80" style="white-space: pre;">⡗⢰⣶⣶⣦⣝⢝⢕⢕⠅⡆⢕⢕⢕⢕⢕⣴⠏⣠⡶⠛⡉⡉⡛⢶⣦⡀⠐⣕⢕</text>
-            <text x="0" y="86.40" style="white-space: pre;">⡝⡄⢻⢟⣿⣿⣷⣕⣕⣅⣿⣔⣕⣵⣵⣿⣿⢠⣿⢠⣮⡈⣌⠨⠅⠹⣷⡀⢱⢕</text>
-            <text x="0" y="104.00" style="white-space: pre;">⡝⡵⠟⠈⢀⣀⣀⡀⠉⢿⣿⣿⣿⣿⣿⣿⣿⣼⣿⢈⡋⠴⢿⡟⣡⡇⣿⡇⡀⢕</text>
-            <text x="0" y="121.60" style="white-space: pre;">⡝⠁⣠⣾⠟⡉⡉⡉⠻⣦⣻⣿⣿⣿⣿⣿⣿⣿⣿⣧⠸⣿⣦⣥⣿⡇⡿⣰⢗⢄</text>
-            <text x="0" y="139.20" style="white-space: pre;">⠁⢰⣿⡏⣴⣌⠈⣌⠡⠈⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣬⣉⣉⣁⣄⢖⢕⢕⢕</text>
-            <text x="0" y="156.80" style="white-space: pre;">⡀⢻⣿⡇⢙⠁⠴⢿⡟⣡⡆⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣵⣵⣿</text>
-            <text x="0" y="174.40" style="white-space: pre;">⡻⣄⣻⣿⣌⠘⢿⣷⣥⣿⠇⣿⣿⣿⣿⣿⣿⠛⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</text>
-            <text x="0" y="192.00" style="white-space: pre;">⣷⢄⠻⣿⣟⠿⠦⠍⠉⣡⣾⣿⣿⣿⣿⣿⣿⢸⣿⣦⠙⣿⣿⣿⣿⣿⣿⣿⣿⠟</text>
-            <text x="0" y="209.60" style="white-space: pre;">⡕⡑⣑⣈⣻⢗⢟⢞⢝⣻⣿⣿⣿⣿⣿⣿⣿⠸⣿⠿⠃⣿⣿⣿⣿⣿⣿⡿⠁⣠</text>
-            <text x="0" y="227.20" style="white-space: pre;">⡝⡵⡈⢟⢕⢕⢕⢕⣵⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣶⣿⣿⣿⣿⣿⠿⠋⣀⣈⠙</text>
-            <text x="0" y="244.80" style="white-space: pre;">⡝⡵⡕⡀⠑⠳⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⢉⡠⡲⡫⡪⡪⡣ </text>
+        <g style="font-size: 8.55px; fill: #78dec7;">
+            <text x="0" y="8.55" style="white-space: pre;">⢀⣴⣶⠛⠋⠉⠉⠉⠉⠉⠙⠛⠒⠒⠒⠒⠒⠒⠒⠀⠠⠤⠤⠤⠤⠤⠤⠤⠤⠤⢤⣤⣄⣀⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+            <text x="0" y="17.95" style="white-space: pre;">⣼⢻⡇⠀⠀⢀⣠⡤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⣄⣀⣀⣀⣀⣀⣀⣀⣀⣈⠉⠉⠳⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+            <text x="0" y="27.35" style="white-space: pre;">⣇⢸⡇⠀⠀⣾⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠻⣆⠀⢸⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+            <text x="0" y="36.75" style="white-space: pre;">⣿⠸⣧⠀⠀⢹⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠐⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+            <text x="0" y="46.15" style="white-space: pre;">⢸⠀⣿⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⡇⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+            <text x="0" y="55.55" style="white-space: pre;">⠸⡄⢸⡄⠀⠀⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣷⠀⢻⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+            <text x="0" y="64.95" style="white-space: pre;">⠀⡇⠀⡇⠀⠀⢿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+            <text x="0" y="74.35" style="white-space: pre;">⠀⣷⠀⢷⠀⠀⠸⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡄⠘⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+            <text x="0" y="83.75" style="white-space: pre;">⠀⢻⠀⢸⠀⠀⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⡇⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+            <text x="0" y="93.15" style="white-space: pre;">⠀⢸⡇⠸⡄⠀⠀⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠰⡇⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+            <text x="0" y="102.55" style="white-space: pre;">⠀⠈⣿⠀⣇⠀⠀⢹⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⢧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+            <text x="0" y="111.95" style="white-space: pre;">⠀⠀⣿⡀⢹⠀⠀⠘⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢷⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+            <text x="0" y="121.35" style="white-space: pre;">⠀⠀⠉⡇⠸⡄⠀⠀⢹⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⠆⢸⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+            <text x="0" y="130.75" style="white-space: pre;">⠀⠀⠀⢧⠀⣷⠀⠀⢸⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⡤⠴⠞⠋⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+            <text x="0" y="140.15" style="white-space: pre;">⠀⠀⠀⢸⠀⢹⡀⠀⠈⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣠⠤⠴⠒⠛⠉⠁⢀⣀⣠⣤⣶⣾⣿⣶⠶⠤⣤⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+            <text x="0" y="149.55" style="white-space: pre;">⠀⠀⠀⠘⡆⠈⣇⠀⠀⢧⡀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣤⠤⠴⠒⠚⠋⠉⠉⢀⣀⣠⣤⣴⣺⣿⣿⣿⣿⣿⣿⣟⣿⣽⢷⡲⢦⣬⣉⡙⠒⠶⠦⣤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+            <text x="0" y="158.95" style="white-space: pre;">⠀⠀⠀⠀⢧⠀⢹⡀⠀⠘⢷⣤⠤⠤⠤⠖⠒⠚⠋⠉⠁⠀⠀⣀⣀⡤⠴⠖⢚⣯⡫⠼⣿⣿⣽⢿⣿⣿⣭⠼⣿⡛⢛⣦⣬⣟⠛⣿⣭⡽⠓⣶⣤⡀⠈⠉⠓⠲⠤⣤⣀⡀⠀⠀⠀</text>
+            <text x="0" y="168.35" style="white-space: pre;">⠀⠀⠀⠀⢸⡀⠈⣇⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⡤⠤⠖⠻⢋⣁⣈⣤⣶⣾⣯⡿⠟⢿⣉⣠⣿⠛⠋⠹⣧⡠⣾⣿⣻⣷⠴⠟⢿⣅⣠⣿⣾⡿⠟⠁⠀⠀⠀⠀⠀⠀⠈⠉⠓⠲⣤</text>
+            <text x="0" y="177.75" style="white-space: pre;">⠀⠀⠀⠀⠈⣧⠀⢹⡆⣀⣀⡤⠤⠖⠛⠋⠁⠁⣀⣠⣤⢖⢻⣿⣥⣴⡛⢉⣹⡷⠶⠿⣍⣀⣨⠷⠞⢻⣅⡠⠼⠟⠉⣹⣦⣴⣿⡿⠟⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡴⠚</text>
+            <text x="0" y="187.15" style="white-space: pre;">⠀⠀⠀⠀⠀⠸⠷⢾⢿⡍⠀⠀⠀⣀⡤⠴⢾⣏⣁⣤⢿⠛⣿⣥⠤⢾⡛⠉⣙⣦⠤⢶⣏⢉⣨⡷⠖⠛⢁⣠⡤⢾⣿⣿⣿⣿⡿⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡴⠟⠁⠀⣠</text>
+            <text x="0" y="196.55" style="white-space: pre;">⠀⠀⠀⠀⠀⠀⢠⣟⡀⠙⢦⡀⠀⠙⢶⡞⢻⣍⣠⡽⠟⠛⠛⢦⣄⣤⠟⠛⠻⣄⣠⠴⠛⠉⢀⣀⣤⣞⣏⡥⣞⣻⡿⠛⠋⠀⠀⠀⠙⠦⡄⠀⠀⠀⠀⢀⣠⠴⠛⠁⠀⣀⡴⠚⠁</text>
+            <text x="0" y="205.95" style="white-space: pre;">⠀⠀⠀⠀⠀⠀⠀⠻⣧⡀⠀⠙⢦⡀⠈⠙⢿⡇⠈⣳⣦⠴⠾⣝⢁⣨⠷⠖⠋⢧⣀⣠⠴⢺⣭⡼⠟⣫⡥⠞⠋⠁⠀⠀⠀⠀⠀⠀⢀⡴⠇⠀⢀⡠⠖⠉⠀⠀⣠⠴⠚⠁⠀⠀⠀</text>
+            <text x="0" y="215.35" style="white-space: pre;">⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⣄⠀⠀⠙⢦⡀⠀⠙⢯⡁⣀⡠⣶⠋⠉⠈⣳⡤⣶⣫⣭⡴⠖⠉⢱⡶⠊⠉⠀⠀⠀⠀⠀⠀⠀⢀⡤⠞⠋⣀⡤⠞⠉⠀⢀⣠⠶⠋⠁⠀⠀⠀⠀⠀⠀</text>
+            <text x="0" y="224.75" style="white-space: pre;">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⣄⠀⠀⠙⢦⡀⠀⠙⢧⣀⣹⣷⣶⣿⡿⠿⠟⠉⠁⠀⠀⠀⠈⠻⣄⠀⠀⠀⠀⠀⣀⡴⠚⠁⣠⠴⠛⠁⠀⣀⡴⠞⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+            <text x="0" y="234.15" style="white-space: pre;">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⣄⠀⠀⠙⠦⣀⠀⠉⠙⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⢤⣤⠖⠋⢁⡤⠞⠋⠁⢀⣠⠴⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+            <text x="0" y="243.55" style="white-space: pre;">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⢦⡀⠀⠈⠲⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⠴⠚⠉⠀⢀⣤⠖⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+            <text x="0" y="252.95" style="white-space: pre;">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢦⣀⠀⠈⠳⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡴⠚⠋⠀⢀⣠⡴⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+            <text x="0" y="262.35" style="white-space: pre;">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⣄⡀⠈⠛⢦⡀⠀⠀⠀⢀⣠⠴⠚⠉⠁⠀⣠⡤⠖⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+            <text x="0" y="271.75" style="white-space: pre;">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠦⣀⠀⠙⠓⠒⠛⠉⠀⠀⣀⡤⠖⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+            <text x="0" y="281.15" style="white-space: pre;">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⢤⣄⣀⣤⠤⠖⠚⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
         </g>
         <rect x="0" y="0" width="400" height="282" fill="#000000">
             <animate attributeName="height" from="282" to="0" dur="1.5s" fill="freeze" />
@@ -38,20 +54,12 @@
     </svg>
         <g>
             <text x="450" y="100" class="label">👤 USER</text>
-            
+
             <g clip-path="url(#mask0)">
                 <text x="560" y="100" class="val">irti-11 (Syed Irtiza Ali)</text>
             </g>
-            
-            <!-- Persistent Cursor that glides -->
-            <text x="560" y="100" class="cursor blink">
-                <animate attributeName="x" from="560" to="785" begin="1.5s" dur="0.8s" fill="freeze" />
-                <!-- This forces the cursor to be hidden after the animation ends -->
-                <animate attributeName="visibility" from="visible" to="hidden" begin="2.3s" dur="0.1s" fill="freeze" />
-                |
-            </text>
         </g>
-        
+
         <clipPath id="mask0">
             <rect x="560" y="80" width="0" height="30">
                 <animate attributeName="width" from="0" to="235" begin="1.5s" dur="0.8s" fill="freeze" />
@@ -59,20 +67,12 @@
         </clipPath>
         <g>
             <text x="450" y="145" class="label">🎓 DEPT</text>
-            
+
             <g clip-path="url(#mask1)">
                 <text x="560" y="145" class="val">Computer Systems Engineering</text>
             </g>
-            
-            <!-- Persistent Cursor that glides -->
-            <text x="560" y="145" class="cursor blink">
-                <animate attributeName="x" from="560" to="812" begin="2.3s" dur="0.8s" fill="freeze" />
-                <!-- This forces the cursor to be hidden after the animation ends -->
-                <animate attributeName="visibility" from="visible" to="hidden" begin="3.0999999999999996s" dur="0.1s" fill="freeze" />
-                |
-            </text>
         </g>
-        
+
         <clipPath id="mask1">
             <rect x="560" y="125" width="0" height="30">
                 <animate attributeName="width" from="0" to="262" begin="2.3s" dur="0.8s" fill="freeze" />
@@ -80,20 +80,12 @@
         </clipPath>
         <g>
             <text x="450" y="190" class="label">🏫 CAMPUS</text>
-            
+
             <g clip-path="url(#mask2)">
                 <text x="560" y="190" class="val">Dawood UET</text>
             </g>
-            
-            <!-- Persistent Cursor that glides -->
-            <text x="560" y="190" class="cursor blink">
-                <animate attributeName="x" from="560" to="650" begin="3.1s" dur="0.8s" fill="freeze" />
-                <!-- This forces the cursor to be hidden after the animation ends -->
-                <animate attributeName="visibility" from="visible" to="hidden" begin="3.9000000000000004s" dur="0.1s" fill="freeze" />
-                |
-            </text>
         </g>
-        
+
         <clipPath id="mask2">
             <rect x="560" y="170" width="0" height="30">
                 <animate attributeName="width" from="0" to="100" begin="3.1s" dur="0.8s" fill="freeze" />
@@ -101,20 +93,12 @@
         </clipPath>
         <g>
             <text x="450" y="235" class="label">📍 LOCATION</text>
-            
+
             <g clip-path="url(#mask3)">
                 <text x="560" y="235" class="val">Karachi, Pakistan</text>
             </g>
-            
-            <!-- Persistent Cursor that glides -->
-            <text x="560" y="235" class="cursor blink">
-                <animate attributeName="x" from="560" to="713" begin="3.9000000000000004s" dur="0.8s" fill="freeze" />
-                <!-- This forces the cursor to be hidden after the animation ends -->
-                <animate attributeName="visibility" from="visible" to="hidden" begin="4.7s" dur="0.1s" fill="freeze" />
-                |
-            </text>
         </g>
-        
+
         <clipPath id="mask3">
             <rect x="560" y="215" width="0" height="30">
                 <animate attributeName="width" from="0" to="163" begin="3.9000000000000004s" dur="0.8s" fill="freeze" />
@@ -122,23 +106,29 @@
         </clipPath>
         <g>
             <text x="450" y="280" class="label">🛠️ STACK</text>
-            
+
             <g clip-path="url(#mask4)">
                 <text x="560" y="280" class="stack-val">[ C++ | Python | PHP | MySQL ]</text>
             </g>
-            
-            <!-- Persistent Cursor that glides -->
-            <text x="560" y="280" class="cursor blink">
-                <animate attributeName="x" from="560" to="830" begin="4.7s" dur="0.8s" fill="freeze" />
-                <!-- This forces the cursor to be hidden after the animation ends -->
-                <animate attributeName="visibility" from="visible" to="hidden" begin="5.5s" dur="0.1s" fill="freeze" />
-                |
-            </text>
         </g>
-        
+
         <clipPath id="mask4">
             <rect x="560" y="260" width="0" height="30">
                 <animate attributeName="width" from="0" to="280" begin="4.7s" dur="0.8s" fill="freeze" />
             </rect>
         </clipPath>
+        <text x="560" y="100" class="cursor blink">
+            <animate attributeName="y" to="100" begin="1.5s" dur="0.01s" fill="freeze" />
+            <animate attributeName="x" from="560" to="785" begin="1.5s" dur="0.8s" fill="freeze" />
+            <animate attributeName="y" to="145" begin="2.3s" dur="0.01s" fill="freeze" />
+            <animate attributeName="x" from="560" to="812" begin="2.3s" dur="0.8s" fill="freeze" />
+            <animate attributeName="y" to="190" begin="3.1s" dur="0.01s" fill="freeze" />
+            <animate attributeName="x" from="560" to="650" begin="3.1s" dur="0.8s" fill="freeze" />
+            <animate attributeName="y" to="235" begin="3.9000000000000004s" dur="0.01s" fill="freeze" />
+            <animate attributeName="x" from="560" to="713" begin="3.9000000000000004s" dur="0.8s" fill="freeze" />
+            <animate attributeName="y" to="280" begin="4.7s" dur="0.01s" fill="freeze" />
+            <animate attributeName="x" from="560" to="830" begin="4.7s" dur="0.8s" fill="freeze" />
+            <animate attributeName="visibility" from="visible" to="hidden" begin="5.5s" dur="0.1s" fill="freeze" />
+            |
+        </text>
 </svg>
