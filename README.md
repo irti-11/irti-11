@@ -22,7 +22,11 @@ I'm continuously improving my backend development skills by building practical p
 
 ###
 
-<a href="#"><img src="./socials_marquee.svg" alt="Socials"></a>
+
+
+[![Gmail](https://img.shields.io/badge/Gmail-DB4437?style=for-the-badge&logo=gmail&logoColor=white)](mailto:irtiza001690@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sdirtiza-ali)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/pxlsect.xyz)
 
 ###
 
