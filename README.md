@@ -36,6 +36,11 @@ I'm continuously improving my backend development skills by building practical p
 ![Equalizer](https://raw.githubusercontent.com/irti-11/irti-11/main/equalizer.svg)
 
 </td>
+<td>
+
+![Terminal Loop](https://raw.githubusercontent.com/irti-11/irti-11/main/terminal_loop.svg)
+
+</td>
 </tr>
 </table>
 
