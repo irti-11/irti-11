@@ -40,17 +40,12 @@ I'm continuously improving my backend development skills by building practical p
   <img src="https://raw.githubusercontent.com/irti-11/irti-11/main/project_monitor.svg" alt="projects showcase" width="750" />
 </p>
 
-<h1 align="left">Fun Fact</h1>
+### 📊 GitHub Status
 
-###
-
-<img align="right" height="141" src="https://user-images.githubusercontent.com/74038190/216655848-cf4d7bed-52aa-4740-8c67-1832472051ec.gif"  />
-
-###
-
-<p align="left">I have a cat. she has witnessed every deadline.<br>desktop customized. always. it's the first thing.<br>I run @pxlsect.xyz — design, type, setups, digital life<br> once rebuilt a whole layout because one font felt wrong<br>silence + screen + late hour = best work condition</p>
-
-###
+<p align="left">
+  <img src="https://raw.githubusercontent.com/irti-11/irti-11/main/meme_panel.svg" alt="mood" width="340" />
+  <img src="https://raw.githubusercontent.com/irti-11/irti-11/main/status_panel.svg" alt="status" width="340" />
+</p>
 
 <h1 align="left">📡 Goals / What I'm Learning</h1>
 
