@@ -23,7 +23,6 @@ BUBBLE_BG = "#151922"
 def fetch_json(url, retries=3):
     req = urllib.request.Request(url)
     req.add_header("User-Agent", "profile-status-script")
-    # If token exists, use it to fetch private repos and commits
     if TOKEN:
         req.add_header("Authorization", f"token {TOKEN}")
         
@@ -41,8 +40,6 @@ def get_github_data():
     try:
         user = fetch_json(f"https://api.github.com/users/{USERNAME}")
         repos = fetch_json(f"https://api.github.com/users/{USERNAME}/repos?per_page=100")
-        
-        # Use authenticated events endpoint if token is available to see private history
         events_url = f"https://api.github.com/users/{USERNAME}/events" if TOKEN else f"https://api.github.com/users/{USERNAME}/events/public"
         events = fetch_json(events_url)
     except Exception as e:
@@ -107,6 +104,12 @@ def generate(width=400):
         ("📈", "This Week", f'{data["week_commits"]} commits'),
         ("💬", "Top Language", data["top_lang"]),
     ]
+    
+    # --- FIX: Calculate position variables BEFORE evaluating the SVG f-string ---
+    y_calc = 75
+    for _ in rows:
+        y_calc += 32
+    y_char_section = y_calc + 10
     
     stats_h = 240
     char_h = 160
@@ -175,9 +178,9 @@ def generate(width=400):
     <!-- Title Section -->
     <text x="20" y="35" class="title">Irtiza's GitHub Status</text>
     <line x1="20" y1="48" x2="{width-20}" y2="48" stroke="{CARD_BORDER}" stroke-width="1.5" />
-
-    <!-- Stats Section -->
     '''
+    
+    # Render stats rows
     y = 75
     for icon, label_txt, val in rows:
         svg += f'''
@@ -186,15 +189,14 @@ def generate(width=400):
         '''
         y += 32
 
-    # Divider before character
-    y_char_section = y + 10
+    # Mode badge
     svg += f'''
     <line x1="20" y1="{y_char_section}" x2="{width-20}" y2="{y_char_section}" stroke="{CARD_BORDER}" stroke-width="1.5" />
     <rect x="20" y="{y_char_section+15}" width="{width-40}" height="30" rx="15" fill="{CARD_BORDER}" />
     <text x="{width/2}" y="{y_char_section+35}" text-anchor="middle" style="font-family:'Fira Code',monospace; font-size:12px; font-weight:700; fill:{status_color};">MODE: {data['status'].upper()}</text>
     '''
 
-    # --- Ambient Animation Zone ---
+    # Character and speech bubble section
     svg += f'''
     <g>
         <!-- Speech Bubble Layer -->
@@ -216,12 +218,11 @@ def generate(width=400):
             <image href="data:image/png;base64,{char_b64}" x="{width/2 - 40}" y="{y_char_section + 95}" width="80" height="80" preserveAspectRatio="xMidYMid meet" filter="url(#shadow)" />
         </g>
     </g>
-    '''
-    svg += '</svg>'
+    </svg>'''
 
     with open("status_panel.svg", "w", encoding="utf-8") as f:
         f.write(svg)
-    print(f"✨ Success: Generated fully ambient status_panel.svg!")
+    print(f"✨ Success: Generated fully ambient status_panel.svg without initialization errors!")
 
 if __name__ == "__main__":
     generate()
