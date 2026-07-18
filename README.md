@@ -34,17 +34,11 @@ I'm continuously improving my backend development skills by building practical p
   <img src="https://raw.githubusercontent.com/irti-11/irti-11/main/terminal_loop.svg" alt="terminal" width="380" />
 </p>
 ###
+### 💻 What I've Built
 
-<h1 align="left">🔧 What I'm Working On</h1>
-
-###
-
-<img align="right" height="135" src="https://user-images.githubusercontent.com/74038190/212744275-c56a72c2-50b1-45e2-a693-d19d40357766.gif"  />
-
-###
-
-<p align="left">Something is in progress.<br>It's not ready, so it doesn't have a name yet.<br><br>Good things take time to say out loud.</p>
-
+<p align="left">
+  <img src="https://raw.githubusercontent.com/irti-11/irti-11/main/project_monitor.svg" alt="projects showcase" width="750" />
+</p>
 ###
 
 <h1 align="left">Fun Fact</h1>
