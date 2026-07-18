@@ -2,9 +2,36 @@ import base64
 import os
 
 PROJECTS = [
-    {"file": "stylebazaar.jpg", "label": "Style Bazaar"},
-    {"file": "mrcone.jpg", "label": "Mr. Cone"},
-    {"file": "32smiles.jpg", "label": "32Smiles"},
+    {
+        "file": "stylebazaar.jpg",
+        "title": "Style Bazaar",
+        "subtitle": "Full-stack e-commerce (PHP, MySQL, JS, AJAX)",
+        "bullets": [
+            "OTP-verified auth + admin/employee panels",
+            "Real-time return-request notifications",
+            "Live checkout with card preview",
+        ],
+    },
+    {
+        "file": "mrcone.jpg",
+        "title": "Mr. Cone",
+        "subtitle": "Restaurant landing page (HTML, CSS, JS)",
+        "bullets": [
+            "Full-width hero with layered imagery",
+            "Responsive, mobile-first layout",
+            "Custom typography & sectioned content",
+        ],
+    },
+    {
+        "file": "32smiles.jpg",
+        "title": "32Smiles",
+        "subtitle": "Dental clinic website (HTML, CSS, JS)",
+        "bullets": [
+            "Split-screen hero with service nav",
+            "Thumbnail gallery + testimonials",
+            "Clean, accessible medical-brand UI",
+        ],
+    },
 ]
 
 BG_COLOR = "#0d1117"
@@ -12,14 +39,20 @@ BEZEL_COLOR = "#1a1d24"
 BEZEL_EDGE = "#2a2e37"
 STAND_COLOR = "#1a1d24"
 ACCENT = "#78dec7"
+TITLE_COLOR = "#f2a6c3"
+BODY_COLOR = "#e2e8f0"
+DIVIDER_COLOR = "#1e222a"
 
-SCREEN_W = 500
-SCREEN_H = 275
-BEZEL = 14
-SCREEN_X = 40
-SCREEN_Y = 30
+SCREEN_W = 340
+SCREEN_H = 215
+BEZEL = 10
+SCREEN_X = 30
+SCREEN_Y = 26
 
-PER_IMAGE = 3.5
+PANEL_W = 400   # right-side text panel width
+GAP = 30
+
+PER_IMAGE = 4.0
 FADE = 0.6
 
 
@@ -31,28 +64,35 @@ def img_to_b64(path):
 def generate():
     n = len(PROJECTS)
     cycle = n * PER_IMAGE
-    svg_w = SCREEN_X * 2 + SCREEN_W
-    svg_h = SCREEN_Y + SCREEN_H + BEZEL + 90
+
+    monitor_area_w = SCREEN_X * 2 + SCREEN_W
+    svg_w = monitor_area_w + GAP + PANEL_W
+    svg_h = SCREEN_Y + SCREEN_H + BEZEL + 60
 
     def frac(t):
         return round(t / cycle, 5)
 
-    images_svg = ""
-    label_svg = ""
-
-    for i, proj in enumerate(PROJECTS):
-        start = i * PER_IMAGE
+    def opacity_kt_vals(start, end):
         fade_in_end = start + FADE
-        hold_end = start + PER_IMAGE - FADE
-        end = start + PER_IMAGE
-
+        hold_end = end - FADE
         points = [(0, 0), (frac(start), 0), (frac(fade_in_end), 1),
                   (frac(hold_end), 1), (frac(end), 0)]
         if points[-1][0] < 1:
             points.append((1, 0))
         kt = ";".join(str(p[0]) for p in points)
         vals = ";".join(str(p[1]) for p in points)
+        return kt, vals
 
+    images_svg = ""
+    panel_svg = ""
+
+    text_x = monitor_area_w + GAP
+    for i, proj in enumerate(PROJECTS):
+        start = i * PER_IMAGE
+        end = start + PER_IMAGE
+        kt, vals = opacity_kt_vals(start, end)
+
+        # --- monitor image ---
         b64 = img_to_b64(proj["file"])
         images_svg += f'''    <g clip-path="url(#screenClip)">
         <image x="{SCREEN_X}" y="{SCREEN_Y}" width="{SCREEN_W}" height="{SCREEN_H}"
@@ -63,14 +103,21 @@ def generate():
         </image>
     </g>
 '''
-        label_svg += f'''    <text x="{svg_w/2}" y="{svg_h - 18}" text-anchor="middle" opacity="0"
-          style="font-family:'Fira Code',monospace; font-size:14px; font-weight:600; fill:{ACCENT};">
-        {proj["label"]}
+        # --- synced description panel (title + subtitle + bullets) ---
+        ty = 50
+        panel_svg += f'''    <g opacity="0">
         <animate attributeName="opacity" keyTimes="{kt}" values="{vals}" dur="{cycle}s" repeatCount="indefinite" calcMode="linear" />
-    </text>
+        <text x="{text_x}" y="{ty}" style="font-family:'Fira Code',monospace; font-size:19px; font-weight:600; fill:{TITLE_COLOR};">{proj["title"]}</text>
+        <text x="{text_x}" y="{ty + 24}" style="font-family:'Fira Code',monospace; font-size:12px; fill:{ACCENT};">{proj["subtitle"]}</text>
 '''
+        by = ty + 55
+        for b in proj["bullets"]:
+            panel_svg += f'''        <text x="{text_x}" y="{by}" style="font-family:'Fira Code',monospace; font-size:12.5px; fill:{BODY_COLOR};">&#8226; {b}</text>
+'''
+            by += 24
+        panel_svg += '    </g>\n'
 
-    stand_x = svg_w / 2
+    stand_x = SCREEN_X + SCREEN_W / 2
     screen_bottom = SCREEN_Y + SCREEN_H + BEZEL
 
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -79,9 +126,12 @@ def generate():
         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&amp;display=swap');
     </style>
     <rect width="100%" height="100%" fill="{BG_COLOR}" rx="8" />
+    <line x1="{monitor_area_w + GAP/2}" y1="10" x2="{monitor_area_w + GAP/2}" y2="{svg_h - 10}"
+          style="stroke:{DIVIDER_COLOR}; stroke-width:1;" />
+
     <rect x="{SCREEN_X - BEZEL}" y="{SCREEN_Y - BEZEL}"
           width="{SCREEN_W + BEZEL * 2}" height="{SCREEN_H + BEZEL * 2}"
-          rx="14" fill="{BEZEL_COLOR}" stroke="{BEZEL_EDGE}" stroke-width="1.5" />
+          rx="12" fill="{BEZEL_COLOR}" stroke="{BEZEL_EDGE}" stroke-width="1.5" />
     <clipPath id="screenClip">
         <rect x="{SCREEN_X}" y="{SCREEN_Y}" width="{SCREEN_W}" height="{SCREEN_H}" rx="3" />
     </clipPath>
@@ -95,14 +145,15 @@ def generate():
             <stop offset="40%" stop-color="#ffffff" stop-opacity="0" />
         </linearGradient>
     </defs>
-    <rect x="{stand_x - 6}" y="{screen_bottom}" width="12" height="22" fill="{STAND_COLOR}" />
-    <rect x="{stand_x - 45}" y="{screen_bottom + 22}" width="90" height="8" rx="4" fill="{STAND_COLOR}" />
-{label_svg}
+    <rect x="{stand_x - 5}" y="{screen_bottom}" width="10" height="18" fill="{STAND_COLOR}" />
+    <rect x="{stand_x - 38}" y="{screen_bottom + 18}" width="76" height="7" rx="3" fill="{STAND_COLOR}" />
+
+{panel_svg}
 </svg>'''
 
     with open("project_monitor.svg", "w", encoding="utf-8") as f:
         f.write(svg)
-    print(f"Generated project_monitor.svg, cycle={cycle}s")
+    print(f"Generated project_monitor.svg, cycle={cycle}s, size={os.path.getsize('project_monitor.svg')/1024:.1f}KB")
 
 
 if __name__ == "__main__":
