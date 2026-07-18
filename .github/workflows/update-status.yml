@@ -20,16 +20,21 @@ jobs:
         with:
           python-version: "3.10"
 
-      - name: Run Python script
+      - name: Run status panel script
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
         run: python generate_status_panel.py
+
+      - name: Run meme panel script
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: python generate_meme_panel.py
 
       - name: Commit and Push changes
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add status_panel.svg
-          git commit -m "✨ Auto-update animated status panel with live stats" || echo "No changes to commit"
+          git add status_panel.svg meme_panel.svg
+          git commit -m "✨ Auto-update status panel and meme" || echo "No changes to commit"
           git pull --rebase origin main
           git push
