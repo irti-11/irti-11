@@ -25,7 +25,7 @@ def fetch_json(url, retries=3):
     req.add_header("User-Agent", "profile-status-script")
     if TOKEN:
         req.add_header("Authorization", f"token {TOKEN}")
-        
+
     last_error = None
     for attempt in range(retries):
         try:
@@ -65,7 +65,7 @@ def get_github_data():
     for e in push_events:
         dt = datetime.strptime(e["created_at"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
         if (now - dt).days <= 7:
-            week_commits += sum(1 for _ in e.get("payload", {}).get("commits", []))
+            week_commits += e.get("payload", {}).get("distinct_size", 0)
 
     lang_count = {}
     for r in repos:
@@ -76,7 +76,7 @@ def get_github_data():
     status = "shipping" if week_commits >= 5 else "active" if week_commits >= 1 else "quiet"
 
     return {
-        "public_repos": user.get("public_repos", 0),
+        "public_repos": len(repos),
         "followers": user.get("followers", 0),
         "last_commit": last_commit,
         "week_commits": week_commits,
@@ -94,9 +94,9 @@ def img_to_b64(path):
 def generate(width=400):
     data = get_github_data()
     char_b64 = img_to_b64("pixel_boy.png")
-    
+
     status_color = COLOR_CYAN if data['status'] == 'active' else "#aef3a4" if data['status'] == 'shipping' else COLOR_DIM
-    
+
     rows = [
         ("📦", "Total Repositories", str(data["public_repos"])),
         ("👥", "Followers", str(data["followers"])),
@@ -104,13 +104,12 @@ def generate(width=400):
         ("📈", "This Week", f'{data["week_commits"]} commits'),
         ("💬", "Top Language", data["top_lang"]),
     ]
-    
-    # --- FIX: Calculate position variables BEFORE evaluating the SVG f-string ---
+
     y_calc = 75
     for _ in rows:
         y_calc += 32
     y_char_section = y_calc + 10
-    
+
     stats_h = 240
     char_h = 160
     total_h = stats_h + char_h + 30
@@ -118,40 +117,37 @@ def generate(width=400):
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {total_h}" width="100%" height="{total_h}">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&amp;display=swap');
-        
+
         .title {{ font-family: 'Fira Code', monospace; font-size: 16px; font-weight: 700; fill: {COLOR_PINK}; }}
         .label {{ font-family: 'Fira Code', monospace; font-size: 13px; font-weight: 400; fill: {COLOR_WHITE}; }}
         .value {{ font-family: 'Fira Code', monospace; font-size: 13px; font-weight: 600; fill: {COLOR_CYAN}; }}
-        
-        /* Continuous Idle Breathing Animation for Character */
+
         .char-wrapper {{
             animation: idleBreath 3s ease-in-out infinite alternate;
         }}
-        
+
         @keyframes idleBreath {{
             0% {{ transform: translateY(0px); }}
             100% {{ transform: translateY(6px); }}
         }}
 
-        /* Smooth Floating Speech Bubble (Always Visible) */
         .bubble {{
             animation: floatBubble 3s ease-in-out infinite alternate;
         }}
-        
+
         @keyframes floatBubble {{
             0% {{ transform: translate({width/2 - 65}px, {y_char_section + 62}px); }}
             100% {{ transform: translate({width/2 - 65}px, {y_char_section + 68}px); }}
         }}
 
-        /* Continuous Text Cycling (No Hover Required) */
         .msg {{
             opacity: 0;
-            font-family: 'Fira Code', monospace; 
-            font-size: 11px; 
-            font-weight: 600; 
+            font-family: 'Fira Code', monospace;
+            font-size: 11px;
+            font-weight: 600;
             fill: {COLOR_WHITE};
         }}
-        
+
         .msg1 {{ animation: cycleText 9s infinite 0s; }}
         .msg2 {{ animation: cycleText 9s infinite 3s; }}
         .msg3 {{ animation: cycleText 9s infinite 6s; }}
@@ -172,15 +168,12 @@ def generate(width=400):
         </filter>
     </defs>
 
-    <!-- Base Card -->
     <rect x="0" y="0" width="{width}" height="{total_h}" rx="16" fill="url(#bgGrad)" stroke="{CARD_BORDER}" stroke-width="2" />
 
-    <!-- Title Section -->
     <text x="20" y="35" class="title">Irtiza's GitHub Status</text>
     <line x1="20" y1="48" x2="{width-20}" y2="48" stroke="{CARD_BORDER}" stroke-width="1.5" />
     '''
-    
-    # Render stats rows
+
     y = 75
     for icon, label_txt, val in rows:
         svg += f'''
@@ -189,32 +182,24 @@ def generate(width=400):
         '''
         y += 32
 
-    # Mode badge
     svg += f'''
     <line x1="20" y1="{y_char_section}" x2="{width-20}" y2="{y_char_section}" stroke="{CARD_BORDER}" stroke-width="1.5" />
     <rect x="20" y="{y_char_section+15}" width="{width-40}" height="30" rx="15" fill="{CARD_BORDER}" />
     <text x="{width/2}" y="{y_char_section+35}" text-anchor="middle" style="font-family:'Fira Code',monospace; font-size:12px; font-weight:700; fill:{status_color};">MODE: {data['status'].upper()}</text>
     '''
 
-    # Character and speech bubble section
     svg += f'''
     <g>
-        <!-- Speech Bubble Layer -->
         <g class="bubble">
-            <!-- Bubble Tail -->
             <polygon points="65,30 55,38 75,30" fill="{BUBBLE_BG}" />
-            <!-- Bubble Body -->
             <rect x="0" y="0" width="130" height="30" rx="8" fill="{BUBBLE_BG}" stroke="{COLOR_CYAN}" stroke-width="1" filter="url(#shadow)"/>
-            
-            <!-- Auto Cycling Messages -->
+
             <text x="65" y="19" text-anchor="middle" class="msg msg1">Hi, I'm Irtiza!</text>
             <text x="65" y="19" text-anchor="middle" class="msg msg2">Writing clean code 🚀</text>
             <text x="65" y="19" text-anchor="middle" class="msg msg3">Checking commits...</text>
         </g>
-        
-        <!-- Character Layer -->
+
         <g class="char-wrapper">
-            <!-- The Pixel Character -->
             <image href="data:image/png;base64,{char_b64}" x="{width/2 - 40}" y="{y_char_section + 95}" width="80" height="80" preserveAspectRatio="xMidYMid meet" filter="url(#shadow)" />
         </g>
     </g>
@@ -222,7 +207,7 @@ def generate(width=400):
 
     with open("status_panel.svg", "w", encoding="utf-8") as f:
         f.write(svg)
-    print(f"✨ Success: Generated fully ambient status_panel.svg without initialization errors!")
+    print(f"Success: Generated status_panel.svg — repos={data['public_repos']}, week_commits={data['week_commits']}")
 
 if __name__ == "__main__":
     generate()
