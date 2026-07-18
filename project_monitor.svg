@@ -64,7 +64,7 @@
         <text x="430" y="74" style="font-family:'Fira Code',monospace; font-size:12px; fill:#78dec7;">Restaurant landing page (HTML, CSS, JS)</text>
         <text x="430" y="105" style="font-family:'Fira Code',monospace; font-size:12.5px; fill:#e2e8f0;">&#8226; Full-width hero with layered imagery</text>
         <text x="430" y="129" style="font-family:'Fira Code',monospace; font-size:12.5px; fill:#e2e8f0;">&#8226; Responsive, mobile-first layout</text>
-        <text x="430" y="153" style="font-family:'Fira Code',monospace; font-size:12.5px; fill:#e2e8f0;">&#8226; Custom typography & sectioned content</text>
+        <text x="430" y="153" style="font-family:'Fira Code',monospace; font-size:12.5px; fill:#e2e8f0;">&#8226; Custom typography and sectioned content</text>
     </g>
     <g opacity="0">
         <animate attributeName="opacity" keyTimes="0;0.66667;0.71667;0.95;1.0" values="0;0;1;1;0" dur="12.0s" repeatCount="indefinite" calcMode="linear" />

@@ -1,4 +1,5 @@
 import base64
+import html
 import os
 
 PROJECTS = [
@@ -19,7 +20,7 @@ PROJECTS = [
         "bullets": [
             "Full-width hero with layered imagery",
             "Responsive, mobile-first layout",
-            "Custom typography & sectioned content",
+            "Custom typography and sectioned content",
         ],
     },
     {
@@ -49,7 +50,7 @@ BEZEL = 10
 SCREEN_X = 30
 SCREEN_Y = 26
 
-PANEL_W = 400   # right-side text panel width
+PANEL_W = 400
 GAP = 30
 
 PER_IMAGE = 4.0
@@ -92,7 +93,6 @@ def generate():
         end = start + PER_IMAGE
         kt, vals = opacity_kt_vals(start, end)
 
-        # --- monitor image ---
         b64 = img_to_b64(proj["file"])
         images_svg += f'''    <g clip-path="url(#screenClip)">
         <image x="{SCREEN_X}" y="{SCREEN_Y}" width="{SCREEN_W}" height="{SCREEN_H}"
@@ -103,16 +103,19 @@ def generate():
         </image>
     </g>
 '''
-        # --- synced description panel (title + subtitle + bullets) ---
+        title = html.escape(proj["title"])
+        subtitle = html.escape(proj["subtitle"])
+
         ty = 50
         panel_svg += f'''    <g opacity="0">
         <animate attributeName="opacity" keyTimes="{kt}" values="{vals}" dur="{cycle}s" repeatCount="indefinite" calcMode="linear" />
-        <text x="{text_x}" y="{ty}" style="font-family:'Fira Code',monospace; font-size:19px; font-weight:600; fill:{TITLE_COLOR};">{proj["title"]}</text>
-        <text x="{text_x}" y="{ty + 24}" style="font-family:'Fira Code',monospace; font-size:12px; fill:{ACCENT};">{proj["subtitle"]}</text>
+        <text x="{text_x}" y="{ty}" style="font-family:'Fira Code',monospace; font-size:19px; font-weight:600; fill:{TITLE_COLOR};">{title}</text>
+        <text x="{text_x}" y="{ty + 24}" style="font-family:'Fira Code',monospace; font-size:12px; fill:{ACCENT};">{subtitle}</text>
 '''
         by = ty + 55
         for b in proj["bullets"]:
-            panel_svg += f'''        <text x="{text_x}" y="{by}" style="font-family:'Fira Code',monospace; font-size:12.5px; fill:{BODY_COLOR};">&#8226; {b}</text>
+            safe_b = html.escape(b)
+            panel_svg += f'''        <text x="{text_x}" y="{by}" style="font-family:'Fira Code',monospace; font-size:12.5px; fill:{BODY_COLOR};">&#8226; {safe_b}</text>
 '''
             by += 24
         panel_svg += '    </g>\n'
