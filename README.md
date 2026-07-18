@@ -33,13 +33,12 @@ I'm continuously improving my backend development skills by building practical p
   <img src="https://raw.githubusercontent.com/irti-11/irti-11/main/equalizer.svg" alt="equalizer" width="380" />
   <img src="https://raw.githubusercontent.com/irti-11/irti-11/main/terminal_loop.svg" alt="terminal" width="380" />
 </p>
-###
+
 ### 💻 What I've Built
 
 <p align="left">
   <img src="https://raw.githubusercontent.com/irti-11/irti-11/main/project_monitor.svg" alt="projects showcase" width="750" />
 </p>
-###
 
 <h1 align="left">Fun Fact</h1>
 
