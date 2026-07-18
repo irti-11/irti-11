@@ -4,9 +4,9 @@ on:
   schedule:
     # Har 6 ghante baad automatically chalega
     - cron: "0 */6 * * *"
-
+  
   # Button dabane par manually run karne ke liye
-  workflow_dispatch:
+  workflow_dispatch: 
 
 permissions:
   contents: write
@@ -21,9 +21,11 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.10"
+          python-version: '3.10'
 
       - name: Run Python script
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Yeh line private repos aur accurate commits fetch karegi
         run: python generate_status_panel.py
 
       - name: Commit and Push changes
@@ -31,5 +33,5 @@ jobs:
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add status_panel.svg
-          git commit -m "✨ Auto-update animated status panel" || echo "No changes to commit"
+          git commit -m "✨ Auto-update animated status panel with live stats" || echo "No changes to commit"
           git push
