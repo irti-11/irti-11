@@ -8,15 +8,15 @@
     <text x="16" y="26" style="font-family:'Fira Code',monospace; font-size:14px; font-weight:600; fill:#f2a6c3;">GitHub Status</text>
     <line x1="16" y1="34" x2="324" y2="34" style="stroke:#1e222a; stroke-width:1;" />
     <text x="16" y="58" style="font-family:'Fira Code',monospace; font-size:12px; fill:#e2e8f0;">📦  Public Repos</text>
-    <text x="324" y="58" text-anchor="end" style="font-family:'Fira Code',monospace; font-size:12px; font-weight:600; fill:#78dec7;">0</text>
+    <text x="324" y="58" text-anchor="end" style="font-family:'Fira Code',monospace; font-size:12px; font-weight:600; fill:#78dec7;">25</text>
     <text x="16" y="88" style="font-family:'Fira Code',monospace; font-size:12px; fill:#e2e8f0;">👥  Followers</text>
     <text x="324" y="88" text-anchor="end" style="font-family:'Fira Code',monospace; font-size:12px; font-weight:600; fill:#78dec7;">0</text>
     <text x="16" y="118" style="font-family:'Fira Code',monospace; font-size:12px; fill:#e2e8f0;">⏱️  Last Commit</text>
-    <text x="324" y="118" text-anchor="end" style="font-family:'Fira Code',monospace; font-size:12px; font-weight:600; fill:#78dec7;">unknown</text>
+    <text x="324" y="118" text-anchor="end" style="font-family:'Fira Code',monospace; font-size:12px; font-weight:600; fill:#78dec7;">just now</text>
     <text x="16" y="148" style="font-family:'Fira Code',monospace; font-size:12px; fill:#e2e8f0;">📈  This Week</text>
     <text x="324" y="148" text-anchor="end" style="font-family:'Fira Code',monospace; font-size:12px; font-weight:600; fill:#78dec7;">0 commits</text>
     <text x="16" y="178" style="font-family:'Fira Code',monospace; font-size:12px; fill:#e2e8f0;">💬  Top Language</text>
-    <text x="324" y="178" text-anchor="end" style="font-family:'Fira Code',monospace; font-size:12px; font-weight:600; fill:#78dec7;">N/A</text>
+    <text x="324" y="178" text-anchor="end" style="font-family:'Fira Code',monospace; font-size:12px; font-weight:600; fill:#78dec7;">CSS</text>
     <rect x="16" y="198" width="308" height="22" rx="11" fill="#0d1117" stroke="#6272a4" stroke-width="1" />
     <text x="170.0" y="213" text-anchor="middle" style="font-family:'Fira Code',monospace; font-size:11px; font-weight:600; fill:#6272a4;">💤 taking a break</text>
 </g>

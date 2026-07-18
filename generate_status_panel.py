@@ -1,4 +1,5 @@
 import urllib.request
+import time
 import json
 from datetime import datetime, timezone
 
@@ -14,10 +15,18 @@ CARD_BG = "#151922"
 DIVIDER = "#1e222a"
 
 
-def fetch_json(url):
+def fetch_json(url, retries=3):
     req = urllib.request.Request(url, headers={"User-Agent": "profile-status-script"})
-    with urllib.request.urlopen(req, timeout=10) as r:
-        return json.loads(r.read().decode())
+    last_error = None
+    for attempt in range(retries):
+        try:
+            with urllib.request.urlopen(req, timeout=30) as r:
+                return json.loads(r.read().decode())
+        except Exception as e:
+            last_error = e
+            print(f"  attempt {attempt+1} failed: {e}, retrying...")
+            time.sleep(2)
+    raise last_error
 
 
 def get_github_data():
