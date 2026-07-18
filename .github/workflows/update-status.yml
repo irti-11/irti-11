@@ -22,7 +22,6 @@ jobs:
 
       - name: Run Python script
         env:
-          # Yahan GH_PAT secret pass ho raha hai[cite: 1]
           GH_PAT: ${{ secrets.GH_PAT }}
         run: python generate_status_panel.py
 
@@ -32,4 +31,5 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add status_panel.svg
           git commit -m "✨ Auto-update animated status panel with live stats" || echo "No changes to commit"
+          git pull --rebase origin main
           git push
