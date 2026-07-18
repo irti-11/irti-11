@@ -106,18 +106,18 @@ def generate():
         title = html.escape(proj["title"])
         subtitle = html.escape(proj["subtitle"])
 
-        ty = 50
+        ty = 55
         panel_svg += f'''    <g opacity="0">
         <animate attributeName="opacity" keyTimes="{kt}" values="{vals}" dur="{cycle}s" repeatCount="indefinite" calcMode="linear" />
-        <text x="{text_x}" y="{ty}" style="font-family:'Fira Code',monospace; font-size:19px; font-weight:600; fill:{TITLE_COLOR};">{title}</text>
-        <text x="{text_x}" y="{ty + 24}" style="font-family:'Fira Code',monospace; font-size:12px; fill:{ACCENT};">{subtitle}</text>
+        <text x="{text_x}" y="{ty}" style="font-family:'Fira Code',monospace; font-size:22px; font-weight:600; fill:{TITLE_COLOR};">{title}</text>
+        <text x="{text_x}" y="{ty + 24}" style="font-family:'Fira Code',monospace; font-size:13px; fill:{ACCENT};">{subtitle}</text>
 '''
-        by = ty + 55
+        by = ty + 65
         for b in proj["bullets"]:
             safe_b = html.escape(b)
-            panel_svg += f'''        <text x="{text_x}" y="{by}" style="font-family:'Fira Code',monospace; font-size:12.5px; fill:{BODY_COLOR};">&#8226; {safe_b}</text>
+            panel_svg += f'''        <text x="{text_x}" y="{by}" style="font-family:'Fira Code',monospace; font-size:14.5px; fill:{BODY_COLOR};">&#8226; {safe_b}</text>
 '''
-            by += 24
+            by += 28
         panel_svg += '    </g>\n'
 
     stand_x = SCREEN_X + SCREEN_W / 2

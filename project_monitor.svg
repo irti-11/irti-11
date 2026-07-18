@@ -52,27 +52,27 @@
 
     <g opacity="0">
         <animate attributeName="opacity" keyTimes="0;0.0;0.05;0.28333;0.33333;1" values="0;0;1;1;0;0" dur="12.0s" repeatCount="indefinite" calcMode="linear" />
-        <text x="430" y="50" style="font-family:'Fira Code',monospace; font-size:19px; font-weight:600; fill:#f2a6c3;">Style Bazaar</text>
-        <text x="430" y="74" style="font-family:'Fira Code',monospace; font-size:12px; fill:#78dec7;">Full-stack e-commerce (PHP, MySQL, JS, AJAX)</text>
-        <text x="430" y="105" style="font-family:'Fira Code',monospace; font-size:12.5px; fill:#e2e8f0;">&#8226; OTP-verified auth + admin/employee panels</text>
-        <text x="430" y="129" style="font-family:'Fira Code',monospace; font-size:12.5px; fill:#e2e8f0;">&#8226; Real-time return-request notifications</text>
-        <text x="430" y="153" style="font-family:'Fira Code',monospace; font-size:12.5px; fill:#e2e8f0;">&#8226; Live checkout with card preview</text>
+        <text x="430" y="55" style="font-family:'Fira Code',monospace; font-size:22px; font-weight:600; fill:#f2a6c3;">Style Bazaar</text>
+        <text x="430" y="79" style="font-family:'Fira Code',monospace; font-size:13px; fill:#78dec7;">Full-stack e-commerce (PHP, MySQL, JS, AJAX)</text>
+        <text x="430" y="120" style="font-family:'Fira Code',monospace; font-size:14.5px; fill:#e2e8f0;">&#8226; OTP-verified auth + admin/employee panels</text>
+        <text x="430" y="148" style="font-family:'Fira Code',monospace; font-size:14.5px; fill:#e2e8f0;">&#8226; Real-time return-request notifications</text>
+        <text x="430" y="176" style="font-family:'Fira Code',monospace; font-size:14.5px; fill:#e2e8f0;">&#8226; Live checkout with card preview</text>
     </g>
     <g opacity="0">
         <animate attributeName="opacity" keyTimes="0;0.33333;0.38333;0.61667;0.66667;1" values="0;0;1;1;0;0" dur="12.0s" repeatCount="indefinite" calcMode="linear" />
-        <text x="430" y="50" style="font-family:'Fira Code',monospace; font-size:19px; font-weight:600; fill:#f2a6c3;">Mr. Cone</text>
-        <text x="430" y="74" style="font-family:'Fira Code',monospace; font-size:12px; fill:#78dec7;">Restaurant landing page (HTML, CSS, JS)</text>
-        <text x="430" y="105" style="font-family:'Fira Code',monospace; font-size:12.5px; fill:#e2e8f0;">&#8226; Full-width hero with layered imagery</text>
-        <text x="430" y="129" style="font-family:'Fira Code',monospace; font-size:12.5px; fill:#e2e8f0;">&#8226; Responsive, mobile-first layout</text>
-        <text x="430" y="153" style="font-family:'Fira Code',monospace; font-size:12.5px; fill:#e2e8f0;">&#8226; Custom typography and sectioned content</text>
+        <text x="430" y="55" style="font-family:'Fira Code',monospace; font-size:22px; font-weight:600; fill:#f2a6c3;">Mr. Cone</text>
+        <text x="430" y="79" style="font-family:'Fira Code',monospace; font-size:13px; fill:#78dec7;">Restaurant landing page (HTML, CSS, JS)</text>
+        <text x="430" y="120" style="font-family:'Fira Code',monospace; font-size:14.5px; fill:#e2e8f0;">&#8226; Full-width hero with layered imagery</text>
+        <text x="430" y="148" style="font-family:'Fira Code',monospace; font-size:14.5px; fill:#e2e8f0;">&#8226; Responsive, mobile-first layout</text>
+        <text x="430" y="176" style="font-family:'Fira Code',monospace; font-size:14.5px; fill:#e2e8f0;">&#8226; Custom typography and sectioned content</text>
     </g>
     <g opacity="0">
         <animate attributeName="opacity" keyTimes="0;0.66667;0.71667;0.95;1.0" values="0;0;1;1;0" dur="12.0s" repeatCount="indefinite" calcMode="linear" />
-        <text x="430" y="50" style="font-family:'Fira Code',monospace; font-size:19px; font-weight:600; fill:#f2a6c3;">32Smiles</text>
-        <text x="430" y="74" style="font-family:'Fira Code',monospace; font-size:12px; fill:#78dec7;">Dental clinic website (HTML, CSS, JS)</text>
-        <text x="430" y="105" style="font-family:'Fira Code',monospace; font-size:12.5px; fill:#e2e8f0;">&#8226; Split-screen hero with service nav</text>
-        <text x="430" y="129" style="font-family:'Fira Code',monospace; font-size:12.5px; fill:#e2e8f0;">&#8226; Thumbnail gallery + testimonials</text>
-        <text x="430" y="153" style="font-family:'Fira Code',monospace; font-size:12.5px; fill:#e2e8f0;">&#8226; Clean, accessible medical-brand UI</text>
+        <text x="430" y="55" style="font-family:'Fira Code',monospace; font-size:22px; font-weight:600; fill:#f2a6c3;">32Smiles</text>
+        <text x="430" y="79" style="font-family:'Fira Code',monospace; font-size:13px; fill:#78dec7;">Dental clinic website (HTML, CSS, JS)</text>
+        <text x="430" y="120" style="font-family:'Fira Code',monospace; font-size:14.5px; fill:#e2e8f0;">&#8226; Split-screen hero with service nav</text>
+        <text x="430" y="148" style="font-family:'Fira Code',monospace; font-size:14.5px; fill:#e2e8f0;">&#8226; Thumbnail gallery + testimonials</text>
+        <text x="430" y="176" style="font-family:'Fira Code',monospace; font-size:14.5px; fill:#e2e8f0;">&#8226; Clean, accessible medical-brand UI</text>
     </g>
 
 </svg>
