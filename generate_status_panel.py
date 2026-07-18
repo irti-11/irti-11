@@ -8,7 +8,7 @@ from datetime import datetime, timezone
 USERNAME = "irti-11"
 
 # Automatically fetch GitHub Token from Actions environment for private stats
-TOKEN = os.environ.get("GITHUB_TOKEN")
+TOKEN = os.environ.get("GH_PAT")
 
 # --- Premium Colors ---
 BG_GRAD_START = "#1e222a"
