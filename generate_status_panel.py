@@ -1,19 +1,21 @@
 import urllib.request
 import time
 import json
+import base64
+import os
 from datetime import datetime, timezone
 
 USERNAME = "irti-11"
 
+# --- Premium Colors ---
+BG_GRAD_START = "#1e222a"
+BG_GRAD_END = "#0d1117"
+CARD_BORDER = "#2a313c"
 COLOR_CYAN = "#78dec7"
 COLOR_PINK = "#f2a6c3"
-COLOR_GREEN = "#aef3a4"
 COLOR_WHITE = "#e2e8f0"
-COLOR_DIM = "#6272a4"
-BG_COLOR = "#0d1117"
-CARD_BG = "#151922"
-DIVIDER = "#1e222a"
-
+COLOR_DIM = "#8b9eb0"
+BUBBLE_BG = "#151922"
 
 def fetch_json(url, retries=3):
     req = urllib.request.Request(url, headers={"User-Agent": "profile-status-script"})
@@ -24,10 +26,8 @@ def fetch_json(url, retries=3):
                 return json.loads(r.read().decode())
         except Exception as e:
             last_error = e
-            print(f"  attempt {attempt+1} failed: {e}, retrying...")
             time.sleep(2)
     raise last_error
-
 
 def get_github_data():
     try:
@@ -36,17 +36,13 @@ def get_github_data():
         events = fetch_json(f"https://api.github.com/users/{USERNAME}/events/public")
     except Exception as e:
         print("API fetch failed, using fallback data:", e)
-        return {
-            "public_repos": 0, "followers": 0, "last_commit": "unknown",
-            "week_commits": 0, "top_lang": "N/A", "status": "quiet"
-        }
+        return {"public_repos": 0, "followers": 0, "last_commit": "unknown", "week_commits": 0, "top_lang": "N/A", "status": "quiet"}
 
     push_events = [e for e in events if e.get("type") == "PushEvent"]
 
     last_commit = "no recent activity"
     if push_events:
-        dt = datetime.strptime(push_events[0]["created_at"], "%Y-%m-%dT%H:%M:%SZ")
-        dt = dt.replace(tzinfo=timezone.utc)
+        dt = datetime.strptime(push_events[0]["created_at"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
         delta = datetime.now(timezone.utc) - dt
         hours = int(delta.total_seconds() // 3600)
         if hours < 1:
@@ -66,16 +62,10 @@ def get_github_data():
     lang_count = {}
     for r in repos:
         lang = r.get("language")
-        if lang:
-            lang_count[lang] = lang_count.get(lang, 0) + 1
+        if lang: lang_count[lang] = lang_count.get(lang, 0) + 1
     top_lang = max(lang_count, key=lang_count.get) if lang_count else "N/A"
 
-    if week_commits >= 5:
-        status = "shipping"
-    elif week_commits >= 1:
-        status = "active"
-    else:
-        status = "quiet"
+    status = "shipping" if week_commits >= 5 else "active" if week_commits >= 1 else "quiet"
 
     return {
         "public_repos": user.get("public_repos", 0),
@@ -86,16 +76,19 @@ def get_github_data():
         "status": status,
     }
 
+def img_to_b64(path):
+    if not os.path.exists(path):
+        print(f"Warning: {path} not found! Character won't load.")
+        return ""
+    with open(path, "rb") as f:
+        return base64.b64encode(f.read()).decode("utf-8")
 
-STATUS_LABELS = {
-    "shipping": ("🚀 actively shipping", COLOR_GREEN),
-    "active": ("🛠️ in progress", COLOR_CYAN),
-    "quiet": ("💤 taking a break", COLOR_DIM),
-}
-
-
-def build_status_card(data, width):
-    label, color = STATUS_LABELS[data["status"]]
+def generate(width=400):
+    data = get_github_data()
+    char_b64 = img_to_b64("pixel_boy.png")  # Apni image ka naam yahan match karna
+    
+    status_color = COLOR_CYAN if data['status'] == 'active' else "#aef3a4" if data['status'] == 'shipping' else COLOR_DIM
+    
     rows = [
         ("📦", "Public Repos", str(data["public_repos"])),
         ("👥", "Followers", str(data["followers"])),
@@ -103,114 +96,132 @@ def build_status_card(data, width):
         ("📈", "This Week", f'{data["week_commits"]} commits'),
         ("💬", "Top Language", data["top_lang"]),
     ]
+    
+    stats_h = 240
+    char_h = 160
+    total_h = stats_h + char_h + 30
 
-    h = 34 + len(rows) * 30 + 30
-    svg = f'''<g>
-    <rect x="0" y="0" width="{width}" height="{h}" rx="10" fill="{CARD_BG}" stroke="{DIVIDER}" stroke-width="1" />
-    <text x="16" y="26" style="font-family:'Fira Code',monospace; font-size:14px; font-weight:600; fill:{COLOR_PINK};">GitHub Status</text>
-    <line x1="16" y1="34" x2="{width-16}" y2="34" style="stroke:{DIVIDER}; stroke-width:1;" />
-'''
-    y = 58
-    for icon, label_txt, val in rows:
-        svg += f'''    <text x="16" y="{y}" style="font-family:'Fira Code',monospace; font-size:12px; fill:{COLOR_WHITE};">{icon}  {label_txt}</text>
-    <text x="{width-16}" y="{y}" text-anchor="end" style="font-family:'Fira Code',monospace; font-size:12px; font-weight:600; fill:{COLOR_CYAN};">{val}</text>
-'''
-        y += 30
-    svg += f'''    <rect x="16" y="{y-10}" width="{width-32}" height="22" rx="11" fill="{BG_COLOR}" stroke="{color}" stroke-width="1" />
-    <text x="{width/2}" y="{y+5}" text-anchor="middle" style="font-family:'Fira Code',monospace; font-size:11px; font-weight:600; fill:{color};">{label}</text>
-</g>'''
-    return svg, h
-
-
-def build_character(width, y_offset, box_h=110):
-    cx = width / 2
-    cy = y_offset + box_h / 2 + 6
-
-    cycle = 12
-    def win(i):
-        return i * 4, i * 4 + 4
-
-    def opacity_anim(start, end):
-        fade = 0.4
-        kt = [0, round(start/cycle,4), round((start+fade)/cycle,4),
-              round((end-fade)/cycle,4), round(end/cycle,4)]
-        vals = [0, 0, 1, 1, 0]
-        if kt[-1] < 1:
-            kt.append(1); vals.append(0)
-        return ";".join(map(str, kt)), ";".join(map(str, vals))
-
-    s1, s2 = win(0)
-    a1, a2 = win(1)
-    b1, b2 = win(2)
-
-    kt_sleep, v_sleep = opacity_anim(s1, s2)
-    kt_dance, v_dance = opacity_anim(a1, a2)
-    kt_wave, v_wave = opacity_anim(b1, b2)
-
-    svg = f'''<g>
-    <rect x="0" y="{y_offset}" width="{width}" height="{box_h}" rx="10" fill="{CARD_BG}" stroke="{DIVIDER}" stroke-width="1" />
-
-    <g opacity="0">
-        <animate attributeName="opacity" keyTimes="{kt_sleep}" values="{v_sleep}" dur="{cycle}s" repeatCount="indefinite" />
-        <ellipse cx="{cx}" cy="{cy+10}" rx="26" ry="18" fill="{COLOR_CYAN}" />
-        <line x1="{cx-10}" y1="{cy+6}" x2="{cx-4}" y2="{cy+6}" stroke="{BG_COLOR}" stroke-width="2" stroke-linecap="round" />
-        <line x1="{cx+4}" y1="{cy+6}" x2="{cx+10}" y2="{cy+6}" stroke="{BG_COLOR}" stroke-width="2" stroke-linecap="round" />
-        <text x="{cx+24}" y="{cy-14}" style="font-family:monospace; font-size:14px; fill:{COLOR_DIM};">z
-            <animate attributeName="y" values="{cy-10};{cy-30}" dur="2s" repeatCount="indefinite" />
-            <animate attributeName="opacity" values="1;0" dur="2s" repeatCount="indefinite" />
-        </text>
-        <text x="{cx+34}" y="{cy-22}" style="font-family:monospace; font-size:10px; fill:{COLOR_DIM};">Z
-            <animate attributeName="y" values="{cy-18};{cy-36}" dur="2s" begin="0.7s" repeatCount="indefinite" />
-            <animate attributeName="opacity" values="1;0" dur="2s" begin="0.7s" repeatCount="indefinite" />
-        </text>
-    </g>
-
-    <g opacity="0">
-        <animate attributeName="opacity" keyTimes="{kt_dance}" values="{v_dance}" dur="{cycle}s" repeatCount="indefinite" />
-        <g>
-            <animateTransform attributeName="transform" type="translate" values="0,0; 0,-8; 0,0; 0,-8; 0,0" dur="0.9s" repeatCount="indefinite" />
-            <circle cx="{cx}" cy="{cy}" r="20" fill="{COLOR_PINK}" />
-            <circle cx="{cx-7}" cy="{cy-4}" r="2.4" fill="{BG_COLOR}" />
-            <circle cx="{cx+7}" cy="{cy-4}" r="2.4" fill="{BG_COLOR}" />
-            <path d="M {cx-7} {cy+6} Q {cx} {cy+12} {cx+7} {cy+6}" stroke="{BG_COLOR}" stroke-width="2" fill="none" stroke-linecap="round" />
-        </g>
-    </g>
-
-    <g opacity="0">
-        <animate attributeName="opacity" keyTimes="{kt_wave}" values="{v_wave}" dur="{cycle}s" repeatCount="indefinite" />
-        <circle cx="{cx}" cy="{cy}" r="20" fill="{COLOR_GREEN}" />
-        <circle cx="{cx-7}" cy="{cy-4}" r="2.4" fill="{BG_COLOR}" />
-        <circle cx="{cx+7}" cy="{cy-4}" r="2.4" fill="{BG_COLOR}" />
-        <path d="M {cx-8} {cy+5} Q {cx} {cy+13} {cx+8} {cy+5}" stroke="{BG_COLOR}" stroke-width="2" fill="none" stroke-linecap="round" />
-        <g>
-            <animateTransform attributeName="transform" type="rotate" values="0 {cx+22} {cy-8}; 30 {cx+22} {cy-8}; 0 {cx+22} {cy-8}" dur="0.6s" repeatCount="indefinite" />
-            <line x1="{cx+20}" y1="{cy}" x2="{cx+22}" y2="{cy-16}" stroke="{COLOR_GREEN}" stroke-width="5" stroke-linecap="round" />
-        </g>
-    </g>
-</g>'''
-    return svg
-
-
-def generate(width=340):
-    data = get_github_data()
-    status_svg, status_h = build_status_card(data, width)
-    char_y = status_h + 14
-    char_svg = build_character(width, char_y, box_h=110)
-    total_h = char_y + 110
-
-    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {total_h}" width="100%" height="{total_h}" preserveAspectRatio="xMinYMin meet">
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {total_h}" width="100%" height="{total_h}">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&amp;display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&amp;display=swap');
+        
+        .title {{ font-family: 'Fira Code', monospace; font-size: 16px; font-weight: 700; fill: {COLOR_PINK}; }}
+        .label {{ font-family: 'Fira Code', monospace; font-size: 13px; font-weight: 400; fill: {COLOR_WHITE}; }}
+        .value {{ font-family: 'Fira Code', monospace; font-size: 13px; font-weight: 600; fill: {COLOR_CYAN}; }}
+        
+        /* Character Animations */
+        .char-wrapper {{
+            transition: transform 0.3s ease;
+        }}
+        
+        /* The walk animation triggers when hovering the interactive zone */
+        .interactive-zone:hover .char-wrapper {{
+            animation: walkLeftRight 3s ease-in-out infinite alternate;
+        }}
+        
+        @keyframes walkLeftRight {{
+            0% {{ transform: translateX(-40px); }}
+            100% {{ transform: translateX(40px); }}
+        }}
+
+        /* Speech Bubble Animations */
+        .bubble {{
+            opacity: 0;
+            transform: scale(0.8) translateY(10px);
+            transform-origin: center bottom;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }}
+        
+        .interactive-zone:hover .bubble {{
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }}
+
+        /* Cycling Text Messages */
+        .msg {{
+            opacity: 0;
+            font-family: 'Fira Code', monospace; 
+            font-size: 11px; 
+            font-weight: 600; 
+            fill: {COLOR_WHITE};
+        }}
+        
+        /* Only cycle texts when hovering */
+        .interactive-zone:hover .msg1 {{ animation: cycle 9s infinite 0s; }}
+        .interactive-zone:hover .msg2 {{ animation: cycle 9s infinite 3s; }}
+        .interactive-zone:hover .msg3 {{ animation: cycle 9s infinite 6s; }}
+
+        @keyframes cycle {{
+            0%, 25% {{ opacity: 1; }}
+            33%, 100% {{ opacity: 0; }}
+        }}
     </style>
-    <rect width="100%" height="100%" fill="{BG_COLOR}" rx="8" />
-{status_svg}
-{char_svg}
-</svg>'''
+
+    <defs>
+        <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="{BG_GRAD_START}"/>
+            <stop offset="100%" stop-color="{BG_GRAD_END}"/>
+        </linearGradient>
+        <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+            <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#000" flood-opacity="0.3"/>
+        </filter>
+    </defs>
+
+    <!-- Base Card -->
+    <rect x="0" y="0" width="{width}" height="{total_h}" rx="16" fill="url(#bgGrad)" stroke="{CARD_BORDER}" stroke-width="2" />
+
+    <!-- Title Section -->
+    <text x="20" y="35" class="title">Irtiza's GitHub Status</text>
+    <line x1="20" y1="48" x2="{width-20}" y2="48" stroke="{CARD_BORDER}" stroke-width="1.5" />
+
+    <!-- Stats Section -->
+    '''
+    y = 75
+    for icon, label_txt, val in rows:
+        svg += f'''
+        <text x="20" y="{y}" class="label">{icon}  {label_txt}</text>
+        <text x="{width-20}" y="{y}" text-anchor="end" class="value">{val}</text>
+        '''
+        y += 32
+
+    # Divider before character
+    y_char_section = y + 10
+    svg += f'''
+    <line x1="20" y1="{y_char_section}" x2="{width-20}" y2="{y_char_section}" stroke="{CARD_BORDER}" stroke-width="1.5" />
+    <rect x="20" y="{y_char_section+15}" width="{width-40}" height="30" rx="15" fill="{CARD_BORDER}" />
+    <text x="{width/2}" y="{y_char_section+35}" text-anchor="middle" style="font-family:'Fira Code',monospace; font-size:12px; font-weight:700; fill:{status_color};">MODE: {data['status'].upper()}</text>
+    '''
+
+    # --- Interactive Character Zone ---
+    svg += f'''
+    <g class="interactive-zone">
+        <!-- Invisible trigger box covers the entire bottom area -->
+        <rect x="0" y="{y_char_section}" width="{width}" height="{char_h+50}" fill="transparent" cursor="pointer" />
+        
+        <g class="char-wrapper">
+            <!-- Speech Bubble -->
+            <g class="bubble" transform="translate({width/2 - 65}, {y_char_section + 65})">
+                <!-- Bubble Tail -->
+                <polygon points="65,30 55,38 75,30" fill="{BUBBLE_BG}" />
+                <!-- Bubble Body -->
+                <rect x="0" y="0" width="130" height="30" rx="8" fill="{BUBBLE_BG}" stroke="{COLOR_CYAN}" stroke-width="1" filter="url(#shadow)"/>
+                
+                <!-- Cycling Messages -->
+                <text x="65" y="19" text-anchor="middle" class="msg msg1">Hi, I'm Irtiza!</text>
+                <text x="65" y="19" text-anchor="middle" class="msg msg2">Writing clean code 🚀</text>
+                <text x="65" y="19" text-anchor="middle" class="msg msg3">Checking commits...</text>
+            </g>
+            
+            <!-- The Pixel Character -->
+            <image href="data:image/png;base64,{char_b64}" x="{width/2 - 40}" y="{y_char_section + 95}" width="80" height="80" preserveAspectRatio="xMidYMid meet" filter="url(#shadow)" />
+        </g>
+    </g>
+    '''
+    svg += '</svg>'
 
     with open("status_panel.svg", "w", encoding="utf-8") as f:
         f.write(svg)
-    print(f"Generated status_panel.svg — status: {data['status']}, week_commits: {data['week_commits']}")
-
+    print(f"✨ Success: Generated status_panel.svg with interactive pixel boy!")
 
 if __name__ == "__main__":
     generate()
