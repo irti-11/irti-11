@@ -3,7 +3,7 @@ import time
 import json
 import base64
 import os
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 
 USERNAME = "irti-11"
 
@@ -60,12 +60,14 @@ def get_github_data():
         else:
             last_commit = f"{hours // 24}d ago"
 
-    now = datetime.now(timezone.utc)
-    week_commits = 0
-    for e in push_events:
-        dt = datetime.strptime(e["created_at"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
-        if (now - dt).days <= 7:
-            week_commits += e.get("payload", {}).get("distinct_size", 0)
+    week_ago = (datetime.now(timezone.utc) - timedelta(days=7)).strftime("%Y-%m-%d")
+    try:
+        search_url = f"https://api.github.com/search/commits?q=author:{USERNAME}+committer-date:>={week_ago}"
+        search_result = fetch_json(search_url)
+        week_commits = search_result.get("total_count", 0)
+    except Exception as e:
+        print("Commit search failed:", e)
+        week_commits = 0
 
     lang_count = {}
     for r in repos:
