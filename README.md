@@ -41,13 +41,12 @@ I'm continuously improving my backend development skills by building practical p
 </p>
 
 ### 📊 GitHub Status
-<div align="right">
-  <img src="./dynamic_meme.svg" alt="Dynamic Coding Status Meme" width="400">
-</div>
-
 <p align="left">
-  <img src="status_panel.svg" alt="Irtiza's GitHub Status">
+  <img src="./dynamic_meme.svg" alt="Dynamic Coding Status Meme" width="400">
+  <img src="status_panel.svg" alt="Irtiza's GitHub Status" height="385" align="right">
 </p>
+
+
 
 <h1 align="left">📡 Goals / What I'm Learning</h1>
 
