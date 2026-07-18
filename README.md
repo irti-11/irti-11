@@ -42,7 +42,7 @@ I'm continuously improving my backend development skills by building practical p
 
 ### 📊 GitHub Status
 <p align="left">
-  <img src="./dynamic_meme.svg" alt="Dynamic Coding Status Meme" width="400">
+ <img src="https://raw.githubusercontent.com/irti-11/irti-11/main/meme_panel.svg" alt="Dynamic Coding Status Meme" width="400">
   <img src="status_panel.svg" alt="Irtiza's GitHub Status" height="385" align="right">
 </p>
 
