@@ -25,9 +25,9 @@ jobs:
 
       - name: Run Python script
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Yeh line private repos aur accurate commits fetch karegi
+          GH_PAT: ${{ secrets.GH_PAT }}
         run: python generate_status_panel.py
-
+        
       - name: Commit and Push changes
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
