@@ -39,7 +39,7 @@ def fetch_json(url, retries=3):
 def get_github_data():
     try:
         user = fetch_json(f"https://api.github.com/users/{USERNAME}")
-        repos = fetch_json(f"https://api.github.com/users/{USERNAME}/repos?per_page=100")
+        repos = fetch_json(f"[https://api.github.com/user/repos?per_page=100](https://api.github.com/user/repos?per_page=100)")
         events_url = f"https://api.github.com/users/{USERNAME}/events" if TOKEN else f"https://api.github.com/users/{USERNAME}/events/public"
         events = fetch_json(events_url)
     except Exception as e:
