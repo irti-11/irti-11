@@ -7,10 +7,8 @@ from datetime import datetime, timezone, timedelta
 
 USERNAME = "irti-11"
 
-# Automatically fetch GitHub Token from Actions environment for private stats
 TOKEN = os.environ.get("GH_PAT")
 
-# --- Premium Colors ---
 BG_GRAD_START = "#1e222a"
 BG_GRAD_END = "#0d1117"
 CARD_BORDER = "#2a313c"
@@ -36,6 +34,21 @@ def fetch_json(url, retries=3):
             time.sleep(2)
     raise last_error
 
+def count_week_commits(repos, since_iso):
+    total = 0
+    for r in repos:
+        owner = r.get("owner", {}).get("login", USERNAME)
+        name = r.get("name")
+        if not name:
+            continue
+        url = f"https://api.github.com/repos/{owner}/{name}/commits?since={since_iso}&author={USERNAME}&per_page=100"
+        try:
+            commits = fetch_json(url, retries=1)
+            total += len(commits)
+        except Exception:
+            continue
+    return total
+
 def get_github_data():
     try:
         user = fetch_json(f"https://api.github.com/users/{USERNAME}")
@@ -60,14 +73,8 @@ def get_github_data():
         else:
             last_commit = f"{hours // 24}d ago"
 
-    week_ago = (datetime.now(timezone.utc) - timedelta(days=7)).strftime("%Y-%m-%d")
-    try:
-        search_url = f"https://api.github.com/search/commits?q=author:{USERNAME}+committer-date:>={week_ago}"
-        search_result = fetch_json(search_url)
-        week_commits = search_result.get("total_count", 0)
-    except Exception as e:
-        print("Commit search failed:", e)
-        week_commits = 0
+    since_iso = (datetime.now(timezone.utc) - timedelta(days=7)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    week_commits = count_week_commits(repos, since_iso)
 
     lang_count = {}
     for r in repos:
