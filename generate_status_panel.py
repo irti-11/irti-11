@@ -34,37 +34,61 @@ def fetch_json(url, retries=3):
             time.sleep(2)
     raise last_error
 
-def count_week_commits(repos, since_iso):
-    total = 0
+def get_latest_commit_and_week_count(repos, since_iso):
+    total_week = 0
+    latest_dt = None
+
     for r in repos:
         owner = r.get("owner", {}).get("login", USERNAME)
         name = r.get("name")
         if not name:
             continue
-        url = f"https://api.github.com/repos/{owner}/{name}/commits?since={since_iso}&author={USERNAME}&per_page=100"
+
+        # --- week commits (paginated, so counts > 100 aren't dropped) ---
+        page = 1
+        while True:
+            url = (f"https://api.github.com/repos/{owner}/{name}/commits"
+                   f"?since={since_iso}&author={USERNAME}&per_page=100&page={page}")
+            try:
+                commits = fetch_json(url, retries=1)
+            except Exception:
+                break
+            if not commits:
+                break
+            total_week += len(commits)
+            if len(commits) < 100:
+                break
+            page += 1
+
+        # --- latest commit overall (only need the newest one) ---
+        latest_url = (f"https://api.github.com/repos/{owner}/{name}/commits"
+                      f"?author={USERNAME}&per_page=1")
         try:
-            commits = fetch_json(url, retries=1)
-            total += len(commits)
+            latest = fetch_json(latest_url, retries=1)
+            if latest:
+                dt_str = latest[0]["commit"]["author"]["date"]
+                dt = datetime.strptime(dt_str, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
+                if latest_dt is None or dt > latest_dt:
+                    latest_dt = dt
         except Exception:
             continue
-    return total
+
+    return total_week, latest_dt
 
 def get_github_data():
     try:
         user = fetch_json(f"https://api.github.com/users/{USERNAME}")
         repos = fetch_json("https://api.github.com/user/repos?per_page=100")
-        events_url = f"https://api.github.com/users/{USERNAME}/events" if TOKEN else f"https://api.github.com/users/{USERNAME}/events/public"
-        events = fetch_json(events_url)
     except Exception as e:
         print("API fetch failed, using fallback data:", e)
         return {"public_repos": 0, "followers": 0, "last_commit": "unknown", "week_commits": 0, "top_lang": "N/A", "status": "quiet"}
 
-    push_events = [e for e in events if e.get("type") == "PushEvent"]
+    since_iso = (datetime.now(timezone.utc) - timedelta(days=7)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    week_commits, latest_dt = get_latest_commit_and_week_count(repos, since_iso)
 
     last_commit = "no recent activity"
-    if push_events:
-        dt = datetime.strptime(push_events[0]["created_at"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
-        delta = datetime.now(timezone.utc) - dt
+    if latest_dt:
+        delta = datetime.now(timezone.utc) - latest_dt
         hours = int(delta.total_seconds() // 3600)
         if hours < 1:
             last_commit = "just now"
@@ -72,9 +96,6 @@ def get_github_data():
             last_commit = f"{hours}h ago"
         else:
             last_commit = f"{hours // 24}d ago"
-
-    since_iso = (datetime.now(timezone.utc) - timedelta(days=7)).strftime("%Y-%m-%dT%H:%M:%SZ")
-    week_commits = count_week_commits(repos, since_iso)
 
     lang_count = {}
     for r in repos:
