@@ -1,44 +1,35 @@
 name: Update GitHub Status Panel
-
 on:
   schedule:
     - cron: "0 */6 * * *"
   workflow_dispatch:
-
 permissions:
   contents: write
-
 jobs:
   update-panel:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.10"
-
       - name: Run status panel script
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
         run: python generate_status_panel.py
-
       - name: Run meme panel script
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
         run: python generate_meme_panel.py
-
       - name: Install dependencies
         run: pip install requests
-
       - name: Generate LED matrix contribution graph
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
           GITHUB_USERNAME: irti-11
         run: python generate_led_matrix.py
-
       - name: Commit and Push changes
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
