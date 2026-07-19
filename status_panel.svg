@@ -64,10 +64,10 @@
         <text x="380" y="107" text-anchor="end" class="value">0</text>
         
         <text x="20" y="139" class="label">⏱️  Last Commit</text>
-        <text x="380" y="139" text-anchor="end" class="value">just now</text>
+        <text x="380" y="139" text-anchor="end" class="value">6h ago</text>
         
         <text x="20" y="171" class="label">📈  This Week</text>
-        <text x="380" y="171" text-anchor="end" class="value">98 commits</text>
+        <text x="380" y="171" text-anchor="end" class="value">100 commits</text>
         
         <text x="20" y="203" class="label">💬  Top Language</text>
         <text x="380" y="203" text-anchor="end" class="value">CSS</text>
