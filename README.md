@@ -19,7 +19,7 @@ I'm continuously improving my backend development skills by building practical p
 ###
 
 ## My Tech Stack
-![Skills Map](./skills_map.svg)
+![Skills Map](./skills_map_v2.svg)
 
 ###
 <p align="left">
