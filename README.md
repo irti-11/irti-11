@@ -4,7 +4,11 @@
 
 ---
 
-###
+<p align="left">
+  <img src="https://raw.githubusercontent.com/irti-11/irti-11/main/led_matrix.svg" alt="GitHub contribution LED matrix" width="100%" />
+</p>
+
+---
 
 <h1 align="left">Salutations, I'm Syed Irtiza Al</h1>
 
