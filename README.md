@@ -10,10 +10,11 @@
 
 ###
 
-<p align="left">I'm a Computer System Engineering student focused on full-stack web development and software engineering. I build responsive, database-driven web applications using HTML, CSS, JavaScript, PHP, and MySQL, with an emphasis on clean code, user-friendly interfaces, and efficient database design.
-
+<h4 align="left">I'm a Computer System Engineering student focused on full-stack web development and software engineering. I build responsive, database-driven web applications using HTML, CSS, JavaScript, PHP, and MySQL, with an emphasis on clean code, user-friendly interfaces, and efficient database design.
+<br>
+<br>
 I'm continuously improving my backend development skills by building practical projects, exploring modern web development practices, and strengthening my understanding of software development through hands-on experience.
-</p>
+</h4>
 
 ###
 
