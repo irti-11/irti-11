@@ -8,8 +8,7 @@ profile README.
 
 Requires:
     - env var GH_PAT: a GitHub Personal Access Token with read access to
-      contribution data (classic PAT with no extra scopes needed for public
-      contribution counts, or a fine-grained PAT with "read-only" access).
+      contribution data.
     - env var GITHUB_USERNAME (optional): defaults to "irti-11".
     - pip package: requests
 
@@ -31,28 +30,26 @@ GH_PAT = os.environ.get("GH_PAT")
 GRAPHQL_URL = "https://api.github.com/graphql"
 OUTPUT_FILE = "led_matrix.svg"
 
-CELL_SIZE = 11          # px, matches GitHub's contribution cell size
-CELL_GAP = 3             # px, matches GitHub's contribution grid spacing
-CELL_RADIUS = 2          # rounded corner radius on each LED tile
-MARGIN = 12              # outer padding around the whole grid
+CELL_SIZE = 11
+CELL_GAP = 3
+CELL_RADIUS = 2
+MARGIN = 12
 
-BG_COLOR = "#050810"     # near-black / deep navy backdrop
-UNLIT_COLOR = "#161b22"  # dark, "powered off" LED tile
+BG_COLOR = "#050810"
+UNLIT_COLOR = "#161b22"
 
-# GitHub's own contribution-graph green palette, level 1 (dim) -> 4 (hottest)
 LEVEL_COLORS = {
     1: "#0e4429",
     2: "#006d32",
     3: "#26a641",
     4: "#39d353",
 }
-# Extra bright "hot core" color blended into level 4 tiles only
 HOT_CORE_COLOR = "#c8ffdb"
 
-TOTAL_WAVE_DURATION = 2.4   # seconds, fixed regardless of grid width
-ENTRANCE_DURATION = 0.5     # seconds, per-LED ignite animation
-FLICKER_DURATION = 0.6      # seconds, post-wave shimmer
-FLICKER_START_GAP = 0.15    # seconds after entrance finishes before flicker
+TOTAL_WAVE_DURATION = 2.4
+ENTRANCE_DURATION = 0.5
+FLICKER_DURATION = 0.6
+FLICKER_START_GAP = 0.15
 
 CONTRIBUTION_QUERY = """
 query($userName:String!) {
@@ -85,7 +82,6 @@ LEVEL_MAP = {
 # ---------------------------------------------------------------------------
 
 def fetch_contribution_weeks(username: str, token: str):
-    """Returns a list of weeks, each a list of intensity levels (0-4)."""
     if not token:
         raise RuntimeError(
             "GH_PAT environment variable is not set. The GitHub Actions "
@@ -129,8 +125,6 @@ def fetch_contribution_weeks(username: str, token: str):
 # ---------------------------------------------------------------------------
 
 def build_filters():
-    """One glow filter per intensity level (1-4). Higher level = wider /
-    brighter blur halo, simulating LED bloom photography."""
     filters = []
     blur_std = {1: 0.6, 2: 1.0, 3: 1.5, 4: 2.2}
     halo_std = {1: 1.4, 2: 2.0, 3: 2.8, 4: 4.0}
@@ -150,8 +144,6 @@ def build_filters():
       </feMerge>
     </filter>''')
 
-    # Extra hot-core filter layered on top of level-4 tiles only, to give the
-    # brightest tiles an almost white-green center.
     filters.append(f'''
     <filter id="hot-core" x="-200%" y="-200%" width="500%" height="500%">
       <feFlood flood-color="{HOT_CORE_COLOR}" flood-opacity="0.85" result="flood"/>
@@ -167,9 +159,7 @@ def build_filters():
 
 
 def build_cell(week_idx, day_idx, level, num_weeks, cx, cy, half):
-    """Returns the SVG markup for a single LED tile."""
     if level == 0:
-        # Static, unlit tile - visible from frame one, never animates.
         x = cx - half
         y = cy - half
         return (
@@ -181,9 +171,6 @@ def build_cell(week_idx, day_idx, level, num_weeks, cx, cy, half):
     delay = week_idx * (TOTAL_WAVE_DURATION / num_weeks)
     flicker_begin = delay + ENTRANCE_DURATION + FLICKER_START_GAP
 
-    # Outer group: fixed translate to the cell's center point.
-    # Inner group: animated scale, pivoting around (0,0) which now sits at
-    # the cell center thanks to the outer translate.
     core_rect = (
         f'<rect x="{-half:.2f}" y="{-half:.2f}" width="{CELL_SIZE}" height="{CELL_SIZE}" '
         f'rx="{CELL_RADIUS}" ry="{CELL_RADIUS}" fill="{color}" filter="url(#glow-{level})"/>'
@@ -229,6 +216,7 @@ def build_svg(weeks):
 
     width = MARGIN * 2 + num_weeks * pitch - CELL_GAP
     height = MARGIN * 2 + 7 * pitch - CELL_GAP
+    grid_height = 7 * pitch - CELL_GAP
 
     cells = []
     for week_idx, week in enumerate(weeks):
@@ -238,8 +226,39 @@ def build_svg(weeks):
             cy = MARGIN + day_idx * pitch + half
             cells.append(build_cell(week_idx, day_idx, level, num_weeks, cx, cy, half))
 
+    beam_w = pitch * 2.2
+    beam_x_start = MARGIN - beam_w
+    beam_x_end = MARGIN + num_weeks * pitch
+    beam = f'''
+  <defs>
+    <linearGradient id="beamGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#39d353" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#8fffc0" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#39d353" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect x="{beam_x_start:.2f}" y="{MARGIN - 4}" width="{beam_w:.2f}" height="{grid_height + 8}"
+        fill="url(#beamGrad)">
+    <animateTransform attributeName="transform" type="translate"
+      from="0,0" to="{beam_x_end - beam_x_start:.2f},0"
+      begin="0s" dur="{TOTAL_WAVE_DURATION}s" fill="freeze" calcMode="linear"/>
+  </rect>'''
+
+    flash_layer = []
+    for week_idx in range(num_weeks):
+        delay = week_idx * (TOTAL_WAVE_DURATION / num_weeks)
+        x = MARGIN + week_idx * pitch - CELL_GAP / 2
+        w = pitch
+        flash_layer.append(f'''
+  <rect x="{x:.2f}" y="{MARGIN - 2}" width="{w:.2f}" height="{grid_height + 4}"
+        fill="#39d353" opacity="0">
+    <animate attributeName="opacity" begin="{delay:.3f}s" dur="0.35s"
+      values="0;0.22;0" calcMode="linear" fill="freeze"/>
+  </rect>''')
+
     filters = build_filters()
     cells_markup = "\n".join(cells)
+    flash_markup = "\n".join(flash_layer)
 
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width:.2f}" height="{height:.2f}"
      viewBox="0 0 {width:.2f} {height:.2f}" role="img" aria-label="GitHub contribution LED matrix">
@@ -247,7 +266,9 @@ def build_svg(weeks):
 {filters}
   </defs>
   <rect x="0" y="0" width="{width:.2f}" height="{height:.2f}" fill="{BG_COLOR}"/>
+{flash_markup}
 {cells_markup}
+{beam}
 </svg>'''
     return svg
 
