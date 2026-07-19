@@ -158,17 +158,28 @@ def build_filters():
     return "\n".join(filters)
 
 
-def build_cell(week_idx, day_idx, level, num_weeks, cx, cy, half):
+def build_cell(week_idx, day_idx, level, num_weeks, num_days, cx, cy, half):
+    col_delay = week_idx * (TOTAL_WAVE_DURATION / num_weeks)
+    row_offset = (day_idx / num_days) * (TOTAL_WAVE_DURATION / num_weeks) * 0.5
+    delay = col_delay + row_offset
+
     if level == 0:
-        x = cx - half
-        y = cy - half
-        return (
-            f'<rect x="{x:.2f}" y="{y:.2f}" width="{CELL_SIZE}" height="{CELL_SIZE}" '
-            f'rx="{CELL_RADIUS}" ry="{CELL_RADIUS}" fill="{UNLIT_COLOR}"/>'
-        )
+        return f'''
+  <g transform="translate({cx:.2f},{cy:.2f})" opacity="0">
+    <animate attributeName="opacity" begin="{delay:.3f}s" dur="0.55s"
+      values="0;1" calcMode="spline" keySplines="0.2 0.8 0.3 1" fill="freeze"/>
+    <g>
+      <animateTransform attributeName="transform" type="scale" begin="{delay:.3f}s"
+        dur="0.55s" values="0.55;1" calcMode="spline" keySplines="0.25 1 0.4 1" fill="freeze"/>
+      <rect x="{-half:.2f}" y="{-half:.2f}" width="{CELL_SIZE}" height="{CELL_SIZE}"
+        rx="{CELL_RADIUS}" ry="{CELL_RADIUS}" fill="{UNLIT_COLOR}">
+        <animate attributeName="fill" begin="{delay:.3f}s" dur="0.55s"
+          values="#2a3140;{UNLIT_COLOR}" calcMode="spline" keySplines="0.3 0 0.4 1" fill="freeze"/>
+      </rect>
+    </g>
+  </g>'''
 
     color = LEVEL_COLORS[level]
-    delay = week_idx * (TOTAL_WAVE_DURATION / num_weeks)
     flicker_begin = delay + ENTRANCE_DURATION + FLICKER_START_GAP
 
     core_rect = (
@@ -194,7 +205,7 @@ def build_cell(week_idx, day_idx, level, num_weeks, cx, cy, half):
       values="0;1" calcMode="spline" keySplines="0.16 1 0.3 1" fill="freeze"/>
     <g>
       <animateTransform attributeName="transform" type="scale" begin="{delay:.3f}s"
-        dur="{ENTRANCE_DURATION}s" values="0.3;1.12;1" keyTimes="0;0.7;1"
+        dur="{ENTRANCE_DURATION}s" values="0.3;1.15;1" keyTimes="0;0.7;1"
         calcMode="spline" keySplines="0.33 0 0.2 1;0.33 0 0.2 1" fill="freeze"/>
       <g>
         {core_rect}
@@ -216,7 +227,6 @@ def build_svg(weeks):
 
     width = MARGIN * 2 + num_weeks * pitch - CELL_GAP
     height = MARGIN * 2 + 7 * pitch - CELL_GAP
-    grid_height = 7 * pitch - CELL_GAP
 
     cells = []
     for week_idx, week in enumerate(weeks):
@@ -224,41 +234,10 @@ def build_svg(weeks):
             level = week[day_idx] if day_idx < len(week) else 0
             cx = MARGIN + week_idx * pitch + half
             cy = MARGIN + day_idx * pitch + half
-            cells.append(build_cell(week_idx, day_idx, level, num_weeks, cx, cy, half))
-
-    beam_w = pitch * 2.2
-    beam_x_start = MARGIN - beam_w
-    beam_x_end = MARGIN + num_weeks * pitch
-    beam = f'''
-  <defs>
-    <linearGradient id="beamGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#39d353" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#8fffc0" stop-opacity="0.35"/>
-      <stop offset="100%" stop-color="#39d353" stop-opacity="0"/>
-    </linearGradient>
-  </defs>
-  <rect x="{beam_x_start:.2f}" y="{MARGIN - 4}" width="{beam_w:.2f}" height="{grid_height + 8}"
-        fill="url(#beamGrad)">
-    <animateTransform attributeName="transform" type="translate"
-      from="0,0" to="{beam_x_end - beam_x_start:.2f},0"
-      begin="0s" dur="{TOTAL_WAVE_DURATION}s" fill="freeze" calcMode="linear"/>
-  </rect>'''
-
-    flash_layer = []
-    for week_idx in range(num_weeks):
-        delay = week_idx * (TOTAL_WAVE_DURATION / num_weeks)
-        x = MARGIN + week_idx * pitch - CELL_GAP / 2
-        w = pitch
-        flash_layer.append(f'''
-  <rect x="{x:.2f}" y="{MARGIN - 2}" width="{w:.2f}" height="{grid_height + 4}"
-        fill="#39d353" opacity="0">
-    <animate attributeName="opacity" begin="{delay:.3f}s" dur="0.35s"
-      values="0;0.22;0" calcMode="linear" fill="freeze"/>
-  </rect>''')
+            cells.append(build_cell(week_idx, day_idx, level, num_weeks, 7, cx, cy, half))
 
     filters = build_filters()
     cells_markup = "\n".join(cells)
-    flash_markup = "\n".join(flash_layer)
 
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width:.2f}" height="{height:.2f}"
      viewBox="0 0 {width:.2f} {height:.2f}" role="img" aria-label="GitHub contribution LED matrix">
@@ -266,9 +245,7 @@ def build_svg(weeks):
 {filters}
   </defs>
   <rect x="0" y="0" width="{width:.2f}" height="{height:.2f}" fill="{BG_COLOR}"/>
-{flash_markup}
 {cells_markup}
-{beam}
 </svg>'''
     return svg
 
