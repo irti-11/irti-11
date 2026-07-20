@@ -3,8 +3,15 @@
 generate_led_matrix.py
 
 Fetches real GitHub contribution data via the GraphQL API and renders it as
-an animated "LED matrix" SVG (led_matrix.svg) for embedding in a GitHub
-profile README.
+an animated "CRT terminal" LED matrix SVG (led_matrix.svg) for embedding in
+a GitHub profile README.
+
+Visual concept: a phosphor-green CRT display. On load, a bright scan bar
+sweeps left-to-right across the grid (like a monitor initializing / a raster
+scan reading the tape), lighting each week-column as it passes. Scanlines
+and a soft vignette sit over the whole thing for the terminal feel. Once the
+sweep finishes, high-activity cells occasionally re-flicker like an idling
+CRT.
 
 Requires:
     - env var GH_PAT: a GitHub Personal Access Token with read access to
@@ -35,21 +42,29 @@ CELL_GAP = 3
 CELL_RADIUS = 2
 MARGIN = 12
 
-BG_COLOR = "#050810"
-UNLIT_COLOR = "#161b22"
+# --- CRT / phosphor palette -------------------------------------------------
+BG_COLOR = "#02100a"          # near-black, faint green cast — the tube glass
+UNLIT_COLOR = "#0a1c12"       # dark phosphor, cell not excited
+SCANLINE_COLOR = "#000000"
+VIGNETTE_COLOR = "#000a05"
 
 LEVEL_COLORS = {
-    1: "#0e4429",
-    2: "#006d32",
-    3: "#26a641",
-    4: "#39d353",
+    1: "#0f3d22",
+    2: "#1c7a3e",
+    3: "#33b854",
+    4: "#7dffa0",
 }
-HOT_CORE_COLOR = "#c8ffdb"
+HOT_CORE_COLOR = "#eafff2"    # near-white phosphor flare, level-4 only
+SCAN_BAR_COLOR = "#8dffb3"    # bright sweeping raster line
 
-TOTAL_WAVE_DURATION = 2.4
+TOTAL_WAVE_DURATION = 2.4     # total time for the scan bar to cross the grid
 ENTRANCE_DURATION = 0.5
 FLICKER_DURATION = 0.6
 FLICKER_START_GAP = 0.15
+
+# idle CRT flicker after boot: high-level cells randomly re-pulse
+IDLE_FLICKER_LEVELS = (3, 4)
+IDLE_FLICKER_PERIOD = 9.0     # seconds between idle re-flickers per cell
 
 CONTRIBUTION_QUERY = """
 query($userName:String!) {
@@ -127,7 +142,7 @@ def fetch_contribution_weeks(username: str, token: str):
 def build_filters():
     filters = []
     blur_std = {1: 0.6, 2: 1.0, 3: 1.5, 4: 2.2}
-    halo_std = {1: 1.4, 2: 2.0, 3: 2.8, 4: 4.0}
+    halo_std = {1: 1.4, 2: 2.0, 3: 2.8, 4: 4.2}
 
     for level in (1, 2, 3, 4):
         color = LEVEL_COLORS[level]
@@ -155,7 +170,31 @@ def build_filters():
       </feMerge>
     </filter>''')
 
+    filters.append(f'''
+    <filter id="scan-bar-glow" x="-300%" y="-50%" width="700%" height="200%">
+      <feFlood flood-color="{SCAN_BAR_COLOR}" flood-opacity="1" result="flood"/>
+      <feComposite in="flood" in2="SourceGraphic" operator="in" result="core"/>
+      <feGaussianBlur in="core" stdDeviation="3.2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="core"/>
+      </feMerge>
+    </filter>''')
+
     return "\n".join(filters)
+
+
+def build_defs_extras(width, height):
+    """Scanline pattern + vignette gradient, shared across the whole grid."""
+    return f'''
+    <pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="4" fill="transparent"/>
+      <rect width="4" height="1" fill="{SCANLINE_COLOR}" opacity="0.18"/>
+    </pattern>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="75%">
+      <stop offset="55%" stop-color="{VIGNETTE_COLOR}" stop-opacity="0"/>
+      <stop offset="100%" stop-color="{VIGNETTE_COLOR}" stop-opacity="0.55"/>
+    </radialGradient>'''
 
 
 def build_cell(week_idx, day_idx, level, num_weeks, num_days, cx, cy, half):
@@ -164,7 +203,7 @@ def build_cell(week_idx, day_idx, level, num_weeks, num_days, cx, cy, half):
     delay = col_delay + row_offset
 
     if level == 0:
-        pulse_color = "#1b7a4a"   # dim energy-green used only for the transient shimmer
+        pulse_color = LEVEL_COLORS[1]  # dim phosphor shimmer as the scan passes
         return f'''
   <g transform="translate({cx:.2f},{cy:.2f})">
     <rect x="{-half:.2f}" y="{-half:.2f}" width="{CELL_SIZE}" height="{CELL_SIZE}"
@@ -202,6 +241,19 @@ def build_cell(week_idx, day_idx, level, num_weeks, num_days, cx, cy, half):
 
     flicker_values = "1;1;0.82;1;0.9;1" if level >= 3 else "1;1;0.88;1"
 
+    # Idle re-flicker loop for high-level cells, starts only after boot settles.
+    idle_loop = ""
+    if level in IDLE_FLICKER_LEVELS:
+        # Stagger idle starts per-cell so the whole grid doesn't flicker in
+        # sync. SMIL has no clean "wait, then repeat forever" primitive, so
+        # this is approximated as one long-period repeating animation whose
+        # first cycle absorbs the stagger delay via keyTimes.
+        idle_start = flicker_begin + FLICKER_DURATION + 1.0 + (delay * 1.7) % IDLE_FLICKER_PERIOD
+        idle_loop = f'''
+        <animate attributeName="opacity" begin="{idle_start:.3f}s" dur="{IDLE_FLICKER_PERIOD}s"
+          values="1;1;0.7;1;1" keyTimes="0;0.3;0.33;0.36;1"
+          calcMode="linear" repeatCount="indefinite" fill="freeze"/>'''
+
     return f'''
   <g transform="translate({cx:.2f},{cy:.2f})" opacity="0">
     <animate attributeName="opacity" begin="{delay:.3f}s" dur="{ENTRANCE_DURATION}s"
@@ -215,8 +267,30 @@ def build_cell(week_idx, day_idx, level, num_weeks, num_days, cx, cy, half):
         {hot_overlay}
         <animate attributeName="opacity" begin="{flicker_begin:.3f}s" dur="{FLICKER_DURATION}s"
           values="{flicker_values}" calcMode="linear" repeatCount="1" fill="freeze"/>
+        {idle_loop}
       </g>
     </g>
+  </g>'''
+
+
+def build_scan_bar(width, height, num_weeks):
+    """A bright vertical raster line that sweeps left-to-right once, matching
+    the same timing the cells use to light up column-by-column, then fades."""
+    x_start = MARGIN - 4
+    x_end = width - MARGIN + 4
+    bar_width = 2.5
+    fade_start = TOTAL_WAVE_DURATION
+    fade_dur = 0.6
+
+    return f'''
+  <g opacity="1">
+    <rect x="{x_start:.2f}" y="0" width="{bar_width}" height="{height:.2f}"
+      fill="{SCAN_BAR_COLOR}" filter="url(#scan-bar-glow)">
+      <animate attributeName="x" begin="0s" dur="{TOTAL_WAVE_DURATION}s"
+        values="{x_start:.2f};{x_end:.2f}" calcMode="linear" fill="freeze"/>
+      <animate attributeName="opacity" begin="{fade_start:.3f}s" dur="{fade_dur}s"
+        values="1;0" calcMode="linear" fill="freeze"/>
+    </rect>
   </g>'''
 
 
@@ -240,15 +314,21 @@ def build_svg(weeks):
             cells.append(build_cell(week_idx, day_idx, level, num_weeks, 7, cx, cy, half))
 
     filters = build_filters()
+    defs_extras = build_defs_extras(width, height)
     cells_markup = "\n".join(cells)
+    scan_bar = build_scan_bar(width, height, num_weeks)
 
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width:.2f}" height="{height:.2f}"
-     viewBox="0 0 {width:.2f} {height:.2f}" role="img" aria-label="GitHub contribution LED matrix">
+     viewBox="0 0 {width:.2f} {height:.2f}" role="img" aria-label="GitHub contribution CRT matrix">
   <defs>
 {filters}
+{defs_extras}
   </defs>
   <rect x="0" y="0" width="{width:.2f}" height="{height:.2f}" fill="{BG_COLOR}"/>
 {cells_markup}
+{scan_bar}
+  <rect x="0" y="0" width="{width:.2f}" height="{height:.2f}" fill="url(#scanlines)" pointer-events="none"/>
+  <rect x="0" y="0" width="{width:.2f}" height="{height:.2f}" fill="url(#vignette)" pointer-events="none"/>
 </svg>'''
     return svg
 
