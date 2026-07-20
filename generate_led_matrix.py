@@ -164,18 +164,21 @@ def build_cell(week_idx, day_idx, level, num_weeks, num_days, cx, cy, half):
     delay = col_delay + row_offset
 
     if level == 0:
+        pulse_color = "#1b7a4a"   # dim energy-green used only for the transient shimmer
         return f'''
-  <g transform="translate({cx:.2f},{cy:.2f})" opacity="0">
-    <animate attributeName="opacity" begin="{delay:.3f}s" dur="0.55s"
-      values="0;1" calcMode="spline" keySplines="0.2 0.8 0.3 1" fill="freeze"/>
-    <g>
-      <animateTransform attributeName="transform" type="scale" begin="{delay:.3f}s"
-        dur="0.55s" values="0.55;1" calcMode="spline" keySplines="0.25 1 0.4 1" fill="freeze"/>
-      <rect x="{-half:.2f}" y="{-half:.2f}" width="{CELL_SIZE}" height="{CELL_SIZE}"
-        rx="{CELL_RADIUS}" ry="{CELL_RADIUS}" fill="{UNLIT_COLOR}">
-        <animate attributeName="fill" begin="{delay:.3f}s" dur="0.55s"
-          values="#2a3140;{UNLIT_COLOR}" calcMode="spline" keySplines="0.3 0 0.4 1" fill="freeze"/>
-      </rect>
+  <g transform="translate({cx:.2f},{cy:.2f})">
+    <rect x="{-half:.2f}" y="{-half:.2f}" width="{CELL_SIZE}" height="{CELL_SIZE}"
+      rx="{CELL_RADIUS}" ry="{CELL_RADIUS}" fill="{UNLIT_COLOR}"/>
+    <g opacity="0">
+      <animate attributeName="opacity" begin="{delay:.3f}s" dur="0.7s"
+        values="0;0.85;0" calcMode="spline" keySplines="0.2 0.8 0.3 1;0.4 0 0.6 1" fill="freeze"/>
+      <g>
+        <animateTransform attributeName="transform" type="scale" begin="{delay:.3f}s"
+          dur="0.7s" values="0.5;1.1;0.9" calcMode="spline"
+          keySplines="0.25 1 0.4 1;0.4 0 0.6 1" fill="freeze"/>
+        <rect x="{-half:.2f}" y="{-half:.2f}" width="{CELL_SIZE}" height="{CELL_SIZE}"
+          rx="{CELL_RADIUS}" ry="{CELL_RADIUS}" fill="{pulse_color}" filter="url(#glow-1)"/>
+      </g>
     </g>
   </g>'''
 
