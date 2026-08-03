@@ -58,7 +58,7 @@
     <line x1="20" y1="48" x2="380" y2="48" stroke="#2a313c" stroke-width="1.5" />
     
         <text x="20" y="75" class="label">📦  Total Repositories</text>
-        <text x="380" y="75" text-anchor="end" class="value">29</text>
+        <text x="380" y="75" text-anchor="end" class="value">30</text>
         
         <text x="20" y="107" class="label">👥  Followers</text>
         <text x="380" y="107" text-anchor="end" class="value">0</text>
@@ -67,14 +67,14 @@
         <text x="380" y="139" text-anchor="end" class="value">1d ago</text>
         
         <text x="20" y="171" class="label">📈  This Week</text>
-        <text x="380" y="171" text-anchor="end" class="value">121 commits</text>
+        <text x="380" y="171" text-anchor="end" class="value">4 commits</text>
         
         <text x="20" y="203" class="label">💬  Top Language</text>
         <text x="380" y="203" text-anchor="end" class="value">CSS</text>
         
     <line x1="20" y1="245" x2="380" y2="245" stroke="#2a313c" stroke-width="1.5" />
     <rect x="20" y="260" width="360" height="30" rx="15" fill="#2a313c" />
-    <text x="200.0" y="280" text-anchor="middle" style="font-family:'Fira Code',monospace; font-size:12px; font-weight:700; fill:#aef3a4;">MODE: SHIPPING</text>
+    <text x="200.0" y="280" text-anchor="middle" style="font-family:'Fira Code',monospace; font-size:12px; font-weight:700; fill:#78dec7;">MODE: ACTIVE</text>
     
     <g>
         <g class="bubble">

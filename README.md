@@ -63,7 +63,7 @@ I'm continuously improving my backend development skills by building practical p
 
 <br clear="both">
 <div align="center">
-  <img src="end_banner.svg" alt="End of profile banner" width="100%" />
+  <img src="Programming Computer.svg" alt="End of profile banner" width="100%" />
 </div>
 
 
