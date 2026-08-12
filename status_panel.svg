@@ -64,7 +64,7 @@
         <text x="380" y="107" text-anchor="end" class="value">0</text>
         
         <text x="20" y="139" class="label">⏱️  Last Commit</text>
-        <text x="380" y="139" text-anchor="end" class="value">4d ago</text>
+        <text x="380" y="139" text-anchor="end" class="value">5d ago</text>
         
         <text x="20" y="171" class="label">📈  This Week</text>
         <text x="380" y="171" text-anchor="end" class="value">1 commits</text>
