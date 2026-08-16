@@ -62,10 +62,7 @@ I'm continuously improving my backend development skills by building practical p
 ###
 
 <br clear="both">
-<div align="center">
-  <p align="center">
-  <img src="./se7en_end_banner.svg" alt="Syed Irtiza Ali End Banner" width="100%">
+
+<p align="center">
+  <img src="./terminal-animation.gif" width="100%" />
 </p>
-</div>
-
-
