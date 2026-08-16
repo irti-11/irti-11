@@ -64,5 +64,6 @@ I'm continuously improving my backend development skills by building practical p
 <br clear="both">
 
 <p align="center">
-  <img src="./terminal-animation.gif" width="100%" />
+  <img src="./terminal-animation.gif" width="60%"
+       height="300" alt="Terminal animation">
 </p>
