@@ -209,18 +209,19 @@
     </g>
   </g>
 
-  <g transform="translate(31.50,31.50)">
-    <rect x="-5.50" y="-5.50" width="11" height="11"
-      rx="2" ry="2" fill="#0a1c12"/>
-    <g opacity="0">
-      <animate attributeName="opacity" begin="0.049s" dur="0.7s"
-        values="0;0.85;0" calcMode="spline" keySplines="0.2 0.8 0.3 1;0.4 0 0.6 1" fill="freeze"/>
+  <g transform="translate(31.50,31.50)" opacity="0">
+    <animate attributeName="opacity" begin="0.049s" dur="0.5s"
+      values="0;1" calcMode="spline" keySplines="0.16 1 0.3 1" fill="freeze"/>
+    <g>
+      <animateTransform attributeName="transform" type="scale" begin="0.049s"
+        dur="0.5s" values="0.3;1.15;1" keyTimes="0;0.7;1"
+        calcMode="spline" keySplines="0.33 0 0.2 1;0.33 0 0.2 1" fill="freeze"/>
       <g>
-        <animateTransform attributeName="transform" type="scale" begin="0.049s"
-          dur="0.7s" values="0.5;1.1;0.9" calcMode="spline"
-          keySplines="0.25 1 0.4 1;0.4 0 0.6 1" fill="freeze"/>
-        <rect x="-5.50" y="-5.50" width="11" height="11"
-          rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
+        <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
+        
+        <animate attributeName="opacity" begin="0.699s" dur="0.6s"
+          values="1;1;0.88;1" calcMode="linear" repeatCount="1" fill="freeze"/>
+        
       </g>
     </g>
   </g>
@@ -321,19 +322,18 @@
     </g>
   </g>
 
-  <g transform="translate(45.50,31.50)" opacity="0">
-    <animate attributeName="opacity" begin="0.094s" dur="0.5s"
-      values="0;1" calcMode="spline" keySplines="0.16 1 0.3 1" fill="freeze"/>
-    <g>
-      <animateTransform attributeName="transform" type="scale" begin="0.094s"
-        dur="0.5s" values="0.3;1.15;1" keyTimes="0;0.7;1"
-        calcMode="spline" keySplines="0.33 0 0.2 1;0.33 0 0.2 1" fill="freeze"/>
+  <g transform="translate(45.50,31.50)">
+    <rect x="-5.50" y="-5.50" width="11" height="11"
+      rx="2" ry="2" fill="#0a1c12"/>
+    <g opacity="0">
+      <animate attributeName="opacity" begin="0.094s" dur="0.7s"
+        values="0;0.85;0" calcMode="spline" keySplines="0.2 0.8 0.3 1;0.4 0 0.6 1" fill="freeze"/>
       <g>
-        <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
-        
-        <animate attributeName="opacity" begin="0.744s" dur="0.6s"
-          values="1;1;0.88;1" calcMode="linear" repeatCount="1" fill="freeze"/>
-        
+        <animateTransform attributeName="transform" type="scale" begin="0.094s"
+          dur="0.7s" values="0.5;1.1;0.9" calcMode="spline"
+          keySplines="0.25 1 0.4 1;0.4 0 0.6 1" fill="freeze"/>
+        <rect x="-5.50" y="-5.50" width="11" height="11"
+          rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
       </g>
     </g>
   </g>
@@ -930,34 +930,39 @@
     </g>
   </g>
 
-  <g transform="translate(115.50,73.50)">
-    <rect x="-5.50" y="-5.50" width="11" height="11"
-      rx="2" ry="2" fill="#0a1c12"/>
-    <g opacity="0">
-      <animate attributeName="opacity" begin="0.330s" dur="0.7s"
-        values="0;0.85;0" calcMode="spline" keySplines="0.2 0.8 0.3 1;0.4 0 0.6 1" fill="freeze"/>
+  <g transform="translate(115.50,73.50)" opacity="0">
+    <animate attributeName="opacity" begin="0.330s" dur="0.5s"
+      values="0;1" calcMode="spline" keySplines="0.16 1 0.3 1" fill="freeze"/>
+    <g>
+      <animateTransform attributeName="transform" type="scale" begin="0.330s"
+        dur="0.5s" values="0.3;1.15;1" keyTimes="0;0.7;1"
+        calcMode="spline" keySplines="0.33 0 0.2 1;0.33 0 0.2 1" fill="freeze"/>
       <g>
-        <animateTransform attributeName="transform" type="scale" begin="0.330s"
-          dur="0.7s" values="0.5;1.1;0.9" calcMode="spline"
-          keySplines="0.25 1 0.4 1;0.4 0 0.6 1" fill="freeze"/>
-        <rect x="-5.50" y="-5.50" width="11" height="11"
-          rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
+        <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
+        
+        <animate attributeName="opacity" begin="0.980s" dur="0.6s"
+          values="1;1;0.88;1" calcMode="linear" repeatCount="1" fill="freeze"/>
+        
       </g>
     </g>
   </g>
 
-  <g transform="translate(115.50,87.50)">
-    <rect x="-5.50" y="-5.50" width="11" height="11"
-      rx="2" ry="2" fill="#0a1c12"/>
-    <g opacity="0">
-      <animate attributeName="opacity" begin="0.333s" dur="0.7s"
-        values="0;0.85;0" calcMode="spline" keySplines="0.2 0.8 0.3 1;0.4 0 0.6 1" fill="freeze"/>
+  <g transform="translate(115.50,87.50)" opacity="0">
+    <animate attributeName="opacity" begin="0.333s" dur="0.5s"
+      values="0;1" calcMode="spline" keySplines="0.16 1 0.3 1" fill="freeze"/>
+    <g>
+      <animateTransform attributeName="transform" type="scale" begin="0.333s"
+        dur="0.5s" values="0.3;1.15;1" keyTimes="0;0.7;1"
+        calcMode="spline" keySplines="0.33 0 0.2 1;0.33 0 0.2 1" fill="freeze"/>
       <g>
-        <animateTransform attributeName="transform" type="scale" begin="0.333s"
-          dur="0.7s" values="0.5;1.1;0.9" calcMode="spline"
-          keySplines="0.25 1 0.4 1;0.4 0 0.6 1" fill="freeze"/>
-        <rect x="-5.50" y="-5.50" width="11" height="11"
-          rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
+        <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#33b854" filter="url(#glow-3)"/>
+        
+        <animate attributeName="opacity" begin="0.983s" dur="0.6s"
+          values="1;1;0.82;1;0.9;1" calcMode="linear" repeatCount="1" fill="freeze"/>
+        
+        <animate attributeName="opacity" begin="3.150s" dur="9.0s"
+          values="1;1;0.7;1;1" keyTimes="0;0.3;0.33;0.36;1"
+          calcMode="linear" repeatCount="indefinite" fill="freeze"/>
       </g>
     </g>
   </g>
@@ -1042,39 +1047,34 @@
     </g>
   </g>
 
-  <g transform="translate(129.50,73.50)" opacity="0">
-    <animate attributeName="opacity" begin="0.375s" dur="0.5s"
-      values="0;1" calcMode="spline" keySplines="0.16 1 0.3 1" fill="freeze"/>
-    <g>
-      <animateTransform attributeName="transform" type="scale" begin="0.375s"
-        dur="0.5s" values="0.3;1.15;1" keyTimes="0;0.7;1"
-        calcMode="spline" keySplines="0.33 0 0.2 1;0.33 0 0.2 1" fill="freeze"/>
+  <g transform="translate(129.50,73.50)">
+    <rect x="-5.50" y="-5.50" width="11" height="11"
+      rx="2" ry="2" fill="#0a1c12"/>
+    <g opacity="0">
+      <animate attributeName="opacity" begin="0.375s" dur="0.7s"
+        values="0;0.85;0" calcMode="spline" keySplines="0.2 0.8 0.3 1;0.4 0 0.6 1" fill="freeze"/>
       <g>
-        <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
-        
-        <animate attributeName="opacity" begin="1.025s" dur="0.6s"
-          values="1;1;0.88;1" calcMode="linear" repeatCount="1" fill="freeze"/>
-        
+        <animateTransform attributeName="transform" type="scale" begin="0.375s"
+          dur="0.7s" values="0.5;1.1;0.9" calcMode="spline"
+          keySplines="0.25 1 0.4 1;0.4 0 0.6 1" fill="freeze"/>
+        <rect x="-5.50" y="-5.50" width="11" height="11"
+          rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
       </g>
     </g>
   </g>
 
-  <g transform="translate(129.50,87.50)" opacity="0">
-    <animate attributeName="opacity" begin="0.378s" dur="0.5s"
-      values="0;1" calcMode="spline" keySplines="0.16 1 0.3 1" fill="freeze"/>
-    <g>
-      <animateTransform attributeName="transform" type="scale" begin="0.378s"
-        dur="0.5s" values="0.3;1.15;1" keyTimes="0;0.7;1"
-        calcMode="spline" keySplines="0.33 0 0.2 1;0.33 0 0.2 1" fill="freeze"/>
+  <g transform="translate(129.50,87.50)">
+    <rect x="-5.50" y="-5.50" width="11" height="11"
+      rx="2" ry="2" fill="#0a1c12"/>
+    <g opacity="0">
+      <animate attributeName="opacity" begin="0.378s" dur="0.7s"
+        values="0;0.85;0" calcMode="spline" keySplines="0.2 0.8 0.3 1;0.4 0 0.6 1" fill="freeze"/>
       <g>
-        <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#33b854" filter="url(#glow-3)"/>
-        
-        <animate attributeName="opacity" begin="1.028s" dur="0.6s"
-          values="1;1;0.82;1;0.9;1" calcMode="linear" repeatCount="1" fill="freeze"/>
-        
-        <animate attributeName="opacity" begin="3.272s" dur="9.0s"
-          values="1;1;0.7;1;1" keyTimes="0;0.3;0.33;0.36;1"
-          calcMode="linear" repeatCount="indefinite" fill="freeze"/>
+        <animateTransform attributeName="transform" type="scale" begin="0.378s"
+          dur="0.7s" values="0.5;1.1;0.9" calcMode="spline"
+          keySplines="0.25 1 0.4 1;0.4 0 0.6 1" fill="freeze"/>
+        <rect x="-5.50" y="-5.50" width="11" height="11"
+          rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
       </g>
     </g>
   </g>
@@ -1239,18 +1239,22 @@
     </g>
   </g>
 
-  <g transform="translate(157.50,45.50)">
-    <rect x="-5.50" y="-5.50" width="11" height="11"
-      rx="2" ry="2" fill="#0a1c12"/>
-    <g opacity="0">
-      <animate attributeName="opacity" begin="0.459s" dur="0.7s"
-        values="0;0.85;0" calcMode="spline" keySplines="0.2 0.8 0.3 1;0.4 0 0.6 1" fill="freeze"/>
+  <g transform="translate(157.50,45.50)" opacity="0">
+    <animate attributeName="opacity" begin="0.459s" dur="0.5s"
+      values="0;1" calcMode="spline" keySplines="0.16 1 0.3 1" fill="freeze"/>
+    <g>
+      <animateTransform attributeName="transform" type="scale" begin="0.459s"
+        dur="0.5s" values="0.3;1.15;1" keyTimes="0;0.7;1"
+        calcMode="spline" keySplines="0.33 0 0.2 1;0.33 0 0.2 1" fill="freeze"/>
       <g>
-        <animateTransform attributeName="transform" type="scale" begin="0.459s"
-          dur="0.7s" values="0.5;1.1;0.9" calcMode="spline"
-          keySplines="0.25 1 0.4 1;0.4 0 0.6 1" fill="freeze"/>
-        <rect x="-5.50" y="-5.50" width="11" height="11"
-          rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
+        <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#7dffa0" filter="url(#glow-4)"/>
+        <rect x="-2.42" y="-2.42" width="4.84" height="4.84" rx="1" ry="1" fill="#eafff2" filter="url(#hot-core)"/>
+        <animate attributeName="opacity" begin="1.109s" dur="0.6s"
+          values="1;1;0.82;1;0.9;1" calcMode="linear" repeatCount="1" fill="freeze"/>
+        
+        <animate attributeName="opacity" begin="3.490s" dur="9.0s"
+          values="1;1;0.7;1;1" keyTimes="0;0.3;0.33;0.36;1"
+          calcMode="linear" repeatCount="indefinite" fill="freeze"/>
       </g>
     </g>
   </g>
@@ -1335,54 +1339,52 @@
     </g>
   </g>
 
-  <g transform="translate(171.50,31.50)">
-    <rect x="-5.50" y="-5.50" width="11" height="11"
-      rx="2" ry="2" fill="#0a1c12"/>
-    <g opacity="0">
-      <animate attributeName="opacity" begin="0.501s" dur="0.7s"
-        values="0;0.85;0" calcMode="spline" keySplines="0.2 0.8 0.3 1;0.4 0 0.6 1" fill="freeze"/>
-      <g>
-        <animateTransform attributeName="transform" type="scale" begin="0.501s"
-          dur="0.7s" values="0.5;1.1;0.9" calcMode="spline"
-          keySplines="0.25 1 0.4 1;0.4 0 0.6 1" fill="freeze"/>
-        <rect x="-5.50" y="-5.50" width="11" height="11"
-          rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
-      </g>
-    </g>
-  </g>
-
-  <g transform="translate(171.50,45.50)" opacity="0">
-    <animate attributeName="opacity" begin="0.505s" dur="0.5s"
+  <g transform="translate(171.50,31.50)" opacity="0">
+    <animate attributeName="opacity" begin="0.501s" dur="0.5s"
       values="0;1" calcMode="spline" keySplines="0.16 1 0.3 1" fill="freeze"/>
     <g>
-      <animateTransform attributeName="transform" type="scale" begin="0.505s"
+      <animateTransform attributeName="transform" type="scale" begin="0.501s"
         dur="0.5s" values="0.3;1.15;1" keyTimes="0;0.7;1"
         calcMode="spline" keySplines="0.33 0 0.2 1;0.33 0 0.2 1" fill="freeze"/>
       <g>
-        <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#7dffa0" filter="url(#glow-4)"/>
-        <rect x="-2.42" y="-2.42" width="4.84" height="4.84" rx="1" ry="1" fill="#eafff2" filter="url(#hot-core)"/>
-        <animate attributeName="opacity" begin="1.155s" dur="0.6s"
-          values="1;1;0.82;1;0.9;1" calcMode="linear" repeatCount="1" fill="freeze"/>
+        <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#1c7a3e" filter="url(#glow-2)"/>
         
-        <animate attributeName="opacity" begin="3.612s" dur="9.0s"
-          values="1;1;0.7;1;1" keyTimes="0;0.3;0.33;0.36;1"
-          calcMode="linear" repeatCount="indefinite" fill="freeze"/>
+        <animate attributeName="opacity" begin="1.151s" dur="0.6s"
+          values="1;1;0.88;1" calcMode="linear" repeatCount="1" fill="freeze"/>
+        
       </g>
     </g>
   </g>
 
-  <g transform="translate(171.50,59.50)">
+  <g transform="translate(171.50,45.50)">
     <rect x="-5.50" y="-5.50" width="11" height="11"
       rx="2" ry="2" fill="#0a1c12"/>
     <g opacity="0">
-      <animate attributeName="opacity" begin="0.508s" dur="0.7s"
+      <animate attributeName="opacity" begin="0.505s" dur="0.7s"
         values="0;0.85;0" calcMode="spline" keySplines="0.2 0.8 0.3 1;0.4 0 0.6 1" fill="freeze"/>
       <g>
-        <animateTransform attributeName="transform" type="scale" begin="0.508s"
+        <animateTransform attributeName="transform" type="scale" begin="0.505s"
           dur="0.7s" values="0.5;1.1;0.9" calcMode="spline"
           keySplines="0.25 1 0.4 1;0.4 0 0.6 1" fill="freeze"/>
         <rect x="-5.50" y="-5.50" width="11" height="11"
           rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
+      </g>
+    </g>
+  </g>
+
+  <g transform="translate(171.50,59.50)" opacity="0">
+    <animate attributeName="opacity" begin="0.508s" dur="0.5s"
+      values="0;1" calcMode="spline" keySplines="0.16 1 0.3 1" fill="freeze"/>
+    <g>
+      <animateTransform attributeName="transform" type="scale" begin="0.508s"
+        dur="0.5s" values="0.3;1.15;1" keyTimes="0;0.7;1"
+        calcMode="spline" keySplines="0.33 0 0.2 1;0.33 0 0.2 1" fill="freeze"/>
+      <g>
+        <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
+        
+        <animate attributeName="opacity" begin="1.158s" dur="0.6s"
+          values="1;1;0.88;1" calcMode="linear" repeatCount="1" fill="freeze"/>
+        
       </g>
     </g>
   </g>
@@ -1459,7 +1461,7 @@
         dur="0.5s" values="0.3;1.15;1" keyTimes="0;0.7;1"
         calcMode="spline" keySplines="0.33 0 0.2 1;0.33 0 0.2 1" fill="freeze"/>
       <g>
-        <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#1c7a3e" filter="url(#glow-2)"/>
+        <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
         
         <animate attributeName="opacity" begin="1.197s" dur="0.6s"
           values="1;1;0.88;1" calcMode="linear" repeatCount="1" fill="freeze"/>
@@ -1484,19 +1486,18 @@
     </g>
   </g>
 
-  <g transform="translate(185.50,59.50)" opacity="0">
-    <animate attributeName="opacity" begin="0.553s" dur="0.5s"
-      values="0;1" calcMode="spline" keySplines="0.16 1 0.3 1" fill="freeze"/>
-    <g>
-      <animateTransform attributeName="transform" type="scale" begin="0.553s"
-        dur="0.5s" values="0.3;1.15;1" keyTimes="0;0.7;1"
-        calcMode="spline" keySplines="0.33 0 0.2 1;0.33 0 0.2 1" fill="freeze"/>
+  <g transform="translate(185.50,59.50)">
+    <rect x="-5.50" y="-5.50" width="11" height="11"
+      rx="2" ry="2" fill="#0a1c12"/>
+    <g opacity="0">
+      <animate attributeName="opacity" begin="0.553s" dur="0.7s"
+        values="0;0.85;0" calcMode="spline" keySplines="0.2 0.8 0.3 1;0.4 0 0.6 1" fill="freeze"/>
       <g>
-        <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
-        
-        <animate attributeName="opacity" begin="1.203s" dur="0.6s"
-          values="1;1;0.88;1" calcMode="linear" repeatCount="1" fill="freeze"/>
-        
+        <animateTransform attributeName="transform" type="scale" begin="0.553s"
+          dur="0.7s" values="0.5;1.1;0.9" calcMode="spline"
+          keySplines="0.25 1 0.4 1;0.4 0 0.6 1" fill="freeze"/>
+        <rect x="-5.50" y="-5.50" width="11" height="11"
+          rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
       </g>
     </g>
   </g>
@@ -1565,19 +1566,18 @@
     </g>
   </g>
 
-  <g transform="translate(199.50,31.50)" opacity="0">
-    <animate attributeName="opacity" begin="0.592s" dur="0.5s"
-      values="0;1" calcMode="spline" keySplines="0.16 1 0.3 1" fill="freeze"/>
-    <g>
-      <animateTransform attributeName="transform" type="scale" begin="0.592s"
-        dur="0.5s" values="0.3;1.15;1" keyTimes="0;0.7;1"
-        calcMode="spline" keySplines="0.33 0 0.2 1;0.33 0 0.2 1" fill="freeze"/>
+  <g transform="translate(199.50,31.50)">
+    <rect x="-5.50" y="-5.50" width="11" height="11"
+      rx="2" ry="2" fill="#0a1c12"/>
+    <g opacity="0">
+      <animate attributeName="opacity" begin="0.592s" dur="0.7s"
+        values="0;0.85;0" calcMode="spline" keySplines="0.2 0.8 0.3 1;0.4 0 0.6 1" fill="freeze"/>
       <g>
-        <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
-        
-        <animate attributeName="opacity" begin="1.242s" dur="0.6s"
-          values="1;1;0.88;1" calcMode="linear" repeatCount="1" fill="freeze"/>
-        
+        <animateTransform attributeName="transform" type="scale" begin="0.592s"
+          dur="0.7s" values="0.5;1.1;0.9" calcMode="spline"
+          keySplines="0.25 1 0.4 1;0.4 0 0.6 1" fill="freeze"/>
+        <rect x="-5.50" y="-5.50" width="11" height="11"
+          rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
       </g>
     </g>
   </g>
@@ -3198,34 +3198,39 @@
     </g>
   </g>
 
-  <g transform="translate(395.50,87.50)">
-    <rect x="-5.50" y="-5.50" width="11" height="11"
-      rx="2" ry="2" fill="#0a1c12"/>
-    <g opacity="0">
-      <animate attributeName="opacity" begin="1.239s" dur="0.7s"
-        values="0;0.85;0" calcMode="spline" keySplines="0.2 0.8 0.3 1;0.4 0 0.6 1" fill="freeze"/>
+  <g transform="translate(395.50,87.50)" opacity="0">
+    <animate attributeName="opacity" begin="1.239s" dur="0.5s"
+      values="0;1" calcMode="spline" keySplines="0.16 1 0.3 1" fill="freeze"/>
+    <g>
+      <animateTransform attributeName="transform" type="scale" begin="1.239s"
+        dur="0.5s" values="0.3;1.15;1" keyTimes="0;0.7;1"
+        calcMode="spline" keySplines="0.33 0 0.2 1;0.33 0 0.2 1" fill="freeze"/>
       <g>
-        <animateTransform attributeName="transform" type="scale" begin="1.239s"
-          dur="0.7s" values="0.5;1.1;0.9" calcMode="spline"
-          keySplines="0.25 1 0.4 1;0.4 0 0.6 1" fill="freeze"/>
-        <rect x="-5.50" y="-5.50" width="11" height="11"
-          rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
+        <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#7dffa0" filter="url(#glow-4)"/>
+        <rect x="-2.42" y="-2.42" width="4.84" height="4.84" rx="1" ry="1" fill="#eafff2" filter="url(#hot-core)"/>
+        <animate attributeName="opacity" begin="1.889s" dur="0.6s"
+          values="1;1;0.82;1;0.9;1" calcMode="linear" repeatCount="1" fill="freeze"/>
+        
+        <animate attributeName="opacity" begin="5.595s" dur="9.0s"
+          values="1;1;0.7;1;1" keyTimes="0;0.3;0.33;0.36;1"
+          calcMode="linear" repeatCount="indefinite" fill="freeze"/>
       </g>
     </g>
   </g>
 
-  <g transform="translate(395.50,101.50)">
-    <rect x="-5.50" y="-5.50" width="11" height="11"
-      rx="2" ry="2" fill="#0a1c12"/>
-    <g opacity="0">
-      <animate attributeName="opacity" begin="1.242s" dur="0.7s"
-        values="0;0.85;0" calcMode="spline" keySplines="0.2 0.8 0.3 1;0.4 0 0.6 1" fill="freeze"/>
+  <g transform="translate(395.50,101.50)" opacity="0">
+    <animate attributeName="opacity" begin="1.242s" dur="0.5s"
+      values="0;1" calcMode="spline" keySplines="0.16 1 0.3 1" fill="freeze"/>
+    <g>
+      <animateTransform attributeName="transform" type="scale" begin="1.242s"
+        dur="0.5s" values="0.3;1.15;1" keyTimes="0;0.7;1"
+        calcMode="spline" keySplines="0.33 0 0.2 1;0.33 0 0.2 1" fill="freeze"/>
       <g>
-        <animateTransform attributeName="transform" type="scale" begin="1.242s"
-          dur="0.7s" values="0.5;1.1;0.9" calcMode="spline"
-          keySplines="0.25 1 0.4 1;0.4 0 0.6 1" fill="freeze"/>
-        <rect x="-5.50" y="-5.50" width="11" height="11"
-          rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
+        <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#1c7a3e" filter="url(#glow-2)"/>
+        
+        <animate attributeName="opacity" begin="1.892s" dur="0.6s"
+          values="1;1;0.88;1" calcMode="linear" repeatCount="1" fill="freeze"/>
+        
       </g>
     </g>
   </g>
@@ -3310,39 +3315,34 @@
     </g>
   </g>
 
-  <g transform="translate(409.50,87.50)" opacity="0">
-    <animate attributeName="opacity" begin="1.284s" dur="0.5s"
-      values="0;1" calcMode="spline" keySplines="0.16 1 0.3 1" fill="freeze"/>
-    <g>
-      <animateTransform attributeName="transform" type="scale" begin="1.284s"
-        dur="0.5s" values="0.3;1.15;1" keyTimes="0;0.7;1"
-        calcMode="spline" keySplines="0.33 0 0.2 1;0.33 0 0.2 1" fill="freeze"/>
+  <g transform="translate(409.50,87.50)">
+    <rect x="-5.50" y="-5.50" width="11" height="11"
+      rx="2" ry="2" fill="#0a1c12"/>
+    <g opacity="0">
+      <animate attributeName="opacity" begin="1.284s" dur="0.7s"
+        values="0;0.85;0" calcMode="spline" keySplines="0.2 0.8 0.3 1;0.4 0 0.6 1" fill="freeze"/>
       <g>
-        <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#7dffa0" filter="url(#glow-4)"/>
-        <rect x="-2.42" y="-2.42" width="4.84" height="4.84" rx="1" ry="1" fill="#eafff2" filter="url(#hot-core)"/>
-        <animate attributeName="opacity" begin="1.934s" dur="0.6s"
-          values="1;1;0.82;1;0.9;1" calcMode="linear" repeatCount="1" fill="freeze"/>
-        
-        <animate attributeName="opacity" begin="5.717s" dur="9.0s"
-          values="1;1;0.7;1;1" keyTimes="0;0.3;0.33;0.36;1"
-          calcMode="linear" repeatCount="indefinite" fill="freeze"/>
+        <animateTransform attributeName="transform" type="scale" begin="1.284s"
+          dur="0.7s" values="0.5;1.1;0.9" calcMode="spline"
+          keySplines="0.25 1 0.4 1;0.4 0 0.6 1" fill="freeze"/>
+        <rect x="-5.50" y="-5.50" width="11" height="11"
+          rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
       </g>
     </g>
   </g>
 
-  <g transform="translate(409.50,101.50)" opacity="0">
-    <animate attributeName="opacity" begin="1.287s" dur="0.5s"
-      values="0;1" calcMode="spline" keySplines="0.16 1 0.3 1" fill="freeze"/>
-    <g>
-      <animateTransform attributeName="transform" type="scale" begin="1.287s"
-        dur="0.5s" values="0.3;1.15;1" keyTimes="0;0.7;1"
-        calcMode="spline" keySplines="0.33 0 0.2 1;0.33 0 0.2 1" fill="freeze"/>
+  <g transform="translate(409.50,101.50)">
+    <rect x="-5.50" y="-5.50" width="11" height="11"
+      rx="2" ry="2" fill="#0a1c12"/>
+    <g opacity="0">
+      <animate attributeName="opacity" begin="1.287s" dur="0.7s"
+        values="0;0.85;0" calcMode="spline" keySplines="0.2 0.8 0.3 1;0.4 0 0.6 1" fill="freeze"/>
       <g>
-        <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#1c7a3e" filter="url(#glow-2)"/>
-        
-        <animate attributeName="opacity" begin="1.937s" dur="0.6s"
-          values="1;1;0.88;1" calcMode="linear" repeatCount="1" fill="freeze"/>
-        
+        <animateTransform attributeName="transform" type="scale" begin="1.287s"
+          dur="0.7s" values="0.5;1.1;0.9" calcMode="spline"
+          keySplines="0.25 1 0.4 1;0.4 0 0.6 1" fill="freeze"/>
+        <rect x="-5.50" y="-5.50" width="11" height="11"
+          rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
       </g>
     </g>
   </g>
@@ -4499,18 +4499,19 @@
     </g>
   </g>
 
-  <g transform="translate(563.50,45.50)">
-    <rect x="-5.50" y="-5.50" width="11" height="11"
-      rx="2" ry="2" fill="#0a1c12"/>
-    <g opacity="0">
-      <animate attributeName="opacity" begin="1.773s" dur="0.7s"
-        values="0;0.85;0" calcMode="spline" keySplines="0.2 0.8 0.3 1;0.4 0 0.6 1" fill="freeze"/>
+  <g transform="translate(563.50,45.50)" opacity="0">
+    <animate attributeName="opacity" begin="1.773s" dur="0.5s"
+      values="0;1" calcMode="spline" keySplines="0.16 1 0.3 1" fill="freeze"/>
+    <g>
+      <animateTransform attributeName="transform" type="scale" begin="1.773s"
+        dur="0.5s" values="0.3;1.15;1" keyTimes="0;0.7;1"
+        calcMode="spline" keySplines="0.33 0 0.2 1;0.33 0 0.2 1" fill="freeze"/>
       <g>
-        <animateTransform attributeName="transform" type="scale" begin="1.773s"
-          dur="0.7s" values="0.5;1.1;0.9" calcMode="spline"
-          keySplines="0.25 1 0.4 1;0.4 0 0.6 1" fill="freeze"/>
-        <rect x="-5.50" y="-5.50" width="11" height="11"
-          rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
+        <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
+        
+        <animate attributeName="opacity" begin="2.423s" dur="0.6s"
+          values="1;1;0.88;1" calcMode="linear" repeatCount="1" fill="freeze"/>
+        
       </g>
     </g>
   </g>
@@ -4547,99 +4548,115 @@
     </g>
   </g>
 
-  <g transform="translate(563.50,87.50)">
-    <rect x="-5.50" y="-5.50" width="11" height="11"
-      rx="2" ry="2" fill="#0a1c12"/>
-    <g opacity="0">
-      <animate attributeName="opacity" begin="1.782s" dur="0.7s"
-        values="0;0.85;0" calcMode="spline" keySplines="0.2 0.8 0.3 1;0.4 0 0.6 1" fill="freeze"/>
-      <g>
-        <animateTransform attributeName="transform" type="scale" begin="1.782s"
-          dur="0.7s" values="0.5;1.1;0.9" calcMode="spline"
-          keySplines="0.25 1 0.4 1;0.4 0 0.6 1" fill="freeze"/>
-        <rect x="-5.50" y="-5.50" width="11" height="11"
-          rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
-      </g>
-    </g>
-  </g>
-
-  <g transform="translate(563.50,101.50)">
-    <rect x="-5.50" y="-5.50" width="11" height="11"
-      rx="2" ry="2" fill="#0a1c12"/>
-    <g opacity="0">
-      <animate attributeName="opacity" begin="1.785s" dur="0.7s"
-        values="0;0.85;0" calcMode="spline" keySplines="0.2 0.8 0.3 1;0.4 0 0.6 1" fill="freeze"/>
-      <g>
-        <animateTransform attributeName="transform" type="scale" begin="1.785s"
-          dur="0.7s" values="0.5;1.1;0.9" calcMode="spline"
-          keySplines="0.25 1 0.4 1;0.4 0 0.6 1" fill="freeze"/>
-        <rect x="-5.50" y="-5.50" width="11" height="11"
-          rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
-      </g>
-    </g>
-  </g>
-
-  <g transform="translate(577.50,17.50)">
-    <rect x="-5.50" y="-5.50" width="11" height="11"
-      rx="2" ry="2" fill="#0a1c12"/>
-    <g opacity="0">
-      <animate attributeName="opacity" begin="1.811s" dur="0.7s"
-        values="0;0.85;0" calcMode="spline" keySplines="0.2 0.8 0.3 1;0.4 0 0.6 1" fill="freeze"/>
-      <g>
-        <animateTransform attributeName="transform" type="scale" begin="1.811s"
-          dur="0.7s" values="0.5;1.1;0.9" calcMode="spline"
-          keySplines="0.25 1 0.4 1;0.4 0 0.6 1" fill="freeze"/>
-        <rect x="-5.50" y="-5.50" width="11" height="11"
-          rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
-      </g>
-    </g>
-  </g>
-
-  <g transform="translate(577.50,31.50)">
-    <rect x="-5.50" y="-5.50" width="11" height="11"
-      rx="2" ry="2" fill="#0a1c12"/>
-    <g opacity="0">
-      <animate attributeName="opacity" begin="1.815s" dur="0.7s"
-        values="0;0.85;0" calcMode="spline" keySplines="0.2 0.8 0.3 1;0.4 0 0.6 1" fill="freeze"/>
-      <g>
-        <animateTransform attributeName="transform" type="scale" begin="1.815s"
-          dur="0.7s" values="0.5;1.1;0.9" calcMode="spline"
-          keySplines="0.25 1 0.4 1;0.4 0 0.6 1" fill="freeze"/>
-        <rect x="-5.50" y="-5.50" width="11" height="11"
-          rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
-      </g>
-    </g>
-  </g>
-
-  <g transform="translate(577.50,45.50)" opacity="0">
-    <animate attributeName="opacity" begin="1.818s" dur="0.5s"
+  <g transform="translate(563.50,87.50)" opacity="0">
+    <animate attributeName="opacity" begin="1.782s" dur="0.5s"
       values="0;1" calcMode="spline" keySplines="0.16 1 0.3 1" fill="freeze"/>
     <g>
-      <animateTransform attributeName="transform" type="scale" begin="1.818s"
+      <animateTransform attributeName="transform" type="scale" begin="1.782s"
+        dur="0.5s" values="0.3;1.15;1" keyTimes="0;0.7;1"
+        calcMode="spline" keySplines="0.33 0 0.2 1;0.33 0 0.2 1" fill="freeze"/>
+      <g>
+        <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#7dffa0" filter="url(#glow-4)"/>
+        <rect x="-2.42" y="-2.42" width="4.84" height="4.84" rx="1" ry="1" fill="#eafff2" filter="url(#hot-core)"/>
+        <animate attributeName="opacity" begin="2.432s" dur="0.6s"
+          values="1;1;0.82;1;0.9;1" calcMode="linear" repeatCount="1" fill="freeze"/>
+        
+        <animate attributeName="opacity" begin="7.062s" dur="9.0s"
+          values="1;1;0.7;1;1" keyTimes="0;0.3;0.33;0.36;1"
+          calcMode="linear" repeatCount="indefinite" fill="freeze"/>
+      </g>
+    </g>
+  </g>
+
+  <g transform="translate(563.50,101.50)" opacity="0">
+    <animate attributeName="opacity" begin="1.785s" dur="0.5s"
+      values="0;1" calcMode="spline" keySplines="0.16 1 0.3 1" fill="freeze"/>
+    <g>
+      <animateTransform attributeName="transform" type="scale" begin="1.785s"
+        dur="0.5s" values="0.3;1.15;1" keyTimes="0;0.7;1"
+        calcMode="spline" keySplines="0.33 0 0.2 1;0.33 0 0.2 1" fill="freeze"/>
+      <g>
+        <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#7dffa0" filter="url(#glow-4)"/>
+        <rect x="-2.42" y="-2.42" width="4.84" height="4.84" rx="1" ry="1" fill="#eafff2" filter="url(#hot-core)"/>
+        <animate attributeName="opacity" begin="2.435s" dur="0.6s"
+          values="1;1;0.82;1;0.9;1" calcMode="linear" repeatCount="1" fill="freeze"/>
+        
+        <animate attributeName="opacity" begin="7.071s" dur="9.0s"
+          values="1;1;0.7;1;1" keyTimes="0;0.3;0.33;0.36;1"
+          calcMode="linear" repeatCount="indefinite" fill="freeze"/>
+      </g>
+    </g>
+  </g>
+
+  <g transform="translate(577.50,17.50)" opacity="0">
+    <animate attributeName="opacity" begin="1.811s" dur="0.5s"
+      values="0;1" calcMode="spline" keySplines="0.16 1 0.3 1" fill="freeze"/>
+    <g>
+      <animateTransform attributeName="transform" type="scale" begin="1.811s"
+        dur="0.5s" values="0.3;1.15;1" keyTimes="0;0.7;1"
+        calcMode="spline" keySplines="0.33 0 0.2 1;0.33 0 0.2 1" fill="freeze"/>
+      <g>
+        <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#7dffa0" filter="url(#glow-4)"/>
+        <rect x="-2.42" y="-2.42" width="4.84" height="4.84" rx="1" ry="1" fill="#eafff2" filter="url(#hot-core)"/>
+        <animate attributeName="opacity" begin="2.461s" dur="0.6s"
+          values="1;1;0.82;1;0.9;1" calcMode="linear" repeatCount="1" fill="freeze"/>
+        
+        <animate attributeName="opacity" begin="7.141s" dur="9.0s"
+          values="1;1;0.7;1;1" keyTimes="0;0.3;0.33;0.36;1"
+          calcMode="linear" repeatCount="indefinite" fill="freeze"/>
+      </g>
+    </g>
+  </g>
+
+  <g transform="translate(577.50,31.50)" opacity="0">
+    <animate attributeName="opacity" begin="1.815s" dur="0.5s"
+      values="0;1" calcMode="spline" keySplines="0.16 1 0.3 1" fill="freeze"/>
+    <g>
+      <animateTransform attributeName="transform" type="scale" begin="1.815s"
+        dur="0.5s" values="0.3;1.15;1" keyTimes="0;0.7;1"
+        calcMode="spline" keySplines="0.33 0 0.2 1;0.33 0 0.2 1" fill="freeze"/>
+      <g>
+        <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#7dffa0" filter="url(#glow-4)"/>
+        <rect x="-2.42" y="-2.42" width="4.84" height="4.84" rx="1" ry="1" fill="#eafff2" filter="url(#hot-core)"/>
+        <animate attributeName="opacity" begin="2.465s" dur="0.6s"
+          values="1;1;0.82;1;0.9;1" calcMode="linear" repeatCount="1" fill="freeze"/>
+        
+        <animate attributeName="opacity" begin="7.149s" dur="9.0s"
+          values="1;1;0.7;1;1" keyTimes="0;0.3;0.33;0.36;1"
+          calcMode="linear" repeatCount="indefinite" fill="freeze"/>
+      </g>
+    </g>
+  </g>
+
+  <g transform="translate(577.50,45.50)">
+    <rect x="-5.50" y="-5.50" width="11" height="11"
+      rx="2" ry="2" fill="#0a1c12"/>
+    <g opacity="0">
+      <animate attributeName="opacity" begin="1.818s" dur="0.7s"
+        values="0;0.85;0" calcMode="spline" keySplines="0.2 0.8 0.3 1;0.4 0 0.6 1" fill="freeze"/>
+      <g>
+        <animateTransform attributeName="transform" type="scale" begin="1.818s"
+          dur="0.7s" values="0.5;1.1;0.9" calcMode="spline"
+          keySplines="0.25 1 0.4 1;0.4 0 0.6 1" fill="freeze"/>
+        <rect x="-5.50" y="-5.50" width="11" height="11"
+          rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
+      </g>
+    </g>
+  </g>
+
+  <g transform="translate(577.50,59.50)" opacity="0">
+    <animate attributeName="opacity" begin="1.821s" dur="0.5s"
+      values="0;1" calcMode="spline" keySplines="0.16 1 0.3 1" fill="freeze"/>
+    <g>
+      <animateTransform attributeName="transform" type="scale" begin="1.821s"
         dur="0.5s" values="0.3;1.15;1" keyTimes="0;0.7;1"
         calcMode="spline" keySplines="0.33 0 0.2 1;0.33 0 0.2 1" fill="freeze"/>
       <g>
         <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
         
-        <animate attributeName="opacity" begin="2.468s" dur="0.6s"
+        <animate attributeName="opacity" begin="2.471s" dur="0.6s"
           values="1;1;0.88;1" calcMode="linear" repeatCount="1" fill="freeze"/>
         
-      </g>
-    </g>
-  </g>
-
-  <g transform="translate(577.50,59.50)">
-    <rect x="-5.50" y="-5.50" width="11" height="11"
-      rx="2" ry="2" fill="#0a1c12"/>
-    <g opacity="0">
-      <animate attributeName="opacity" begin="1.821s" dur="0.7s"
-        values="0;0.85;0" calcMode="spline" keySplines="0.2 0.8 0.3 1;0.4 0 0.6 1" fill="freeze"/>
-      <g>
-        <animateTransform attributeName="transform" type="scale" begin="1.821s"
-          dur="0.7s" values="0.5;1.1;0.9" calcMode="spline"
-          keySplines="0.25 1 0.4 1;0.4 0 0.6 1" fill="freeze"/>
-        <rect x="-5.50" y="-5.50" width="11" height="11"
-          rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
       </g>
     </g>
   </g>
@@ -4660,82 +4677,66 @@
     </g>
   </g>
 
-  <g transform="translate(577.50,87.50)" opacity="0">
-    <animate attributeName="opacity" begin="1.827s" dur="0.5s"
-      values="0;1" calcMode="spline" keySplines="0.16 1 0.3 1" fill="freeze"/>
-    <g>
-      <animateTransform attributeName="transform" type="scale" begin="1.827s"
-        dur="0.5s" values="0.3;1.15;1" keyTimes="0;0.7;1"
-        calcMode="spline" keySplines="0.33 0 0.2 1;0.33 0 0.2 1" fill="freeze"/>
+  <g transform="translate(577.50,87.50)">
+    <rect x="-5.50" y="-5.50" width="11" height="11"
+      rx="2" ry="2" fill="#0a1c12"/>
+    <g opacity="0">
+      <animate attributeName="opacity" begin="1.827s" dur="0.7s"
+        values="0;0.85;0" calcMode="spline" keySplines="0.2 0.8 0.3 1;0.4 0 0.6 1" fill="freeze"/>
       <g>
-        <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#7dffa0" filter="url(#glow-4)"/>
-        <rect x="-2.42" y="-2.42" width="4.84" height="4.84" rx="1" ry="1" fill="#eafff2" filter="url(#hot-core)"/>
-        <animate attributeName="opacity" begin="2.477s" dur="0.6s"
-          values="1;1;0.82;1;0.9;1" calcMode="linear" repeatCount="1" fill="freeze"/>
-        
-        <animate attributeName="opacity" begin="7.184s" dur="9.0s"
-          values="1;1;0.7;1;1" keyTimes="0;0.3;0.33;0.36;1"
-          calcMode="linear" repeatCount="indefinite" fill="freeze"/>
+        <animateTransform attributeName="transform" type="scale" begin="1.827s"
+          dur="0.7s" values="0.5;1.1;0.9" calcMode="spline"
+          keySplines="0.25 1 0.4 1;0.4 0 0.6 1" fill="freeze"/>
+        <rect x="-5.50" y="-5.50" width="11" height="11"
+          rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
       </g>
     </g>
   </g>
 
-  <g transform="translate(577.50,101.50)" opacity="0">
-    <animate attributeName="opacity" begin="1.831s" dur="0.5s"
-      values="0;1" calcMode="spline" keySplines="0.16 1 0.3 1" fill="freeze"/>
-    <g>
-      <animateTransform attributeName="transform" type="scale" begin="1.831s"
-        dur="0.5s" values="0.3;1.15;1" keyTimes="0;0.7;1"
-        calcMode="spline" keySplines="0.33 0 0.2 1;0.33 0 0.2 1" fill="freeze"/>
+  <g transform="translate(577.50,101.50)">
+    <rect x="-5.50" y="-5.50" width="11" height="11"
+      rx="2" ry="2" fill="#0a1c12"/>
+    <g opacity="0">
+      <animate attributeName="opacity" begin="1.831s" dur="0.7s"
+        values="0;0.85;0" calcMode="spline" keySplines="0.2 0.8 0.3 1;0.4 0 0.6 1" fill="freeze"/>
       <g>
-        <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#7dffa0" filter="url(#glow-4)"/>
-        <rect x="-2.42" y="-2.42" width="4.84" height="4.84" rx="1" ry="1" fill="#eafff2" filter="url(#hot-core)"/>
-        <animate attributeName="opacity" begin="2.481s" dur="0.6s"
-          values="1;1;0.82;1;0.9;1" calcMode="linear" repeatCount="1" fill="freeze"/>
-        
-        <animate attributeName="opacity" begin="7.193s" dur="9.0s"
-          values="1;1;0.7;1;1" keyTimes="0;0.3;0.33;0.36;1"
-          calcMode="linear" repeatCount="indefinite" fill="freeze"/>
+        <animateTransform attributeName="transform" type="scale" begin="1.831s"
+          dur="0.7s" values="0.5;1.1;0.9" calcMode="spline"
+          keySplines="0.25 1 0.4 1;0.4 0 0.6 1" fill="freeze"/>
+        <rect x="-5.50" y="-5.50" width="11" height="11"
+          rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
       </g>
     </g>
   </g>
 
-  <g transform="translate(591.50,17.50)" opacity="0">
-    <animate attributeName="opacity" begin="1.857s" dur="0.5s"
-      values="0;1" calcMode="spline" keySplines="0.16 1 0.3 1" fill="freeze"/>
-    <g>
-      <animateTransform attributeName="transform" type="scale" begin="1.857s"
-        dur="0.5s" values="0.3;1.15;1" keyTimes="0;0.7;1"
-        calcMode="spline" keySplines="0.33 0 0.2 1;0.33 0 0.2 1" fill="freeze"/>
+  <g transform="translate(591.50,17.50)">
+    <rect x="-5.50" y="-5.50" width="11" height="11"
+      rx="2" ry="2" fill="#0a1c12"/>
+    <g opacity="0">
+      <animate attributeName="opacity" begin="1.857s" dur="0.7s"
+        values="0;0.85;0" calcMode="spline" keySplines="0.2 0.8 0.3 1;0.4 0 0.6 1" fill="freeze"/>
       <g>
-        <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#7dffa0" filter="url(#glow-4)"/>
-        <rect x="-2.42" y="-2.42" width="4.84" height="4.84" rx="1" ry="1" fill="#eafff2" filter="url(#hot-core)"/>
-        <animate attributeName="opacity" begin="2.507s" dur="0.6s"
-          values="1;1;0.82;1;0.9;1" calcMode="linear" repeatCount="1" fill="freeze"/>
-        
-        <animate attributeName="opacity" begin="7.263s" dur="9.0s"
-          values="1;1;0.7;1;1" keyTimes="0;0.3;0.33;0.36;1"
-          calcMode="linear" repeatCount="indefinite" fill="freeze"/>
+        <animateTransform attributeName="transform" type="scale" begin="1.857s"
+          dur="0.7s" values="0.5;1.1;0.9" calcMode="spline"
+          keySplines="0.25 1 0.4 1;0.4 0 0.6 1" fill="freeze"/>
+        <rect x="-5.50" y="-5.50" width="11" height="11"
+          rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
       </g>
     </g>
   </g>
 
-  <g transform="translate(591.50,31.50)" opacity="0">
-    <animate attributeName="opacity" begin="1.860s" dur="0.5s"
-      values="0;1" calcMode="spline" keySplines="0.16 1 0.3 1" fill="freeze"/>
-    <g>
-      <animateTransform attributeName="transform" type="scale" begin="1.860s"
-        dur="0.5s" values="0.3;1.15;1" keyTimes="0;0.7;1"
-        calcMode="spline" keySplines="0.33 0 0.2 1;0.33 0 0.2 1" fill="freeze"/>
+  <g transform="translate(591.50,31.50)">
+    <rect x="-5.50" y="-5.50" width="11" height="11"
+      rx="2" ry="2" fill="#0a1c12"/>
+    <g opacity="0">
+      <animate attributeName="opacity" begin="1.860s" dur="0.7s"
+        values="0;0.85;0" calcMode="spline" keySplines="0.2 0.8 0.3 1;0.4 0 0.6 1" fill="freeze"/>
       <g>
-        <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#7dffa0" filter="url(#glow-4)"/>
-        <rect x="-2.42" y="-2.42" width="4.84" height="4.84" rx="1" ry="1" fill="#eafff2" filter="url(#hot-core)"/>
-        <animate attributeName="opacity" begin="2.510s" dur="0.6s"
-          values="1;1;0.82;1;0.9;1" calcMode="linear" repeatCount="1" fill="freeze"/>
-        
-        <animate attributeName="opacity" begin="7.272s" dur="9.0s"
-          values="1;1;0.7;1;1" keyTimes="0;0.3;0.33;0.36;1"
-          calcMode="linear" repeatCount="indefinite" fill="freeze"/>
+        <animateTransform attributeName="transform" type="scale" begin="1.860s"
+          dur="0.7s" values="0.5;1.1;0.9" calcMode="spline"
+          keySplines="0.25 1 0.4 1;0.4 0 0.6 1" fill="freeze"/>
+        <rect x="-5.50" y="-5.50" width="11" height="11"
+          rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
       </g>
     </g>
   </g>
@@ -4756,19 +4757,18 @@
     </g>
   </g>
 
-  <g transform="translate(591.50,59.50)" opacity="0">
-    <animate attributeName="opacity" begin="1.866s" dur="0.5s"
-      values="0;1" calcMode="spline" keySplines="0.16 1 0.3 1" fill="freeze"/>
-    <g>
-      <animateTransform attributeName="transform" type="scale" begin="1.866s"
-        dur="0.5s" values="0.3;1.15;1" keyTimes="0;0.7;1"
-        calcMode="spline" keySplines="0.33 0 0.2 1;0.33 0 0.2 1" fill="freeze"/>
+  <g transform="translate(591.50,59.50)">
+    <rect x="-5.50" y="-5.50" width="11" height="11"
+      rx="2" ry="2" fill="#0a1c12"/>
+    <g opacity="0">
+      <animate attributeName="opacity" begin="1.866s" dur="0.7s"
+        values="0;0.85;0" calcMode="spline" keySplines="0.2 0.8 0.3 1;0.4 0 0.6 1" fill="freeze"/>
       <g>
-        <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
-        
-        <animate attributeName="opacity" begin="2.516s" dur="0.6s"
-          values="1;1;0.88;1" calcMode="linear" repeatCount="1" fill="freeze"/>
-        
+        <animateTransform attributeName="transform" type="scale" begin="1.866s"
+          dur="0.7s" values="0.5;1.1;0.9" calcMode="spline"
+          keySplines="0.25 1 0.4 1;0.4 0 0.6 1" fill="freeze"/>
+        <rect x="-5.50" y="-5.50" width="11" height="11"
+          rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
       </g>
     </g>
   </g>
@@ -4821,18 +4821,19 @@
     </g>
   </g>
 
-  <g transform="translate(605.50,17.50)">
-    <rect x="-5.50" y="-5.50" width="11" height="11"
-      rx="2" ry="2" fill="#0a1c12"/>
-    <g opacity="0">
-      <animate attributeName="opacity" begin="1.902s" dur="0.7s"
-        values="0;0.85;0" calcMode="spline" keySplines="0.2 0.8 0.3 1;0.4 0 0.6 1" fill="freeze"/>
+  <g transform="translate(605.50,17.50)" opacity="0">
+    <animate attributeName="opacity" begin="1.902s" dur="0.5s"
+      values="0;1" calcMode="spline" keySplines="0.16 1 0.3 1" fill="freeze"/>
+    <g>
+      <animateTransform attributeName="transform" type="scale" begin="1.902s"
+        dur="0.5s" values="0.3;1.15;1" keyTimes="0;0.7;1"
+        calcMode="spline" keySplines="0.33 0 0.2 1;0.33 0 0.2 1" fill="freeze"/>
       <g>
-        <animateTransform attributeName="transform" type="scale" begin="1.902s"
-          dur="0.7s" values="0.5;1.1;0.9" calcMode="spline"
-          keySplines="0.25 1 0.4 1;0.4 0 0.6 1" fill="freeze"/>
-        <rect x="-5.50" y="-5.50" width="11" height="11"
-          rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
+        <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#1c7a3e" filter="url(#glow-2)"/>
+        
+        <animate attributeName="opacity" begin="2.552s" dur="0.6s"
+          values="1;1;0.88;1" calcMode="linear" repeatCount="1" fill="freeze"/>
+        
       </g>
     </g>
   </g>
@@ -4853,18 +4854,19 @@
     </g>
   </g>
 
-  <g transform="translate(605.50,45.50)">
-    <rect x="-5.50" y="-5.50" width="11" height="11"
-      rx="2" ry="2" fill="#0a1c12"/>
-    <g opacity="0">
-      <animate attributeName="opacity" begin="1.908s" dur="0.7s"
-        values="0;0.85;0" calcMode="spline" keySplines="0.2 0.8 0.3 1;0.4 0 0.6 1" fill="freeze"/>
+  <g transform="translate(605.50,45.50)" opacity="0">
+    <animate attributeName="opacity" begin="1.908s" dur="0.5s"
+      values="0;1" calcMode="spline" keySplines="0.16 1 0.3 1" fill="freeze"/>
+    <g>
+      <animateTransform attributeName="transform" type="scale" begin="1.908s"
+        dur="0.5s" values="0.3;1.15;1" keyTimes="0;0.7;1"
+        calcMode="spline" keySplines="0.33 0 0.2 1;0.33 0 0.2 1" fill="freeze"/>
       <g>
-        <animateTransform attributeName="transform" type="scale" begin="1.908s"
-          dur="0.7s" values="0.5;1.1;0.9" calcMode="spline"
-          keySplines="0.25 1 0.4 1;0.4 0 0.6 1" fill="freeze"/>
-        <rect x="-5.50" y="-5.50" width="11" height="11"
-          rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
+        <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
+        
+        <animate attributeName="opacity" begin="2.558s" dur="0.6s"
+          values="1;1;0.88;1" calcMode="linear" repeatCount="1" fill="freeze"/>
+        
       </g>
     </g>
   </g>
@@ -4901,18 +4903,19 @@
     </g>
   </g>
 
-  <g transform="translate(605.50,87.50)">
-    <rect x="-5.50" y="-5.50" width="11" height="11"
-      rx="2" ry="2" fill="#0a1c12"/>
-    <g opacity="0">
-      <animate attributeName="opacity" begin="1.918s" dur="0.7s"
-        values="0;0.85;0" calcMode="spline" keySplines="0.2 0.8 0.3 1;0.4 0 0.6 1" fill="freeze"/>
+  <g transform="translate(605.50,87.50)" opacity="0">
+    <animate attributeName="opacity" begin="1.918s" dur="0.5s"
+      values="0;1" calcMode="spline" keySplines="0.16 1 0.3 1" fill="freeze"/>
+    <g>
+      <animateTransform attributeName="transform" type="scale" begin="1.918s"
+        dur="0.5s" values="0.3;1.15;1" keyTimes="0;0.7;1"
+        calcMode="spline" keySplines="0.33 0 0.2 1;0.33 0 0.2 1" fill="freeze"/>
       <g>
-        <animateTransform attributeName="transform" type="scale" begin="1.918s"
-          dur="0.7s" values="0.5;1.1;0.9" calcMode="spline"
-          keySplines="0.25 1 0.4 1;0.4 0 0.6 1" fill="freeze"/>
-        <rect x="-5.50" y="-5.50" width="11" height="11"
-          rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
+        <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
+        
+        <animate attributeName="opacity" begin="2.568s" dur="0.6s"
+          values="1;1;0.88;1" calcMode="linear" repeatCount="1" fill="freeze"/>
+        
       </g>
     </g>
   </g>
@@ -4933,19 +4936,18 @@
     </g>
   </g>
 
-  <g transform="translate(619.50,17.50)" opacity="0">
-    <animate attributeName="opacity" begin="1.947s" dur="0.5s"
-      values="0;1" calcMode="spline" keySplines="0.16 1 0.3 1" fill="freeze"/>
-    <g>
-      <animateTransform attributeName="transform" type="scale" begin="1.947s"
-        dur="0.5s" values="0.3;1.15;1" keyTimes="0;0.7;1"
-        calcMode="spline" keySplines="0.33 0 0.2 1;0.33 0 0.2 1" fill="freeze"/>
+  <g transform="translate(619.50,17.50)">
+    <rect x="-5.50" y="-5.50" width="11" height="11"
+      rx="2" ry="2" fill="#0a1c12"/>
+    <g opacity="0">
+      <animate attributeName="opacity" begin="1.947s" dur="0.7s"
+        values="0;0.85;0" calcMode="spline" keySplines="0.2 0.8 0.3 1;0.4 0 0.6 1" fill="freeze"/>
       <g>
-        <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#1c7a3e" filter="url(#glow-2)"/>
-        
-        <animate attributeName="opacity" begin="2.597s" dur="0.6s"
-          values="1;1;0.88;1" calcMode="linear" repeatCount="1" fill="freeze"/>
-        
+        <animateTransform attributeName="transform" type="scale" begin="1.947s"
+          dur="0.7s" values="0.5;1.1;0.9" calcMode="spline"
+          keySplines="0.25 1 0.4 1;0.4 0 0.6 1" fill="freeze"/>
+        <rect x="-5.50" y="-5.50" width="11" height="11"
+          rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
       </g>
     </g>
   </g>
@@ -4966,19 +4968,18 @@
     </g>
   </g>
 
-  <g transform="translate(619.50,45.50)" opacity="0">
-    <animate attributeName="opacity" begin="1.954s" dur="0.5s"
-      values="0;1" calcMode="spline" keySplines="0.16 1 0.3 1" fill="freeze"/>
-    <g>
-      <animateTransform attributeName="transform" type="scale" begin="1.954s"
-        dur="0.5s" values="0.3;1.15;1" keyTimes="0;0.7;1"
-        calcMode="spline" keySplines="0.33 0 0.2 1;0.33 0 0.2 1" fill="freeze"/>
+  <g transform="translate(619.50,45.50)">
+    <rect x="-5.50" y="-5.50" width="11" height="11"
+      rx="2" ry="2" fill="#0a1c12"/>
+    <g opacity="0">
+      <animate attributeName="opacity" begin="1.954s" dur="0.7s"
+        values="0;0.85;0" calcMode="spline" keySplines="0.2 0.8 0.3 1;0.4 0 0.6 1" fill="freeze"/>
       <g>
-        <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
-        
-        <animate attributeName="opacity" begin="2.604s" dur="0.6s"
-          values="1;1;0.88;1" calcMode="linear" repeatCount="1" fill="freeze"/>
-        
+        <animateTransform attributeName="transform" type="scale" begin="1.954s"
+          dur="0.7s" values="0.5;1.1;0.9" calcMode="spline"
+          keySplines="0.25 1 0.4 1;0.4 0 0.6 1" fill="freeze"/>
+        <rect x="-5.50" y="-5.50" width="11" height="11"
+          rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
       </g>
     </g>
   </g>
@@ -5023,7 +5024,7 @@
         dur="0.5s" values="0.3;1.15;1" keyTimes="0;0.7;1"
         calcMode="spline" keySplines="0.33 0 0.2 1;0.33 0 0.2 1" fill="freeze"/>
       <g>
-        <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
+        <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#1c7a3e" filter="url(#glow-2)"/>
         
         <animate attributeName="opacity" begin="2.613s" dur="0.6s"
           values="1;1;0.88;1" calcMode="linear" repeatCount="1" fill="freeze"/>
@@ -5048,18 +5049,19 @@
     </g>
   </g>
 
-  <g transform="translate(633.50,17.50)">
-    <rect x="-5.50" y="-5.50" width="11" height="11"
-      rx="2" ry="2" fill="#0a1c12"/>
-    <g opacity="0">
-      <animate attributeName="opacity" begin="1.992s" dur="0.7s"
-        values="0;0.85;0" calcMode="spline" keySplines="0.2 0.8 0.3 1;0.4 0 0.6 1" fill="freeze"/>
+  <g transform="translate(633.50,17.50)" opacity="0">
+    <animate attributeName="opacity" begin="1.992s" dur="0.5s"
+      values="0;1" calcMode="spline" keySplines="0.16 1 0.3 1" fill="freeze"/>
+    <g>
+      <animateTransform attributeName="transform" type="scale" begin="1.992s"
+        dur="0.5s" values="0.3;1.15;1" keyTimes="0;0.7;1"
+        calcMode="spline" keySplines="0.33 0 0.2 1;0.33 0 0.2 1" fill="freeze"/>
       <g>
-        <animateTransform attributeName="transform" type="scale" begin="1.992s"
-          dur="0.7s" values="0.5;1.1;0.9" calcMode="spline"
-          keySplines="0.25 1 0.4 1;0.4 0 0.6 1" fill="freeze"/>
-        <rect x="-5.50" y="-5.50" width="11" height="11"
-          rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
+        <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#1c7a3e" filter="url(#glow-2)"/>
+        
+        <animate attributeName="opacity" begin="2.642s" dur="0.6s"
+          values="1;1;0.88;1" calcMode="linear" repeatCount="1" fill="freeze"/>
+        
       </g>
     </g>
   </g>
@@ -5128,19 +5130,18 @@
     </g>
   </g>
 
-  <g transform="translate(633.50,87.50)" opacity="0">
-    <animate attributeName="opacity" begin="2.009s" dur="0.5s"
-      values="0;1" calcMode="spline" keySplines="0.16 1 0.3 1" fill="freeze"/>
-    <g>
-      <animateTransform attributeName="transform" type="scale" begin="2.009s"
-        dur="0.5s" values="0.3;1.15;1" keyTimes="0;0.7;1"
-        calcMode="spline" keySplines="0.33 0 0.2 1;0.33 0 0.2 1" fill="freeze"/>
+  <g transform="translate(633.50,87.50)">
+    <rect x="-5.50" y="-5.50" width="11" height="11"
+      rx="2" ry="2" fill="#0a1c12"/>
+    <g opacity="0">
+      <animate attributeName="opacity" begin="2.009s" dur="0.7s"
+        values="0;0.85;0" calcMode="spline" keySplines="0.2 0.8 0.3 1;0.4 0 0.6 1" fill="freeze"/>
       <g>
-        <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#1c7a3e" filter="url(#glow-2)"/>
-        
-        <animate attributeName="opacity" begin="2.659s" dur="0.6s"
-          values="1;1;0.88;1" calcMode="linear" repeatCount="1" fill="freeze"/>
-        
+        <animateTransform attributeName="transform" type="scale" begin="2.009s"
+          dur="0.7s" values="0.5;1.1;0.9" calcMode="spline"
+          keySplines="0.25 1 0.4 1;0.4 0 0.6 1" fill="freeze"/>
+        <rect x="-5.50" y="-5.50" width="11" height="11"
+          rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
       </g>
     </g>
   </g>
@@ -5161,19 +5162,18 @@
     </g>
   </g>
 
-  <g transform="translate(647.50,17.50)" opacity="0">
-    <animate attributeName="opacity" begin="2.038s" dur="0.5s"
-      values="0;1" calcMode="spline" keySplines="0.16 1 0.3 1" fill="freeze"/>
-    <g>
-      <animateTransform attributeName="transform" type="scale" begin="2.038s"
-        dur="0.5s" values="0.3;1.15;1" keyTimes="0;0.7;1"
-        calcMode="spline" keySplines="0.33 0 0.2 1;0.33 0 0.2 1" fill="freeze"/>
+  <g transform="translate(647.50,17.50)">
+    <rect x="-5.50" y="-5.50" width="11" height="11"
+      rx="2" ry="2" fill="#0a1c12"/>
+    <g opacity="0">
+      <animate attributeName="opacity" begin="2.038s" dur="0.7s"
+        values="0;0.85;0" calcMode="spline" keySplines="0.2 0.8 0.3 1;0.4 0 0.6 1" fill="freeze"/>
       <g>
-        <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#1c7a3e" filter="url(#glow-2)"/>
-        
-        <animate attributeName="opacity" begin="2.688s" dur="0.6s"
-          values="1;1;0.88;1" calcMode="linear" repeatCount="1" fill="freeze"/>
-        
+        <animateTransform attributeName="transform" type="scale" begin="2.038s"
+          dur="0.7s" values="0.5;1.1;0.9" calcMode="spline"
+          keySplines="0.25 1 0.4 1;0.4 0 0.6 1" fill="freeze"/>
+        <rect x="-5.50" y="-5.50" width="11" height="11"
+          rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
       </g>
     </g>
   </g>
@@ -5386,18 +5386,19 @@
     </g>
   </g>
 
-  <g transform="translate(675.50,17.50)">
-    <rect x="-5.50" y="-5.50" width="11" height="11"
-      rx="2" ry="2" fill="#0a1c12"/>
-    <g opacity="0">
-      <animate attributeName="opacity" begin="2.128s" dur="0.7s"
-        values="0;0.85;0" calcMode="spline" keySplines="0.2 0.8 0.3 1;0.4 0 0.6 1" fill="freeze"/>
+  <g transform="translate(675.50,17.50)" opacity="0">
+    <animate attributeName="opacity" begin="2.128s" dur="0.5s"
+      values="0;1" calcMode="spline" keySplines="0.16 1 0.3 1" fill="freeze"/>
+    <g>
+      <animateTransform attributeName="transform" type="scale" begin="2.128s"
+        dur="0.5s" values="0.3;1.15;1" keyTimes="0;0.7;1"
+        calcMode="spline" keySplines="0.33 0 0.2 1;0.33 0 0.2 1" fill="freeze"/>
       <g>
-        <animateTransform attributeName="transform" type="scale" begin="2.128s"
-          dur="0.7s" values="0.5;1.1;0.9" calcMode="spline"
-          keySplines="0.25 1 0.4 1;0.4 0 0.6 1" fill="freeze"/>
-        <rect x="-5.50" y="-5.50" width="11" height="11"
-          rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
+        <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
+        
+        <animate attributeName="opacity" begin="2.778s" dur="0.6s"
+          values="1;1;0.88;1" calcMode="linear" repeatCount="1" fill="freeze"/>
+        
       </g>
     </g>
   </g>
@@ -5482,35 +5483,35 @@
     </g>
   </g>
 
-  <g transform="translate(675.50,101.50)">
-    <rect x="-5.50" y="-5.50" width="11" height="11"
-      rx="2" ry="2" fill="#0a1c12"/>
-    <g opacity="0">
-      <animate attributeName="opacity" begin="2.148s" dur="0.7s"
-        values="0;0.85;0" calcMode="spline" keySplines="0.2 0.8 0.3 1;0.4 0 0.6 1" fill="freeze"/>
-      <g>
-        <animateTransform attributeName="transform" type="scale" begin="2.148s"
-          dur="0.7s" values="0.5;1.1;0.9" calcMode="spline"
-          keySplines="0.25 1 0.4 1;0.4 0 0.6 1" fill="freeze"/>
-        <rect x="-5.50" y="-5.50" width="11" height="11"
-          rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
-      </g>
-    </g>
-  </g>
-
-  <g transform="translate(689.50,17.50)" opacity="0">
-    <animate attributeName="opacity" begin="2.174s" dur="0.5s"
+  <g transform="translate(675.50,101.50)" opacity="0">
+    <animate attributeName="opacity" begin="2.148s" dur="0.5s"
       values="0;1" calcMode="spline" keySplines="0.16 1 0.3 1" fill="freeze"/>
     <g>
-      <animateTransform attributeName="transform" type="scale" begin="2.174s"
+      <animateTransform attributeName="transform" type="scale" begin="2.148s"
         dur="0.5s" values="0.3;1.15;1" keyTimes="0;0.7;1"
         calcMode="spline" keySplines="0.33 0 0.2 1;0.33 0 0.2 1" fill="freeze"/>
       <g>
         <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
         
-        <animate attributeName="opacity" begin="2.824s" dur="0.6s"
+        <animate attributeName="opacity" begin="2.798s" dur="0.6s"
           values="1;1;0.88;1" calcMode="linear" repeatCount="1" fill="freeze"/>
         
+      </g>
+    </g>
+  </g>
+
+  <g transform="translate(689.50,17.50)">
+    <rect x="-5.50" y="-5.50" width="11" height="11"
+      rx="2" ry="2" fill="#0a1c12"/>
+    <g opacity="0">
+      <animate attributeName="opacity" begin="2.174s" dur="0.7s"
+        values="0;0.85;0" calcMode="spline" keySplines="0.2 0.8 0.3 1;0.4 0 0.6 1" fill="freeze"/>
+      <g>
+        <animateTransform attributeName="transform" type="scale" begin="2.174s"
+          dur="0.7s" values="0.5;1.1;0.9" calcMode="spline"
+          keySplines="0.25 1 0.4 1;0.4 0 0.6 1" fill="freeze"/>
+        <rect x="-5.50" y="-5.50" width="11" height="11"
+          rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
       </g>
     </g>
   </g>
@@ -5595,19 +5596,18 @@
     </g>
   </g>
 
-  <g transform="translate(689.50,101.50)" opacity="0">
-    <animate attributeName="opacity" begin="2.193s" dur="0.5s"
-      values="0;1" calcMode="spline" keySplines="0.16 1 0.3 1" fill="freeze"/>
-    <g>
-      <animateTransform attributeName="transform" type="scale" begin="2.193s"
-        dur="0.5s" values="0.3;1.15;1" keyTimes="0;0.7;1"
-        calcMode="spline" keySplines="0.33 0 0.2 1;0.33 0 0.2 1" fill="freeze"/>
+  <g transform="translate(689.50,101.50)">
+    <rect x="-5.50" y="-5.50" width="11" height="11"
+      rx="2" ry="2" fill="#0a1c12"/>
+    <g opacity="0">
+      <animate attributeName="opacity" begin="2.193s" dur="0.7s"
+        values="0;0.85;0" calcMode="spline" keySplines="0.2 0.8 0.3 1;0.4 0 0.6 1" fill="freeze"/>
       <g>
-        <rect x="-5.50" y="-5.50" width="11" height="11" rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
-        
-        <animate attributeName="opacity" begin="2.843s" dur="0.6s"
-          values="1;1;0.88;1" calcMode="linear" repeatCount="1" fill="freeze"/>
-        
+        <animateTransform attributeName="transform" type="scale" begin="2.193s"
+          dur="0.7s" values="0.5;1.1;0.9" calcMode="spline"
+          keySplines="0.25 1 0.4 1;0.4 0 0.6 1" fill="freeze"/>
+        <rect x="-5.50" y="-5.50" width="11" height="11"
+          rx="2" ry="2" fill="#0f3d22" filter="url(#glow-1)"/>
       </g>
     </g>
   </g>
